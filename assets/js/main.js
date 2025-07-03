@@ -291,47 +291,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-
-    const scrollContainer = document.querySelector('.tips-inner ul');
-
-    if (scrollContainer) {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        scrollContainer.addEventListener('mousedown', (e) => {
-            if (e.button !== 0) return; // Только левая кнопка мыши
-            isDown = true;
-            scrollContainer.classList.add('scrolling');
-            startX = e.pageX - scrollContainer.offsetLeft;
-            scrollLeft = scrollContainer.scrollLeft;
-        });
-
-        scrollContainer.addEventListener('mouseleave', () => {
-            isDown = false;
-            scrollContainer.classList.remove('scrolling');
-        });
-
-        scrollContainer.addEventListener('mouseup', () => {
-            isDown = false;
-            scrollContainer.classList.remove('scrolling');
-        });
-
-        scrollContainer.addEventListener('mousemove', (e) => {
-            if (!isDown || e.buttons !== 1) return; // Только если зажата левая кнопка
-            e.preventDefault();
-            const x = e.pageX - scrollContainer.offsetLeft;
-            const walk = (x - startX) * 1; // множитель скорости
-            scrollContainer.scrollLeft = scrollLeft - walk;
-        });
-
-        scrollContainer.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', (e) => {
-                if (isDragging) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            });
-        });
-    }
 });
