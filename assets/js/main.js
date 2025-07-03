@@ -30,25 +30,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.querySelector("body");
 
   // Открытие меню при клике на ".all"
-  allButton.addEventListener("click", () => {
-    catalog.classList.toggle("active");
-    overlay.classList.toggle("active");
-    body.classList.toggle("active");
-  });
-
-  catalog.addEventListener("click", (event) => {
-    if (event.target.tagName === "A") {
-      catalog.classList.remove("active");
+  if (allButton) {
+    allButton.addEventListener("click", () => {
+      catalog.classList.toggle("active");
+      overlay.classList.toggle("active");
+      body.classList.toggle("active");
+    });
+  }
+  if (catalog) {
+    catalog.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        catalog.classList.remove("active");
+        overlay.classList.remove("active");
+        body.classList.remove("active");
+      }
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      catalog.classList.remove("active"); // Убираем класс "active"
       overlay.classList.remove("active");
       body.classList.remove("active");
-    }
-  });
-
-  closeBtn.addEventListener("click", () => {
-    catalog.classList.remove("active"); // Убираем класс "active"
-    overlay.classList.remove("active");
-    body.classList.remove("active");
-  });
+    });
+  }
 
   document.addEventListener("click", (event) => {
     const isClickInsideMenu = catalog.contains(event.target); // Проверяем, клик внутри меню
