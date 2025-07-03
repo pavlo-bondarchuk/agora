@@ -3001,6 +3001,12 @@ header {
 
     .products__catalog {
         margin-top: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(166px, 1fr));
+    }
+
+    .product-card {
+        max-width: 100%;
+        width: 100%;
     }
 
     .product-info {
