@@ -1,1292 +1,1634 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agora | Shop</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Agora | Shop</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/css/main.css" />
 
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./img/favicons/apple-touch-icon.png"
-    />
-  </head>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./images/favicon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./img/favicons/apple-touch-icon.png" />
+    </head>
 
-  <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <p>
-            <img src="./assets/icons/cart.svg" alt="cart icon" />Відкрий світ
-            покупок разом з нами!
-          </p>
-        </div>
-      </div>
-      <div class="header__middle">
-        <div class="container">
-          <a href="/" class="logo">
-            <img src="./assets/icons/logo.svg" alt="shop logo" />
-          </a>
-          <div class="header__info">
-            <a href="#" class="delivery__info-mob">
-              <img src="./assets/icons/geo-mob.svg" alt="delivery icon" />
-            </a>
-            <a href="#" class="delivery__info">
-              Доставити до
-              <span
-                ><img
-                  src="./assets/icons/geo.svg"
-                  alt="delivery icon"
-                />України</span
-              >
-            </a>
-
-            <form class="search" action="/search" method="get">
-              <input type="text" placeholder="Пошук..." />
-              <button>
-                <img src="./assets/icons/search.svg" alt="search icon" />
-                <img
-                  class="search-icon"
-                  src="./assets/icons/search-mob.svg"
-                  alt="search icon"
-                />
-              </button>
-            </form>
-            <a href="#" class="add__goods"
-              ><span>Додати товар</span
-              ><img src="./assets/icons/cart-mob.svg" alt="cart icon"
-            /></a>
-            <a
-              href="#"
-              class="header__account"
-              aria-label="Click to open account"
-              ><img src="./assets/icons/user.svg" alt="account"
-            /></a>
-            <div class="language-switcher">
-              <div class="selected-option">UA</div>
-              <div class="options">
-                <div class="language-option" data-value="en">EN</div>
-              </div>
+    <body>
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <p>
+                        <img
+                            src="./assets/icons/cart.svg"
+                            alt="cart icon" />Відкрий світ покупок разом з нами!
+                    </p>
+                </div>
             </div>
+            <div class="header__middle">
+                <div class="container">
+                    <a
+                        href="/"
+                        class="logo">
+                        <img
+                            src="./assets/icons/logo.svg"
+                            alt="shop logo" />
+                    </a>
+                    <div class="header__info">
+                        <a
+                            href="#"
+                            class="delivery__info-mob">
+                            <img
+                                src="./assets/icons/geo-mob.svg"
+                                alt="delivery icon" />
+                        </a>
+                        <a
+                            href="#"
+                            class="delivery__info">
+                            Доставити до
+                            <span
+                                ><img
+                                    src="./assets/icons/geo.svg"
+                                    alt="delivery icon" />України</span
+                            >
+                        </a>
 
-            <div class="header-login">
-              <a href="#" class="login" aria-label="Click to login">Вхід</a>
-              <a href="#" class="register" aria-label="Click to registration"
-                >Реєстрація</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__mobile">
-        <div class="container"></div>
-      </div>
-      <div class="header__btm">
-        <div class="overlay"></div>
-        <div class="container">
-          <nav class="header__nav nav">
-            <ul class="nav__list">
-              <li>
-                <a href="#" class="all"
-                  ><img src="./assets/icons/menu.svg" alt="menu" /><span
-                    >Все</span
-                  ></a
-                >
-                <ul class="sub-menu catalog">
-                  <div class="catalog-title">
-                    <span class="close-btn"></span>
-                    <span>Каталог</span>
-                  </div>
-                  <div class="catalog-container">
-                    <div class="catalog-container__items">
-                      <li class="menu-category first">
-                        <span class="category-title"
-                          >Одяг<img src="./assets/icons/arrow.svg" alt="arrow"
-                        /></span>
-                        <ul class="category-items">
-                          <li><a href="#">Жінкам</a></li>
-                          <li><a href="#">Чоловікам</a></li>
-                          <li><a href="#">Дівчаткам</a></li>
-                          <li><a href="#">Хлопчикам</a></li>
-                        </ul>
-                      </li>
-                      <li class="menu-category">
-                        <span class="category-title"
-                          >Взуття<img
-                            src="./assets/icons/arrow.svg"
-                            alt="arrow"
-                        /></span>
-                        <ul class="category-items">
-                          <li><a href="#">Жінкам</a></li>
-                          <li><a href="#">Чоловікам</a></li>
-                          <li><a href="#">Дівчаткам</a></li>
-                          <li><a href="#">Хлопчикам</a></li>
-                        </ul>
-                      </li>
+                        <form
+                            class="search"
+                            action="/search"
+                            method="get">
+                            <input
+                                type="text"
+                                placeholder="Пошук..." />
+                            <button>
+                                <img
+                                    src="./assets/icons/search.svg"
+                                    alt="search icon" />
+                                <img
+                                    class="search-icon"
+                                    src="./assets/icons/search-mob.svg"
+                                    alt="search icon" />
+                            </button>
+                        </form>
+                        <a
+                            href="#"
+                            class="add__goods"
+                            ><span>Додати товар</span
+                            ><img
+                                src="./assets/icons/cart-mob.svg"
+                                alt="cart icon"
+                        /></a>
+                        <a
+                            href="#"
+                            class="header__account"
+                            aria-label="Click to open account"
+                            ><img
+                                src="./assets/icons/user.svg"
+                                alt="account"
+                        /></a>
+                        <div class="language-switcher">
+                            <div class="selected-option">UA</div>
+                            <div class="options">
+                                <div
+                                    class="language-option"
+                                    data-value="en">
+                                    EN
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-login">
+                            <a
+                                href="#"
+                                class="login"
+                                aria-label="Click to login"
+                                >Вхід</a
+                            >
+                            <a
+                                href="#"
+                                class="register"
+                                aria-label="Click to registration"
+                                >Реєстрація</a
+                            >
+                        </div>
                     </div>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Дітям<img src="./assets/icons/arrow.svg" alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Одяг</a></li>
-                        <li><a href="#">Взуття</a></li>
-                        <li><a href="#">Білизна</a></li>
-                        <li><a href="#">Пляжний одяг</a></li>
-                        <li><a href="#">Малюкам</a></li>
-                        <li><a href="#">Дитячий транспорт</a></li>
-                        <li><a href="#">Іграшки</a></li>
-                        <li><a href="#">Меблі</a></li>
-                        <li><a href="#">Школа</a></li>
-                        <li><a href="#">Для свята</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Краса та здоров’я<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Парфуми</a></li>
-                        <li><a href="#">Декоративна косметика</a></li>
-                        <li><a href="#">Косметика для догляду</a></li>
-                        <li><a href="#">Косметика для волосся</a></li>
-                        <li><a href="#">Захист від сонця</a></li>
-                        <li><a href="#">Гігієна</a></li>
-                        <li><a href="#">Гоління</a></li>
-                        <li><a href="#">Депіляція</a></li>
-                        <li><a href="#">Косметичні набори</a></li>
-                        <li><a href="#">Товари для здоров’я</a></li>
-                        <li><a href="#">Професійна косметика</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Спортивні товари<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Мисливське спорядження</a></li>
-                        <li><a href="#">Обладнання для гольфу</a></li>
-                        <li><a href="#">Спорт на свіжому повітрі</a></li>
-                        <li><a href="#">Велосипедне спорядження</a></li>
-                        <li><a href="#">Тренажери</a></li>
-                        <li><a href="#">Все для фітнесу</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Електроніка<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Комп'ютери, планшети</a></li>
-                        <li><a href="#">Мобільні телефони</a></li>
-                        <li>
-                          <a href="#">Смарт годинники та аксесуари</a>
-                        </li>
-                        <li><a href="#">Відеоігри та консолі</a></li>
-                        <li><a href="#">Камери та фото</a></li>
-                        <li><a href="#">Монітори</a></li>
-                        <li><a href="#">Принтери</a></li>
-                        <li><a href="#">Сканери</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Аксесуари<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Сумки і рюкзаки</a></li>
-                        <li><a href="#">Головні убори</a></li>
-                        <li><a href="#">Окуляри</a></li>
-                        <li><a href="#">Шарфи і хустки</a></li>
-                        <li><a href="#">Гаманці</a></li>
-                        <li><a href="#">Парасолі</a></li>
-                        <li><a href="#">Біжутерія</a></li>
-                        <li><a href="#">Годинники</a></li>
-                        <li><a href="#">Ремені</a></li>
-                        <li><a href="#">Краватки</a></li>
-                        <li><a href="#">Ювелірні прикраси</a></li>
-                        <li><a href="#">Рукавички і рукавиці</a></li>
-                        <li><a href="#">Подарунковий набір</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Товари для дому<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Посуд</a></li>
-                        <li><a href="#">Текстиль</a></li>
-                        <li><a href="#">Меблі</a></li>
-                        <li><a href="#">Освітлення</a></li>
-                        <li><a href="#">Декор і дизайн</a></li>
-                        <li><a href="#">Все для свята</a></li>
-                        <li><a href="#">Книги</a></li>
-                        <li><a href="#">Канцелярія</a></li>
-                        <li><a href="#">Творчість і хобі</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Дім і сад<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li>
-                          <a href="#"
-                            >Інструменти та обладнання для майстерні</a
-                          >
-                        </li>
-                        <li><a href="#">Все для поливу</a></li>
-                        <li><a href="#">Альтанки</a></li>
-                        <li><a href="#">Лавки</a></li>
-                        <li><a href="#">Гойдалки</a></li>
-                        <li><a href="#">Фонтани</a></li>
-                        <li><a href="#">Дитячі майданчики</a></li>
-                        <li><a href="#">Басейни</a></li>
-                        <li><a href="#">Обладнання для басейнів</a></li>
-                        <li><a href="#">Зонти</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Фільми та телебачення<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Фільми</a></li>
-                        <li><a href="#">Телешоу</a></li>
-                        <li><a href="#">Бестселери</a></li>
-                        <li>
-                          <a href="#">Фільми та мультики для дітей</a>
-                        </li>
-                        <li><a href="#">Фільми для всієї сім'ї</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Авто, мото<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Запчастини та аксесуари</a></li>
-                        <li>
-                          <a href="#">Легкові та вантажні автомобілі</a>
-                        </li>
-                        <li><a href="#">Мотоцикли</a></li>
-                        <li><a href="#">Велосипеди</a></li>
-                        <li><a href="#">Самокати</a></li>
-                        <li><a href="#">Інші види транспорту</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items large">
-                      <span class="category-title"
-                        >Вироби своїми руками<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Декорування тканин</a></li>
-                        <li><a href="#">Шиття</a></li>
-                        <li><a href="#">Рукоділля</a></li>
-                        <li><a href="#">В'язання спицями та гачком</a></li>
-                        <li><a href="#">Гравюра</a></li>
-                        <li><a href="#">Крафтінг</a></li>
-                        <li>
-                          <a href="#"
-                            >Бісероплетіння та виготовлення ювелірних виробів</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#">Приладдя для живопису та малювання</a>
-                        </li>
-                        <li><a href="#">Вишивання</a></li>
-                        <li><a href="#">Гончарні вироби</a></li>
-                        <li><a href="#">Антикваріат</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Зоотовари<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Корм для тварин</a></li>
-                        <li><a href="#">Акваріуми</a></li>
-                        <li><a href="#">Клітки для птахів</a></li>
-                        <li><a href="#">Іграшки</a></li>
-                        <li><a href="#">Все для догляду</a></li>
-                        <li><a href="#">Одяг</a></li>
-                        <li><a href="#">Аксесуари</a></li>
-                        <li><a href="#">Посуд</a></li>
-                        <li><a href="#">Меблі</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-category catalog-container__items">
-                      <span class="category-title"
-                        >Будівництво<img
-                          src="./assets/icons/arrow.svg"
-                          alt="arrow"
-                      /></span>
-                      <ul class="category-items">
-                        <li><a href="#">Інструменти та обладнання</a></li>
-                        <li><a href="#">Сантехніка</a></li>
-                        <li><a href="#">Будівельні матеріали</a></li>
-                        <li><a href="#">Інтер'єр та оздоблення</a></li>
-                        <li><a href="#">Обладнання для бізнесу</a></li>
-                        <li><a href="#">Сировина</a></li>
-                      </ul>
-                    </li>
-                    <div class="catalog-container__items">
-                      <li class="menu-category">
-                        <span class="category-title">Нерухомість</span>
-                      </li>
-                      <li class="menu-category">
-                        <span class="category-title">Подорожі</span>
-                      </li>
-                      <li class="menu-category">
-                        <span class="category-title">Аукціони</span>
-                      </li>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <div class="container"></div>
+            </div>
+            <div class="header__btm">
+                <div class="overlay"></div>
+                <div class="container">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="all"
+                                    ><img
+                                        src="./assets/icons/menu.svg"
+                                        alt="menu" /><span>Все</span></a
+                                >
+                                <ul class="sub-menu catalog">
+                                    <div class="catalog-title">
+                                        <span class="close-btn"></span>
+                                        <span>Каталог</span>
+                                    </div>
+                                    <div class="catalog-container">
+                                        <div class="catalog-container__items">
+                                            <li class="menu-category first">
+                                                <span class="category-title"
+                                                    >Одяг<img
+                                                        src="./assets/icons/arrow.svg"
+                                                        alt="arrow"
+                                                /></span>
+                                                <ul class="category-items">
+                                                    <li><a href="#">Жінкам</a></li>
+                                                    <li><a href="#">Чоловікам</a></li>
+                                                    <li><a href="#">Дівчаткам</a></li>
+                                                    <li><a href="#">Хлопчикам</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title"
+                                                    >Взуття<img
+                                                        src="./assets/icons/arrow.svg"
+                                                        alt="arrow"
+                                                /></span>
+                                                <ul class="category-items">
+                                                    <li><a href="#">Жінкам</a></li>
+                                                    <li><a href="#">Чоловікам</a></li>
+                                                    <li><a href="#">Дівчаткам</a></li>
+                                                    <li><a href="#">Хлопчикам</a></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Дітям<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Одяг</a></li>
+                                                <li><a href="#">Взуття</a></li>
+                                                <li><a href="#">Білизна</a></li>
+                                                <li><a href="#">Пляжний одяг</a></li>
+                                                <li><a href="#">Малюкам</a></li>
+                                                <li><a href="#">Дитячий транспорт</a></li>
+                                                <li><a href="#">Іграшки</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                                <li><a href="#">Школа</a></li>
+                                                <li><a href="#">Для свята</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Краса та здоров’я<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Парфуми</a></li>
+                                                <li><a href="#">Декоративна косметика</a></li>
+                                                <li><a href="#">Косметика для догляду</a></li>
+                                                <li><a href="#">Косметика для волосся</a></li>
+                                                <li><a href="#">Захист від сонця</a></li>
+                                                <li><a href="#">Гігієна</a></li>
+                                                <li><a href="#">Гоління</a></li>
+                                                <li><a href="#">Депіляція</a></li>
+                                                <li><a href="#">Косметичні набори</a></li>
+                                                <li><a href="#">Товари для здоров’я</a></li>
+                                                <li><a href="#">Професійна косметика</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Спортивні товари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Мисливське спорядження</a></li>
+                                                <li><a href="#">Обладнання для гольфу</a></li>
+                                                <li><a href="#">Спорт на свіжому повітрі</a></li>
+                                                <li><a href="#">Велосипедне спорядження</a></li>
+                                                <li><a href="#">Тренажери</a></li>
+                                                <li><a href="#">Все для фітнесу</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Електроніка<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Комп'ютери, планшети</a></li>
+                                                <li><a href="#">Мобільні телефони</a></li>
+                                                <li>
+                                                    <a href="#">Смарт годинники та аксесуари</a>
+                                                </li>
+                                                <li><a href="#">Відеоігри та консолі</a></li>
+                                                <li><a href="#">Камери та фото</a></li>
+                                                <li><a href="#">Монітори</a></li>
+                                                <li><a href="#">Принтери</a></li>
+                                                <li><a href="#">Сканери</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Аксесуари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Сумки і рюкзаки</a></li>
+                                                <li><a href="#">Головні убори</a></li>
+                                                <li><a href="#">Окуляри</a></li>
+                                                <li><a href="#">Шарфи і хустки</a></li>
+                                                <li><a href="#">Гаманці</a></li>
+                                                <li><a href="#">Парасолі</a></li>
+                                                <li><a href="#">Біжутерія</a></li>
+                                                <li><a href="#">Годинники</a></li>
+                                                <li><a href="#">Ремені</a></li>
+                                                <li><a href="#">Краватки</a></li>
+                                                <li><a href="#">Ювелірні прикраси</a></li>
+                                                <li><a href="#">Рукавички і рукавиці</a></li>
+                                                <li><a href="#">Подарунковий набір</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Товари для дому<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Посуд</a></li>
+                                                <li><a href="#">Текстиль</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                                <li><a href="#">Освітлення</a></li>
+                                                <li><a href="#">Декор і дизайн</a></li>
+                                                <li><a href="#">Все для свята</a></li>
+                                                <li><a href="#">Книги</a></li>
+                                                <li><a href="#">Канцелярія</a></li>
+                                                <li><a href="#">Творчість і хобі</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Дім і сад<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li>
+                                                    <a href="#"
+                                                        >Інструменти та обладнання для майстерні</a
+                                                    >
+                                                </li>
+                                                <li><a href="#">Все для поливу</a></li>
+                                                <li><a href="#">Альтанки</a></li>
+                                                <li><a href="#">Лавки</a></li>
+                                                <li><a href="#">Гойдалки</a></li>
+                                                <li><a href="#">Фонтани</a></li>
+                                                <li><a href="#">Дитячі майданчики</a></li>
+                                                <li><a href="#">Басейни</a></li>
+                                                <li><a href="#">Обладнання для басейнів</a></li>
+                                                <li><a href="#">Зонти</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Фільми та телебачення<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Фільми</a></li>
+                                                <li><a href="#">Телешоу</a></li>
+                                                <li><a href="#">Бестселери</a></li>
+                                                <li>
+                                                    <a href="#">Фільми та мультики для дітей</a>
+                                                </li>
+                                                <li><a href="#">Фільми для всієї сім'ї</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Авто, мото<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Запчастини та аксесуари</a></li>
+                                                <li>
+                                                    <a href="#">Легкові та вантажні автомобілі</a>
+                                                </li>
+                                                <li><a href="#">Мотоцикли</a></li>
+                                                <li><a href="#">Велосипеди</a></li>
+                                                <li><a href="#">Самокати</a></li>
+                                                <li><a href="#">Інші види транспорту</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items large">
+                                            <span class="category-title"
+                                                >Вироби своїми руками<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Декорування тканин</a></li>
+                                                <li><a href="#">Шиття</a></li>
+                                                <li><a href="#">Рукоділля</a></li>
+                                                <li><a href="#">В'язання спицями та гачком</a></li>
+                                                <li><a href="#">Гравюра</a></li>
+                                                <li><a href="#">Крафтінг</a></li>
+                                                <li>
+                                                    <a href="#"
+                                                        >Бісероплетіння та виготовлення ювелірних
+                                                        виробів</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        >Приладдя для живопису та малювання</a
+                                                    >
+                                                </li>
+                                                <li><a href="#">Вишивання</a></li>
+                                                <li><a href="#">Гончарні вироби</a></li>
+                                                <li><a href="#">Антикваріат</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Зоотовари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Корм для тварин</a></li>
+                                                <li><a href="#">Акваріуми</a></li>
+                                                <li><a href="#">Клітки для птахів</a></li>
+                                                <li><a href="#">Іграшки</a></li>
+                                                <li><a href="#">Все для догляду</a></li>
+                                                <li><a href="#">Одяг</a></li>
+                                                <li><a href="#">Аксесуари</a></li>
+                                                <li><a href="#">Посуд</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Будівництво<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Інструменти та обладнання</a></li>
+                                                <li><a href="#">Сантехніка</a></li>
+                                                <li><a href="#">Будівельні матеріали</a></li>
+                                                <li><a href="#">Інтер'єр та оздоблення</a></li>
+                                                <li><a href="#">Обладнання для бізнесу</a></li>
+                                                <li><a href="#">Сировина</a></li>
+                                            </ul>
+                                        </li>
+                                        <div class="catalog-container__items">
+                                            <li class="menu-category">
+                                                <span class="category-title">Нерухомість</span>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title">Подорожі</span>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title">Аукціони</span>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Щоденні пропозиції</a>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Подарункові картки</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Подарункові картки</a></li>
+                                        <li><a href="#">З нагоди</a></li>
+                                        <li><a href="#">Топ подарунків</a></li>
+                                        <li><a href="#">Знайти подарунок</a></li>
+                                        <li><a href="#">Фізичні картки</a></li>
+                                        <li><a href="#">Електронні картки</a></li>
+                                        <li><a href="#">Картки гуртом</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu4.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Продати</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Перші кроки</a></li>
+                                        <li><a href="#">Правила та політика</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Маркетинг</a></li>
+                                        <li><a href="#">Керування оголошеннями</a></li>
+                                        <li><a href="#">Оновлення продавця</a></li>
+                                        <li><a href="#">Партнери agora</a></li>
+                                        <li><a href="#">Продуктивність продавця</a></li>
+                                        <li><a href="#">Збори, податки та платежі</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu3.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Збережено</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Одяг</a></li>
+                                        <li><a href="#">Зоотовари</a></li>
+                                        <li><a href="#">Взуття</a></li>
+                                        <li><a href="#">Електроніка</a></li>
+                                        <li><a href="#">Дітям</a></li>
+                                        <li><a href="#">Будівництво</a></li>
+                                        <li><a href="#">Аксесуари</a></li>
+                                        <li><a href="#">Авто, мото</a></li>
+                                        <li><a href="#">Товари для дому</a></li>
+                                        <li><a href="#">Спортивні товари</a></li>
+                                        <li><a href="#">Краса та здоров'я</a></li>
+                                        <li><a href="#">Вироби своїми руками</a></li>
+                                        <li><a href="#">Дім і сад</a></li>
+                                        <li><a href="#">Фільми та телебачення</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu2.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Обслуговування клієнтів</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Товар</a></li>
+                                        <li><a href="#">Подарункові картки</a></li>
+                                        <li><a href="#">Оплата</a></li>
+                                        <li><a href="#">Технічні проблеми</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Повернення та рекламації</a></li>
+                                        <li><a href="#">Замовлення</a></li>
+                                        <li><a href="#">Центр обслуговування</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu1.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section
+                class="hero"
+                id="hero">
+                <div class="swiper swiper-hero">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/images/main-banner.jpg"
+                                alt="Slide 1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/images/main-banner.jpg"
+                                alt="Slide 1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/images/main-banner.jpg"
+                                alt="Slide 1" />
+                        </div>
                     </div>
-                  </div>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Щоденні пропозиції</a>
-              </li>
-              <li class="has-menu">
-                <a href="#">Подарункові картки</a>
-                <span class="sub-menu sub-container">
-                  <ul class="img-menu">
-                    <li><a href="#">Подарункові картки</a></li>
-                    <li><a href="#">З нагоди</a></li>
-                    <li><a href="#">Топ подарунків</a></li>
-                    <li><a href="#">Знайти подарунок</a></li>
-                    <li><a href="#">Фізичні картки</a></li>
-                    <li><a href="#">Електронні картки</a></li>
-                    <li><a href="#">Картки гуртом</a></li>
-                  </ul>
-                  <div>
-                    <img src="./assets/images/menu4.png" alt="menu image" />
-                  </div>
-                </span>
-              </li>
-              <li class="has-menu">
-                <a href="#">Продати</a>
-                <span class="sub-menu sub-container">
-                  <ul class="img-menu">
-                    <li><a href="#">Перші кроки</a></li>
-                    <li><a href="#">Правила та політика</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Маркетинг</a></li>
-                    <li><a href="#">Керування оголошеннями</a></li>
-                    <li><a href="#">Оновлення продавця</a></li>
-                    <li><a href="#">Партнери agora</a></li>
-                    <li><a href="#">Продуктивність продавця</a></li>
-                    <li><a href="#">Збори, податки та платежі</a></li>
-                  </ul>
-                  <div>
-                    <img src="./assets/images/menu3.png" alt="menu image" />
-                  </div>
-                </span>
-              </li>
-              <li class="has-menu">
-                <a href="#">Збережено</a>
-                <span class="sub-menu sub-container">
-                  <ul class="img-menu">
-                    <li><a href="#">Одяг</a></li>
-                    <li><a href="#">Зоотовари</a></li>
-                    <li><a href="#">Взуття</a></li>
-                    <li><a href="#">Електроніка</a></li>
-                    <li><a href="#">Дітям</a></li>
-                    <li><a href="#">Будівництво</a></li>
-                    <li><a href="#">Аксесуари</a></li>
-                    <li><a href="#">Авто, мото</a></li>
-                    <li><a href="#">Товари для дому</a></li>
-                    <li><a href="#">Спортивні товари</a></li>
-                    <li><a href="#">Краса та здоров'я</a></li>
-                    <li><a href="#">Вироби своїми руками</a></li>
-                    <li><a href="#">Дім і сад</a></li>
-                    <li><a href="#">Фільми та телебачення</a></li>
-                  </ul>
-                  <div>
-                    <img src="./assets/images/menu2.png" alt="menu image" />
-                  </div>
-                </span>
-              </li>
-              <li class="has-menu">
-                <a href="#">Обслуговування клієнтів</a>
-                <span class="sub-menu sub-container">
-                  <ul class="img-menu">
-                    <li><a href="#">Товар</a></li>
-                    <li><a href="#">Подарункові картки</a></li>
-                    <li><a href="#">Оплата</a></li>
-                    <li><a href="#">Технічні проблеми</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Повернення та рекламації</a></li>
-                    <li><a href="#">Замовлення</a></li>
-                    <li><a href="#">Центр обслуговування</a></li>
-                  </ul>
-                  <div>
-                    <img src="./assets/images/menu1.png" alt="menu image" />
-                  </div>
-                </span>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <div class="mobile-nav"></div>
+                </div>
+            </section>
+            <section
+                class="hero-mob"
+                id="hero-mob">
+                <div class="swiper swiper-hero-mob">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="catalog-container__title">Готуємось до Великодня</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/eastern.png"
+                                    alt="category image" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="catalog-container__title">Дитячий світ розваг</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/toy.png"
+                                    alt="category image" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="catalog-container__title">Ігровий портал</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/game.png"
+                                    alt="category image" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="catalog-container__title">Стиль кожного дня</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/style.png"
+                                    alt="category image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="section-catalog"
+                id="catalog">
+                <div class="container">
+                    <h1>ЧАС ОБИРАТИ ЩОСЬ ОСОБЛИВЕ</h1>
+                    <div class="catalog-container">
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Кухонний комфорт</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/kitchen1.png"
+                                        alt="category image" />
+                                    <span>Кавоварки</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/kitchen2.png"
+                                        alt="category image" />
+                                    <span>Мультиварка</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/kitchen3.png"
+                                        alt="category image" />
+                                    <span>Посуд</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/kitchen4.png"
+                                        alt="category image" />
+                                    <span>Чайник</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Речі першої необхідності</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/house1.png"
+                                        alt="category image" />
+                                    <span>Інструменти для чищення</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/house2.png"
+                                        alt="category image" />
+                                    <span>Оргонайзер</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/house3.png"
+                                        alt="category image" />
+                                    <span>Декор для дому</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/house4.png"
+                                        alt="category image" />
+                                    <span>Постільна білизна</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Простір твого дому</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/home1.png"
+                                        alt="category image" />
+                                    <span>Ремонт та комфорт</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/home2.png"
+                                        alt="category image" />
+                                    <span>DVD </span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/home3.png"
+                                        alt="category image" />
+                                    <span>Здоров’я і Краса</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/home4.png"
+                                        alt="category image" />
+                                    <span>Кухонні прилади</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item large">
+                            <div class="catalog-container__title">Готуємось до Великодня</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/eastern.png"
+                                    alt="category image" />
+                            </div>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item large">
+                            <div class="catalog-container__title">Дитячий світ розваг</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/toy.png"
+                                    alt="category image" />
+                            </div>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item large">
+                            <div class="catalog-container__title">Ігровий портал</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/game.png"
+                                    alt="category image" />
+                            </div>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Акценти затишку</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/lifestyle1.png"
+                                        alt="category image" />
+                                    <span>Корзинки та кошики</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/lifestyle2.png"
+                                        alt="category image" />
+                                    <span>Фурнітура </span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/lifestyle3.png"
+                                        alt="category image" />
+                                    <span>Меблі</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/lifestyle4.png"
+                                        alt="category image" />
+                                    <span>Шпалери та фарби</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Тік-так стиль</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/watch1.png"
+                                        alt="category image" />
+                                    <span>Жіночі</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/watch2.png"
+                                        alt="category image" />
+                                    <span>Чоловічі</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/watch3.png"
+                                        alt="category image" />
+                                    <span>Дівчачі</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/watch4.png"
+                                        alt="category image" />
+                                    <span>Хлопчачі</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Світ електроніки</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/electronic1.png"
+                                        alt="category image" />
+                                    <span>Навушники</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/electronic2.png"
+                                        alt="category image" />
+                                    <span>Планшети</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/electronic3.png"
+                                        alt="category image" />
+                                    <span>Гарнітура</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/electronic4.png"
+                                        alt="category image" />
+                                    <span>Акустична система</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Магія макіяжу</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/makeup1.png"
+                                        alt="category image" />
+                                    <span>Косметика</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/makeup2.png"
+                                        alt="category image" />
+                                    <span>Набір пензликів</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/makeup3.png"
+                                        alt="category image" />
+                                    <span>Спонжики</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/makeup4.png"
+                                        alt="category image" />
+                                    <span>Люстерка</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Подорож починається тут</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/tour1.png"
+                                        alt="category image" />
+                                    <span>Рюкзаки</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/tour2.png"
+                                        alt="category image" />
+                                    <span>Валізи</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/tour3.png"
+                                        alt="category image" />
+                                    <span>Сумочки</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/tour4.png"
+                                        alt="category image" />
+                                    <span>Аксесуари</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Дім у деталях</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/detail-house1.png"
+                                        alt="category image" />
+                                    <span>Відеокамера</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/detail-house2.png"
+                                        alt="category image" />
+                                    <span>Лампочки WIFI </span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/detail-house3.png"
+                                        alt="category image" />
+                                    <span>Принтери</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/detail-house4.png"
+                                        alt="category image" />
+                                    <span>Очищувач повітря</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Цифровий простір</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/comp1.png"
+                                        alt="category image" />
+                                    <span>Ноутбуки</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/comp2.png"
+                                        alt="category image" />
+                                    <span>ПК</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/comp3.png"
+                                        alt="category image" />
+                                    <span>Жорсткий диск</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/comp4.png"
+                                        alt="category image" />
+                                    <span>Монітори</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Спортивна зона</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/sport1.png"
+                                        alt="category image" />
+                                    <span>Одяг для жінок</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/sport2.png"
+                                        alt="category image" />
+                                    <span>Одяг для чоловіків</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/sport3.png"
+                                        alt="category image" />
+                                    <span>Обладнання</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/sport4.png"
+                                        alt="category image" />
+                                    <span>Фітнес трекер</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item">
+                            <div class="catalog-container__title">Ароматне натхнення</div>
+                            <ul class="category-list">
+                                <li>
+                                    <img
+                                        src="./assets/images/aroma1.png"
+                                        alt="category image" />
+                                    <span>Жінкам</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/aroma2.png"
+                                        alt="category image" />
+                                    <span>Чоловікам</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/aroma3.png"
+                                        alt="category image" />
+                                    <span>Ароматизатор для дому</span>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/images/aroma4.png"
+                                        alt="category image" />
+                                    <span>Ароматизатор для авто</span>
+                                </li>
+                            </ul>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                        <div class="catalog-container__item large">
+                            <div class="catalog-container__title">Стиль кожного дня</div>
+                            <div class="catalog-container__image">
+                                <img
+                                    src="./assets/images/style.png"
+                                    alt="category image" />
+                            </div>
+                            <a
+                                href="#"
+                                class="catalog-container__link"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="category-slider">
+                <div class="container">
+                    <div class="category-slider__inner">
+                        <h2>Дитячі іграшки</h2>
+                        <div class="swiper category-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery1.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery2.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery3.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery4.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery5.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery6.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery7.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/toy-gallery8.png"
+                                        alt="Slide" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-slider__inner">
+                        <h2>Все для школи</h2>
+                        <div class="swiper category-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/school1.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/school2.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/school3.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/school4.png"
+                                        alt="Slide" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./assets/images/school5.png"
+                                        alt="Slide" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="brands"
+                id="brands">
+                <div class="container">
+                    <div class="brands__inner">
+                        <h2>Список кращих брендів</h2>
+                        <ul class="brands__list">
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend1.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend2.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend3.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend4.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend5-1.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend5.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend6.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend7.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend8.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend9.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend10.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend11.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend12.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend13.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend14.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend15.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend16.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend17.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend18.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend19.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend20.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend21.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend22.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend23.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend24.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend25.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend26.svg"
+                                    alt="brand" />
+                            </li>
+                            <li class="brands__item">
+                                <img
+                                    src="./assets/icons/brend27.svg"
+                                    alt="brand" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="about"
+                id="about">
+                <div class="container">
+                    <div class="about__inner">
+                        <h2 class="about__title">
+                            <span>Інтернет-магазин</span>
+                            <img
+                                src="./assets/images/agora.png"
+                                alt="Agora - логотип магазину"
+                                class="about__logo" />
+                            <span>- товари від одягу до техніки</span>
+                        </h2>
 
-    <main class="main">
-      <section class="hero" id="hero">
-        <div class="swiper swiper-hero">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/images/main-banner.jpg" alt="Slide 1" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/main-banner.jpg" alt="Slide 1" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/main-banner.jpg" alt="Slide 1" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="hero-mob" id="hero-mob">
-        <div class="swiper swiper-hero-mob">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="catalog-container__title">Готуємось до Великодня</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/eastern.png" alt="category image" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="catalog-container__title">Дитячий світ розваг</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/toy.png" alt="category image" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="catalog-container__title">Ігровий портал</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/game.png" alt="category image" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="catalog-container__title">Стиль кожного дня</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/style.png" alt="category image" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-catalog" id="catalog">
-        <div class="container">
-          <h1>ЧАС ОБИРАТИ ЩОСЬ ОСОБЛИВЕ</h1>
-          <div class="catalog-container">
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Кухонний комфорт</div>
-              <ul class="category-list">
-                <li>
-                  <img
-                    src="./assets/images/kitchen1.png"
-                    alt="category image"
-                  />
-                  <span>Кавоварки</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/kitchen2.png"
-                    alt="category image"
-                  />
-                  <span>Мультиварка</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/kitchen3.png"
-                    alt="category image"
-                  />
-                  <span>Посуд</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/kitchen4.png"
-                    alt="category image"
-                  />
-                  <span>Чайник</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">
-                Речі першої необхідності
-              </div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/house1.png" alt="category image" />
-                  <span>Інструменти для чищення</span>
-                </li>
-                <li>
-                  <img src="./assets/images/house2.png" alt="category image" />
-                  <span>Оргонайзер</span>
-                </li>
-                <li>
-                  <img src="./assets/images/house3.png" alt="category image" />
-                  <span>Декор для дому</span>
-                </li>
-                <li>
-                  <img src="./assets/images/house4.png" alt="category image" />
-                  <span>Постільна білизна</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Простір твого дому</div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/home1.png" alt="category image" />
-                  <span>Ремонт та комфорт</span>
-                </li>
-                <li>
-                  <img src="./assets/images/home2.png" alt="category image" />
-                  <span>DVD </span>
-                </li>
-                <li>
-                  <img src="./assets/images/home3.png" alt="category image" />
-                  <span>Здоров’я і Краса</span>
-                </li>
-                <li>
-                  <img src="./assets/images/home4.png" alt="category image" />
-                  <span>Кухонні прилади</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item large">
-              <div class="catalog-container__title">Готуємось до Великодня</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/eastern.png" alt="category image" />
-              </div>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item large">
-              <div class="catalog-container__title">Дитячий світ розваг</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/toy.png" alt="category image" />
-              </div>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item large">
-              <div class="catalog-container__title">Ігровий портал</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/game.png" alt="category image" />
-              </div>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Акценти затишку</div>
-              <ul class="category-list">
-                <li>
-                  <img
-                    src="./assets/images/lifestyle1.png"
-                    alt="category image"
-                  />
-                  <span>Корзинки та кошики</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/lifestyle2.png"
-                    alt="category image"
-                  />
-                  <span>Фурнітура </span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/lifestyle3.png"
-                    alt="category image"
-                  />
-                  <span>Меблі</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/lifestyle4.png"
-                    alt="category image"
-                  />
-                  <span>Шпалери та фарби</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Тік-так стиль</div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/watch1.png" alt="category image" />
-                  <span>Жіночі</span>
-                </li>
-                <li>
-                  <img src="./assets/images/watch2.png" alt="category image" />
-                  <span>Чоловічі</span>
-                </li>
-                <li>
-                  <img src="./assets/images/watch3.png" alt="category image" />
-                  <span>Дівчачі</span>
-                </li>
-                <li>
-                  <img src="./assets/images/watch4.png" alt="category image" />
-                  <span>Хлопчачі</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Світ електроніки</div>
-              <ul class="category-list">
-                <li>
-                  <img
-                    src="./assets/images/electronic1.png"
-                    alt="category image"
-                  />
-                  <span>Навушники</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/electronic2.png"
-                    alt="category image"
-                  />
-                  <span>Планшети</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/electronic3.png"
-                    alt="category image"
-                  />
-                  <span>Гарнітура</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/electronic4.png"
-                    alt="category image"
-                  />
-                  <span>Акустична система</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Магія макіяжу</div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/makeup1.png" alt="category image" />
-                  <span>Косметика</span>
-                </li>
-                <li>
-                  <img src="./assets/images/makeup2.png" alt="category image" />
-                  <span>Набір пензликів</span>
-                </li>
-                <li>
-                  <img src="./assets/images/makeup3.png" alt="category image" />
-                  <span>Спонжики</span>
-                </li>
-                <li>
-                  <img src="./assets/images/makeup4.png" alt="category image" />
-                  <span>Люстерка</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">
-                Подорож починається тут
-              </div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/tour1.png" alt="category image" />
-                  <span>Рюкзаки</span>
-                </li>
-                <li>
-                  <img src="./assets/images/tour2.png" alt="category image" />
-                  <span>Валізи</span>
-                </li>
-                <li>
-                  <img src="./assets/images/tour3.png" alt="category image" />
-                  <span>Сумочки</span>
-                </li>
-                <li>
-                  <img src="./assets/images/tour4.png" alt="category image" />
-                  <span>Аксесуари</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Дім у деталях</div>
-              <ul class="category-list">
-                <li>
-                  <img
-                    src="./assets/images/detail-house1.png"
-                    alt="category image"
-                  />
-                  <span>Відеокамера</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/detail-house2.png"
-                    alt="category image"
-                  />
-                  <span>Лампочки WIFI </span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/detail-house3.png"
-                    alt="category image"
-                  />
-                  <span>Принтери</span>
-                </li>
-                <li>
-                  <img
-                    src="./assets/images/detail-house4.png"
-                    alt="category image"
-                  />
-                  <span>Очищувач повітря</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Цифровий простір</div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/comp1.png" alt="category image" />
-                  <span>Ноутбуки</span>
-                </li>
-                <li>
-                  <img src="./assets/images/comp2.png" alt="category image" />
-                  <span>ПК</span>
-                </li>
-                <li>
-                  <img src="./assets/images/comp3.png" alt="category image" />
-                  <span>Жорсткий диск</span>
-                </li>
-                <li>
-                  <img src="./assets/images/comp4.png" alt="category image" />
-                  <span>Монітори</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Спортивна зона</div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/sport1.png" alt="category image" />
-                  <span>Одяг для жінок</span>
-                </li>
-                <li>
-                  <img src="./assets/images/sport2.png" alt="category image" />
-                  <span>Одяг для чоловіків</span>
-                </li>
-                <li>
-                  <img src="./assets/images/sport3.png" alt="category image" />
-                  <span>Обладнання</span>
-                </li>
-                <li>
-                  <img src="./assets/images/sport4.png" alt="category image" />
-                  <span>Фітнес трекер</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item">
-              <div class="catalog-container__title">Ароматне натхнення</div>
-              <ul class="category-list">
-                <li>
-                  <img src="./assets/images/aroma1.png" alt="category image" />
-                  <span>Жінкам</span>
-                </li>
-                <li>
-                  <img src="./assets/images/aroma2.png" alt="category image" />
-                  <span>Чоловікам</span>
-                </li>
-                <li>
-                  <img src="./assets/images/aroma3.png" alt="category image" />
-                  <span>Ароматизатор для дому</span>
-                </li>
-                <li>
-                  <img src="./assets/images/aroma4.png" alt="category image" />
-                  <span>Ароматизатор для авто</span>
-                </li>
-              </ul>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-            <div class="catalog-container__item large">
-              <div class="catalog-container__title">Стиль кожного дня</div>
-              <div class="catalog-container__image">
-                <img src="./assets/images/style.png" alt="category image" />
-              </div>
-              <a href="#" class="catalog-container__link">Дізнатися більше</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="category-slider">
-        <div class="container">
-          <div class="category-slider__inner">
-            <h2>Дитячі іграшки</h2>
-            <div class="swiper category-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery1.png" alt="Slide" />
+                        <div class="about__features">
+                            <div class="about__feature">
+                                <img
+                                    src="./assets/icons/about1.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="about__icon" />
+                                <p class="about__feature-text">Гарантія кращої ціни</p>
+                            </div>
+                            <div class="about__feature">
+                                <img
+                                    src="./assets/icons/about2.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="about__icon" />
+                                <p class="about__feature-text">Міжнародна доставка</p>
+                            </div>
+                            <div class="about__feature">
+                                <img
+                                    src="./assets/icons/about3.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="about__icon" />
+                                <p class="about__feature-text">Гарантія автентичності</p>
+                            </div>
+                            <div class="about__feature">
+                                <img
+                                    src="./assets/icons/about4.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="about__icon" />
+                                <p class="about__feature-text">Будь-якаформа оплати</p>
+                            </div>
+                            <div class="about__feature">
+                                <img
+                                    src="./assets/icons/about5.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="about__icon" />
+                                <p class="about__feature-text">Миттєве повернення грошей</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery2.png" alt="Slide" />
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__inner-item footer__menu1">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Про компанію</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Рекламуй свою продукцію</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Стати партнером</a>
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--phone">
+                                <a
+                                    href="tel:+380972291449"
+                                    class="footer__menu-link"
+                                    >+38 (097) 229 14 49</a
+                                >
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--address">
+                                Херсонська обл., м. Берислав, вул. Журавлинська, 54
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--email">
+                                <a
+                                    href="mailto:sakalvictoria_br@gmail.com"
+                                    class="footer__menu-link">
+                                    sakalvictoria_br@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__menu2">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Допомога</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Про agora</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Товари і замовлення</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Акції</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__menu3">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Доставка</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Повернення</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Контакти</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Угода користувача</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Політика конфіденсійності</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Політика кукі файлів</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__payments">
+                        <a
+                            href="#"
+                            class="footer__payments-item">
+                            <img
+                                src="./assets/icons/apple.svg"
+                                alt="app store"
+                                aria-hidden="true" />
+                            <p><span>Download on the</span> App Store</p>
+                        </a>
+                        <a
+                            href="#"
+                            class="footer__payments-item">
+                            <img
+                                src="./assets/icons/goo-app.svg"
+                                alt="google app"
+                                aria-hidden="true" />
+                            <p><span>Download on the</span> Google Play</p>
+                        </a>
+                    </div>
+                    <div class="footer__inner-item footer__socials">
+                        <a
+                            href="/"
+                            class="footer-logo">
+                            <img
+                                src="./assets/icons/logo-footer.svg"
+                                alt="logo" />
+                        </a>
+                        <p>Ми в соцмережах</p>
+                        <ul>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/fb.svg"
+                                        alt="facebook"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/insta.svg"
+                                        alt="instagram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/tg.svg"
+                                        alt="telegram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/message.svg"
+                                        alt="messenger"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__code">
+                        <img
+                            src="./assets/icons/code.png"
+                            alt="code" />
+                        <a
+                            href="#"
+                            aria-hidden="true"
+                            >www.agora.com</a
+                        >
+                    </div>
+                    <div class="footer__inner-item footer__copyright">
+                        <p>
+                            <span>Речі за викликом серця. Всі права захищені</span>
+                            <a
+                                href="#"
+                                href="https://agora.ua"
+                                target="_blank">
+                                &copy; 2025 agora.ua</a
+                            >
+                        </p>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery3.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery4.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery5.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery6.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery7.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/toy-gallery8.png" alt="Slide" />
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="category-slider__inner">
-            <h2>Все для школи</h2>
-            <div class="swiper category-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/images/school1.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/school2.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/school3.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/school4.png" alt="Slide" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/school5.png" alt="Slide" />
-                </div>
-              </div>
+        </footer>
+        <div class="popup">
+            <div class="popup-bg">
+                <img
+                    src="./assets/images/popup-bg.jpg"
+                    alt="background" />
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="brands" id="brands">
-        <div class="container">
-          <div class="brands__inner">
-            <h2>Список кращих брендів</h2>
-            <ul class="brands__list">
-              <li class="brands__item">
-                <img src="./assets/icons/brend1.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend2.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend3.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend4.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend5-1.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend5.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend6.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend7.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend8.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend9.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend10.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend11.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend12.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend13.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend14.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend15.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend16.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend17.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend18.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend19.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend20.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend21.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend22.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend23.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend24.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend25.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend26.svg" alt="brand" />
-              </li>
-              <li class="brands__item">
-                <img src="./assets/icons/brend27.svg" alt="brand" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="about" id="about">
-        <div class="container">
-          <div class="about__inner">
-            <h2 class="about__title">
-              <span>Інтернет-магазин</span>
-              <img
-                src="./assets/images/agora.png"
-                alt="Agora - логотип магазину"
-                class="about__logo"
-              />
-              <span>- товари від одягу до техніки</span>
-            </h2>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <button
+                        class="popup-tab active"
+                        data-tab="login">
+                        Вхід
+                    </button>
+                    <button
+                        class="popup-tab"
+                        data-tab="register">
+                        Реєстрація
+                    </button>
+                </div>
+                <div class="popup-body">
+                    <!-- Вхід -->
+                    <div
+                        class="popup-section"
+                        id="login"
+                        style="display: block">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Увійти</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                            <a
+                                href="#"
+                                class="forgot-password"
+                                >Не можете увійти?</a
+                            >
+                        </div>
+                    </div>
 
-            <div class="about__features">
-              <div class="about__feature">
-                <img
-                  src="./assets/icons/about1.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="about__icon"
-                />
-                <p class="about__feature-text">Гарантія кращої ціни</p>
-              </div>
-              <div class="about__feature">
-                <img
-                  src="./assets/icons/about2.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="about__icon"
-                />
-                <p class="about__feature-text">Міжнародна доставка</p>
-              </div>
-              <div class="about__feature">
-                <img
-                  src="./assets/icons/about3.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="about__icon"
-                />
-                <p class="about__feature-text">Гарантія автентичності</p>
-              </div>
-              <div class="about__feature">
-                <img
-                  src="./assets/icons/about4.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="about__icon"
-                />
-                <p class="about__feature-text">Будь-якаформа оплати</p>
-              </div>
-              <div class="about__feature">
-                <img
-                  src="./assets/icons/about5.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="about__icon"
-                />
-                <p class="about__feature-text">Миттєве повернення грошей</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__inner-item footer__menu1">
-            <ul class="footer__menu">
-              <li class="footer__menu-title">Про компанію</li>
-              <li class="footer__menu-item">
-                <a href="#">Блог</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Рекламуй свою продукцію</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Стати партнером</a>
-              </li>
-              <li class="footer__menu-item footer__menu-item--phone">
-                <a href="tel:+380972291449" class="footer__menu-link"
-                  >+38 (097) 229 14 49</a
-                >
-              </li>
-              <li class="footer__menu-item footer__menu-item--address">
-                Херсонська обл., м. Берислав, вул. Журавлинська, 54
-              </li>
-              <li class="footer__menu-item footer__menu-item--email">
-                <a
-                  href="mailto:sakalvictoria_br@gmail.com"
-                  class="footer__menu-link"
-                >
-                  sakalvictoria_br@gmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__inner-item footer__menu2">
-            <ul class="footer__menu">
-              <li class="footer__menu-title">Допомога</li>
-              <li class="footer__menu-item">
-                <a href="#">Про agora</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Товари і замовлення</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Акції</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Оплата</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__inner-item footer__menu3">
-            <ul class="footer__menu">
-              <li class="footer__menu-title">Доставка</li>
-              <li class="footer__menu-item">
-                <a href="#">Повернення</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Контакти</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Угода користувача</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Політика конфіденсійності</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#">Політика кукі файлів</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__inner-item footer__payments">
-            <a href="#" class="footer__payments-item">
-              <img
-                src="./assets/icons/apple.svg"
-                alt="app store"
-                aria-hidden="true"
-              />
-              <p><span>Download on the</span> App Store</p>
-            </a>
-            <a href="#" class="footer__payments-item">
-              <img
-                src="./assets/icons/goo-app.svg"
-                alt="google app"
-                aria-hidden="true"
-              />
-              <p><span>Download on the</span> Google Play</p>
-            </a>
-          </div>
-          <div class="footer__inner-item footer__socials">
-            <a href="/" class="footer-logo">
-              <img src="./assets/icons/logo-footer.svg" alt="logo" />
-            </a>
-            <p>Ми в соцмережах</p>
-            <ul>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/fb.svg" alt="facebook"
-                /></a>
-              </li>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/insta.svg" alt="instagram"
-                /></a>
-              </li>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/tg.svg" alt="telegram"
-                /></a>
-              </li>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/message.svg" alt="messenger"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__inner-item footer__code">
-            <img src="./assets/icons/code.png" alt="code" />
-            <a href="#" aria-hidden="true">www.agora.com</a>
-          </div>
-          <div class="footer__inner-item footer__copyright">
-            <p>
-              <span>Речі за викликом серця. Всі права захищені</span>
-              <a href="#" href="https://agora.ua" target="_blank">
-                &copy; 2025 agora.ua</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="popup">
-      <div class="popup-bg">
-        <img src="./assets/images/popup-bg.jpg" alt="background" />
-      </div>
-      <div class="popup-content">
-        <div class="popup-header">
-          <button class="popup-tab active" data-tab="login">Вхід</button>
-          <button class="popup-tab" data-tab="register">Реєстрація</button>
-        </div>
-        <div class="popup-body">
-          <!-- Вхід -->
-          <div class="popup-section" id="login" style="display: block">
-            <form>
-              <label>Email *</label>
-              <input type="email" placeholder="Введіть вашу електронну пошту" />
-              <label>Пароль *</label>
-              <input type="password" placeholder="Введіть ваш пароль" />
-              <button class="btn-primary">Увійти</button>
-            </form>
-            <div class="popup-footer">
-              <span class="or">або</span>
-              <div class="social-login">
-                <button class="btn-social">
-                  <span class="social-icon">f</span>
-                  <span class="social-text">Facebook</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon">g</span>
-                  <span class="social-text">Google</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon"
-                    ><img src="./assets/icons/apple.svg" alt="apple icon"
-                  /></span>
-                  <span class="social-text">Apple</span>
-                </button>
-              </div>
-              <a href="#" class="forgot-password">Не можете увійти?</a>
-            </div>
-          </div>
+                    <!-- Реєстрація -->
+                    <div
+                        class="popup-section"
+                        id="register">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Зареєструватися</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-          <!-- Реєстрація -->
-          <div class="popup-section" id="register">
-            <form>
-              <label>Email *</label>
-              <input type="email" placeholder="Введіть вашу електронну пошту" />
-              <label>Пароль *</label>
-              <input type="password" placeholder="Введіть ваш пароль" />
-              <button class="btn-primary">Зареєструватися</button>
-            </form>
-            <div class="popup-footer">
-              <span class="or">або</span>
-              <div class="social-login">
-                <button class="btn-social">
-                  <span class="social-icon">f</span>
-                  <span class="social-text">Facebook</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon">g</span>
-                  <span class="social-text">Google</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon"
-                    ><img src="./assets/icons/apple.svg" alt="apple icon"
-                  /></span>
-                  <span class="social-text">Apple</span>
-                </button>
-              </div>
+                    <!-- Зміна пароля -->
+                    <div
+                        class="popup-section"
+                        id="forgot-password">
+                        <form>
+                            <label>Новий пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть новий пароль" />
+                            <label>Підтвердити пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Підтвердьте новий пароль" />
+                            <button class="btn-primary">Далі</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <!-- Зміна пароля -->
-          <div class="popup-section" id="forgot-password">
-            <form>
-              <label>Новий пароль</label>
-              <input type="password" placeholder="Введіть новий пароль" />
-              <label>Підтвердити пароль</label>
-              <input type="password" placeholder="Підтвердьте новий пароль" />
-              <button class="btn-primary">Далі</button>
-            </form>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-  </body>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
