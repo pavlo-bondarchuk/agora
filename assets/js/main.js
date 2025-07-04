@@ -1,205 +1,207 @@
 document.addEventListener('DOMContentLoaded', function () {
     const languageSwitcher = document.querySelector('.language-switcher');
-    const selectedOption = languageSwitcher.querySelector('.selected-option');
+    if (languageSwitcher) {
+        const selectedOption = languageSwitcher.querySelector('.selected-option');
 
-    // Обработчик клика по переключателю
-    languageSwitcher.addEventListener('click', function (e) {
-        // Если кликнули не по опции - просто открываем/закрываем меню
-        if (!e.target.classList.contains('language-option')) {
-            languageSwitcher.classList.toggle('active');
-            return;
-        }
+        languageSwitcher.addEventListener('click', function (e) {
+            if (!e.target.classList.contains('language-option')) {
+                languageSwitcher.classList.toggle('active');
+                return;
+            }
 
-        // Если кликнули по опции - меняем язык
-        const selectedLanguage = e.target.textContent;
-        const currentLanguage = selectedOption.textContent;
+            const selectedLanguage = e.target.textContent;
+            const currentLanguage = selectedOption.textContent;
 
-        // Меняем местами
-        selectedOption.textContent = selectedLanguage;
-        e.target.textContent = currentLanguage;
+            selectedOption.textContent = selectedLanguage;
+            e.target.textContent = currentLanguage;
 
-        // Можно добавить логику смены языка на сайте
-        const newLang = selectedOption.textContent === 'UA' ? 'ua' : 'en';
-    });
+            // You can add your site language change logic here
+            const newLang = selectedOption.textContent === 'UA' ? 'ua' : 'en';
+        });
+    }
 
-    // Находим элементы
     const allButton = document.querySelector('.all');
     const catalog = document.querySelector('.sub-menu.catalog');
     const closeBtn = document.querySelector('.close-btn');
     const overlay = document.querySelector('.overlay');
     const body = document.querySelector('body');
 
-    // Открытие меню при клике на ".all"
-    allButton.addEventListener('click', () => {
-        catalog.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.classList.toggle('active');
-    });
-
-    catalog.addEventListener('click', (event) => {
-        if (event.target.tagName === 'A') {
-            catalog.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('active');
-        }
-    });
-
-    closeBtn.addEventListener('click', () => {
-        catalog.classList.remove('active'); // Убираем класс "active"
-        overlay.classList.remove('active');
-        body.classList.remove('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        const isClickInsideMenu = catalog.contains(event.target); // Проверяем, клик внутри меню
-        const isClickOnButton = allButton.contains(event.target); // Проверяем, клик по кнопке
-
-        if (!isClickInsideMenu && !isClickOnButton) {
-            catalog.classList.remove('active'); // Закрываем меню
-            overlay.classList.remove('active');
-            body.classList.remove('active');
-        }
-    });
-
-    // Находим все кнопки с классом "has-menu"
-    const menuItems = document.querySelectorAll('.nav__list .has-menu');
-
-    // Для каждого элемента .has-menu добавляем обработчики
-    menuItems.forEach((menuItem) => {
-        const subMenu = menuItem.querySelector('.sub-menu.sub-container');
-
-        menuItem.addEventListener('click', (event) => {
-            event.stopPropagation(); // Предотвращаем всплытие
-
-            // Закрываем другие открытые меню
-            menuItems.forEach((otherItem) => {
-                const otherSubMenu = otherItem.querySelector('.sub-menu.sub-container');
-                if (otherSubMenu !== subMenu) {
-                    otherSubMenu.classList.remove('active');
-                }
-            });
-
-            // Переключаем текущее меню
-            subMenu.classList.toggle('active');
+    if (allButton && catalog && overlay && body) {
+        // Open catalog menu
+        allButton.addEventListener('click', () => {
+            catalog.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.classList.toggle('active');
         });
 
-        // Закрытие меню при клике на ссылку внутри него
-        subMenu.addEventListener('click', (event) => {
+        // Close catalog when clicking a link inside it
+        catalog.addEventListener('click', (event) => {
             if (event.target.tagName === 'A') {
-                subMenu.classList.remove('active');
+                catalog.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('active');
             }
         });
-    });
 
-    // Закрытие всех открытых меню при клике вне их
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.sub-menu.sub-container.active').forEach((menu) => {
-            menu.classList.remove('active');
+        // Close catalog on close button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                catalog.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('active');
+            });
+        }
+
+        // Close catalog when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = catalog.contains(event.target);
+            const isClickOnButton = allButton.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnButton) {
+                catalog.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('active');
+            }
         });
-    });
+    }
 
-    const swiper = new Swiper('.swiper-hero', {
-        loop: true,
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-        },
-        effect: 'fade',
-    });
+    const menuItems = document.querySelectorAll('.nav__list .has-menu');
+    if (menuItems.length) {
+        menuItems.forEach((menuItem) => {
+            const subMenu = menuItem.querySelector('.sub-menu.sub-container');
+            if (!subMenu) return;
 
-    const swiperCategory = new Swiper('.category-swiper', {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-    });
+            menuItem.addEventListener('click', (event) => {
+                event.stopPropagation();
 
-    const swiperHeroMob = new Swiper('.swiper-hero-mob', {
-        slidesPerView: 'auto',
-        spaceBetween: 9,
-        loop: true,
-        centeredSlides: false,
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-        },
-    });
+                menuItems.forEach((otherItem) => {
+                    const otherSubMenu = otherItem.querySelector('.sub-menu.sub-container');
+                    if (otherSubMenu !== subMenu) {
+                        otherSubMenu?.classList.remove('active');
+                    }
+                });
 
-    const categorySwiper = new Swiper('.catalog-category-swiper', {
-        slidesPerView: 4,
-        spaceBetween: 38,
-        breakpoints: {
-            320: {
-                slidesPerView: 2,
-                spaceBetween: 8,
+                subMenu.classList.toggle('active');
+            });
+
+            subMenu.addEventListener('click', (event) => {
+                if (event.target.tagName === 'A') {
+                    subMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Close all open submenus when clicking outside
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.sub-menu.sub-container.active').forEach((menu) => {
+                menu.classList.remove('active');
+            });
+        });
+    }
+
+    // Swiper initializations
+    if (document.querySelector('.swiper-hero')) {
+        new Swiper('.swiper-hero', {
+            loop: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
             },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 16,
-            },
-            1240: {
-                slidesPerView: 4,
-                spaceBetween: 38,
-            },
-        },
-    });
+            effect: 'fade',
+        });
+    }
 
-    // Выбираем все заголовки категорий
+    if (document.querySelector('.category-swiper')) {
+        new Swiper('.category-swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+        });
+    }
+
+    if (document.querySelector('.swiper-hero-mob')) {
+        new Swiper('.swiper-hero-mob', {
+            slidesPerView: 'auto',
+            spaceBetween: 9,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+        });
+    }
+
+    if (document.querySelector('.catalog-category-swiper')) {
+        new Swiper('.catalog-category-swiper', {
+            slidesPerView: 4,
+            spaceBetween: 38,
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 8,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                1240: {
+                    slidesPerView: 4,
+                    spaceBetween: 38,
+                },
+            },
+        });
+    }
+
+    // Expand/collapse categories
     const categoryTitles = document.querySelectorAll('.category-title');
-
-    // Добавляем обработчик клика для каждого заголовка
     categoryTitles.forEach((title) => {
         title.addEventListener('click', () => {
             const parentCategory = title.parentElement;
             const categoryItems = parentCategory.querySelector('.category-items');
+            if (!categoryItems) return;
 
-            // Переключаем класс "open" для раскрытия/сокрытия
             parentCategory.classList.toggle('open');
+            categoryItems.style.display = parentCategory.classList.contains('open')
+                ? 'block'
+                : 'none';
+        });
+    });
 
-            // Анимация раскрытия/скрытия
-            if (parentCategory.classList.contains('open')) {
-                categoryItems.style.display = 'block';
-            } else {
-                categoryItems.style.display = 'none';
+    // Tabs in popup
+    const popupTabs = document.querySelectorAll('.popup-tab');
+    const popupSections = document.querySelectorAll('.popup-section');
+    popupTabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+            const tabId = event.target.getAttribute('data-tab');
+            if (!tabId) return;
+
+            popupTabs.forEach((t) => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            popupSections.forEach((section) => {
+                section.style.display = 'none';
+            });
+
+            const activeSection = document.getElementById(tabId);
+            if (activeSection) {
+                activeSection.style.display = 'block';
             }
         });
     });
 
-    document.querySelectorAll('.popup-tab').forEach((tab) => {
-        tab.addEventListener('click', (event) => {
-            const tabId = event.target.getAttribute('data-tab');
-
-            // Переключение активной вкладки
-            document.querySelectorAll('.popup-tab').forEach((tab) => {
-                tab.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
-            // Переключение секции
-            document.querySelectorAll('.popup-section').forEach((section) => {
-                section.style.display = 'none';
-            });
-            document.getElementById(tabId).style.display = 'block';
+    const forgotPasswordBtn = document.querySelector('.forgot-password');
+    if (forgotPasswordBtn) {
+        forgotPasswordBtn.addEventListener('click', () => {
+            popupTabs.forEach((tab) => tab.classList.remove('active'));
+            popupSections.forEach((section) => (section.style.display = 'none'));
+            const forgotSection = document.getElementById('forgot-password');
+            if (forgotSection) forgotSection.style.display = 'block';
         });
-    });
+    }
 
-    document.querySelector('.forgot-password').addEventListener('click', () => {
-        document.querySelectorAll('.popup-tab').forEach((tab) => {
-            tab.classList.remove('active');
-        });
-
-        // Показать секцию "Зміна пароля"
-        document.querySelectorAll('.popup-section').forEach((section) => {
-            section.style.display = 'none';
-        });
-        document.getElementById('forgot-password').style.display = 'block';
-    });
-
-    // Элементы попапа
     const popup = document.querySelector('.popup');
-    const popupSections = document.querySelectorAll('.popup-section');
     const popupBg = document.querySelector('.popup-bg');
-
-    // Кнопки открытия
     const loginBtn = document.querySelector('.header-login .login');
     const registerBtn = document.querySelector('.register');
 
@@ -207,46 +209,35 @@ document.addEventListener('DOMContentLoaded', function () {
         return window.innerWidth > 980;
     }
 
-    // Функция открытия попапа с определенной вкладкой
     function openPopup(tabId) {
+        if (!popup || !body) return;
+
         body.style.overflow = 'hidden';
         popup.style.display = 'flex';
-        // Скрываем все секции
-        popupSections.forEach((section) => {
-            section.style.display = 'none';
-        });
+        popupSections.forEach((section) => (section.style.display = 'none'));
 
         if (checkScreenSize() && popupBg) {
             popupBg.style.display = 'block';
         }
 
-        // Показываем нужную секцию
         const activeSection = document.getElementById(tabId);
         if (activeSection) {
             activeSection.style.display = 'block';
         }
 
-        // Активируем соответствующую вкладку
-        const tabs = document.querySelectorAll('.popup-tab');
-        tabs.forEach((tab) => {
-            if (tab.dataset.tab === tabId) {
-                tab.classList.add('active');
-            } else {
-                tab.classList.remove('active');
-            }
+        popupTabs.forEach((tab) => {
+            tab.classList.toggle('active', tab.dataset.tab === tabId);
         });
     }
 
-    // Функция закрытия попапа
     function closePopup() {
+        if (!popup || !body) return;
+
         body.style.overflow = '';
         popup.style.display = 'none';
-        if (popupBg) {
-            popupBg.style.display = 'none';
-        }
+        if (popupBg) popupBg.style.display = 'none';
     }
 
-    // Обработчики для кнопок открытия
     if (loginBtn) {
         loginBtn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -261,9 +252,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Закрытие по клику вне попапа
     document.addEventListener('click', function (e) {
         if (
+            popup &&
             popup.style.display === 'flex' &&
             !e.target.closest('.popup-content') &&
             !e.target.closest('.login') &&
@@ -273,21 +264,96 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Переключение между вкладками
-    const tabButtons = document.querySelectorAll('.popup-tab');
-    tabButtons.forEach((button) => {
-        button.addEventListener('click', function () {
-            const tabId = this.dataset.tab;
-            openPopup(tabId);
-        });
+    // Reopen the right section on resize
+    window.addEventListener('resize', function () {
+        if (popup && popup.style.display === 'flex') {
+            if (popupBg) {
+                popupBg.style.display = checkScreenSize() ? 'block' : 'none';
+            }
+        }
     });
 
-    window.addEventListener('resize', function () {
-        if (popup.style.display === 'flex') {
-            if (checkScreenSize()) {
-                if (popupBg) popupBg.style.display = 'block';
-            } else {
-                if (popupBg) popupBg.style.display = 'none';
+    // Filter
+    const filterSections = document.querySelectorAll('.filter-section');
+
+    filterSections.forEach((section) => {
+        const seeMoreBtn = section.querySelector('.see-more__btn');
+
+        // Handle tabbed filters (e.g., "Size" filter with multiple systems)
+        const tabs = section.querySelectorAll('.size-tab');
+        const optionsGroups = section.querySelectorAll('.size-options');
+
+        if (tabs.length && optionsGroups.length) {
+            // Tabs switching logic
+            tabs.forEach((tab) => {
+                tab.addEventListener('click', () => {
+                    const type = tab.dataset.sizeType;
+
+                    tabs.forEach((t) => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    optionsGroups.forEach((group) => {
+                        group.style.display = group.dataset.sizeType === type ? 'block' : 'none';
+                    });
+                });
+            });
+
+            // Handle checkbox limiting for each size-options group
+            optionsGroups.forEach((group) => {
+                const checkboxes = group.querySelectorAll('.filter-checkbox');
+                const visibleAttr = group.dataset.visibleCount;
+                const visibleCount = visibleAttr !== undefined ? parseInt(visibleAttr, 10) : 8;
+                const safeVisibleCount = isNaN(visibleCount) ? 5 : visibleCount;
+
+                if (!checkboxes.length || !seeMoreBtn) return;
+
+                if (checkboxes.length > safeVisibleCount) {
+                    checkboxes.forEach((cb, index) => {
+                        if (index >= safeVisibleCount) cb.style.display = 'none';
+                    });
+
+                    seeMoreBtn.style.cursor = 'pointer';
+
+                    seeMoreBtn.addEventListener('click', () => {
+                        const isExpanded = seeMoreBtn.classList.toggle('close');
+
+                        checkboxes.forEach((cb, index) => {
+                            if (index >= safeVisibleCount) {
+                                cb.style.display = isExpanded ? 'flex' : 'none';
+                            }
+                        });
+                    });
+                }
+            });
+        }
+
+        // Handle standard filters (non-tabbed)
+        if (!tabs.length && !optionsGroups.length) {
+            const optionsContainer = section.querySelector('.filter-options');
+            const checkboxes = section.querySelectorAll('.filter-checkbox');
+
+            if (!optionsContainer || !checkboxes.length || !seeMoreBtn) return;
+
+            const visibleAttr = section.dataset.visibleCount;
+            const visibleCount = visibleAttr !== undefined ? parseInt(visibleAttr, 10) : 5;
+            const safeVisibleCount = isNaN(visibleCount) ? 5 : visibleCount;
+
+            if (checkboxes.length > safeVisibleCount) {
+                checkboxes.forEach((cb, index) => {
+                    if (index >= safeVisibleCount) cb.style.display = 'none';
+                });
+
+                seeMoreBtn.style.cursor = 'pointer';
+
+                seeMoreBtn.addEventListener('click', () => {
+                    const isExpanded = seeMoreBtn.classList.toggle('close');
+
+                    checkboxes.forEach((cb, index) => {
+                        if (index >= safeVisibleCount) {
+                            cb.style.display = isExpanded ? 'flex' : 'none';
+                        }
+                    });
+                });
             }
         }
     });

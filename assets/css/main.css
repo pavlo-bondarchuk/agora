@@ -361,6 +361,39 @@ article {
     background-size: contain;
 }
 
+/*BREADCRUMB*/
+.breadcrumb-nav {
+    position: absolute;
+    top: 40px;
+    left: 48px;
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    padding: 0 8px;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.breadcrumb-item.active {
+    pointer-events: none;
+}
+
 /*HEADER*/
 header {
     position: fixed;
@@ -1777,6 +1810,294 @@ header {
     transform: rotate(180deg);
 }
 
+/*---------------------CATEGORY PAGE-----------------*/
+.main-category {
+    background: #f8f6f0;
+}
+
+.category-container {
+    position: relative;
+}
+
+.category-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.product-layout {
+    max-width: 1160px;
+}
+
+.main-category .products__catalog {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 39px;
+    padding: 0;
+    margin-top: 63px;
+}
+
+.main-category .product-card {
+    max-width: 373px;
+}
+
+.main-category .product-title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    min-height: 61px;
+    max-width: 346px;
+}
+
+.main-category .category-tips {
+    padding: 30px 0 53px 0;
+}
+
+.main-category .tips-inner ul {
+    flex-wrap: wrap;
+    height: auto;
+    overflow: unset;
+    gap: 24px;
+}
+
+.main-category .tips {
+    display: block;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 16px 17px;
+}
+
+.main .category__main-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+    margin-top: 37px;
+}
+
+.notice-block {
+    padding: 88px 0 62px;
+}
+
+.notice-block__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.notice-block__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 22px;
+}
+
+.notice-block__link a {
+    font-weight: 500;
+    color: #482b1e;
+}
+
+.filters {
+    padding-top: 100px;
+    max-width: 360px;
+}
+
+.aside-title {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.8);
+    gap: 27px;
+}
+
+.aside-title:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.aside-title img {
+    width: 38px;
+    height: 38px;
+}
+
+.filters-form {
+    max-width: 348px;
+}
+
+.filter-section {
+    margin-top: 48px;
+    position: relative;
+}
+
+.label-text {
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+.label-text span {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.filter-title {
+    font-weight: 500;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.filter-search {
+    margin-bottom: 30px;
+    max-width: 294px;
+}
+
+.search-input {
+    width: 100%;
+    height: 47px;
+    padding: 11px 13px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    background: #f8f6f0;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.search-input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 37px;
+    user-select: none;
+}
+
+.filter-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    background: #f8f6f0;
+}
+
+.filter-checkbox:hover input~.checkmark {
+    border-color: #482B1E;
+}
+
+.filter-checkbox input:checked~.checkmark {
+    background-color: #482B1E;
+
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.filter-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.filter-checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.filter-view {
+    margin-top: 59px;
+}
+
+.see-more__btn {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.see-more__btn.close {
+    transform: rotate(180deg);
+}
+
+.filter-section.empty .see-more__btn {
+    bottom: 9px;
+}
+
+.filter-section.empty .see-more__btn.close {
+    bottom: -25px;
+}
+
+.size-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-bottom: 33px;
+}
+
+.size-tab {
+    padding: 13px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    background: #f8f6f0;
+    cursor: pointer;
+    position: relative;
+}
+
+.size-tab.active {
+    font-weight: 500;
+    color: #f8f6f0;
+    background: #482b1e;
+}
+
+.size-row,
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.color-options {
+    column-gap: 36px;
+}
+
+.color-options>*:nth-last-child(-n+3) {
+    grid-column: 1 / -1;
+}
 
 /*---------------------1600px-------------------------*/
 @media (max-width: 1600px) {
@@ -2116,6 +2437,17 @@ header {
 
     .category-card p {
         font-size: 30px;
+    }
+
+    .main-category .tips-inner ul {
+        height: 76px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scrollbar-width: thin;
     }
 
 }
