@@ -2225,6 +2225,7 @@ header {
 
     .page-404 .container-404 {
         padding-left: 58px;
+        align-items: flex-start;
     }
 
     .inner-404 {
