@@ -278,13 +278,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     filterSections.forEach((section) => {
         const seeMoreBtn = section.querySelector('.see-more__btn');
-
-        // Handle tabbed filters (e.g., "Size" filter with multiple systems)
         const tabs = section.querySelectorAll('.size-tab');
         const optionsGroups = section.querySelectorAll('.size-options');
+        const isMobile = window.innerWidth <= 768;
+        const isInsideOtherFilters = section.closest('.other-filters') !== null;
 
+        // Handle tabbed filters (e.g. size systems)
         if (tabs.length && optionsGroups.length) {
-            // Tabs switching logic
             tabs.forEach((tab) => {
                 tab.addEventListener('click', () => {
                     const type = tab.dataset.sizeType;
@@ -298,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-            // Handle checkbox limiting for each size-options group
             optionsGroups.forEach((group) => {
                 const checkboxes = group.querySelectorAll('.filter-checkbox');
                 const visibleAttr = group.dataset.visibleCount;
@@ -307,22 +306,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (!checkboxes.length || !seeMoreBtn) return;
 
-                if (checkboxes.length > safeVisibleCount) {
-                    checkboxes.forEach((cb, index) => {
-                        if (index >= safeVisibleCount) cb.style.display = 'none';
-                    });
+                const shouldHide = !isMobile || (isMobile && isInsideOtherFilters);
 
-                    seeMoreBtn.style.cursor = 'pointer';
-
-                    seeMoreBtn.addEventListener('click', () => {
-                        const isExpanded = seeMoreBtn.classList.toggle('close');
-
+                if (checkboxes.length > safeVisibleCount || (isMobile && isInsideOtherFilters)) {
+                    if (shouldHide) {
                         checkboxes.forEach((cb, index) => {
-                            if (index >= safeVisibleCount) {
-                                cb.style.display = isExpanded ? 'flex' : 'none';
-                            }
+                            if (!isMobile && index < safeVisibleCount) return;
+                            cb.style.display = 'none';
                         });
-                    });
+
+                        seeMoreBtn.style.cursor = 'pointer';
+                        seeMoreBtn.addEventListener('click', () => {
+                            const isExpanded = seeMoreBtn.classList.toggle('close');
+                            checkboxes.forEach((cb, index) => {
+                                if (!isMobile && index < safeVisibleCount) return;
+                                cb.style.display = isExpanded ? 'flex' : 'none';
+                            });
+                        });
+                    } else {
+                        checkboxes.forEach((cb) => (cb.style.display = 'flex'));
+                        seeMoreBtn.style.display = 'none';
+                    }
                 }
             });
         }
@@ -334,27 +338,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (!optionsContainer || !checkboxes.length || !seeMoreBtn) return;
 
-            const visibleAttr = section.dataset.visibleCount;
-            const visibleCount = visibleAttr !== undefined ? parseInt(visibleAttr, 10) : 5;
+            let visibleCount;
+
+            if (isMobile && isInsideOtherFilters) {
+                visibleCount = 0;
+            } else {
+                const visibleAttr = section.dataset.visibleCount;
+                visibleCount = visibleAttr !== undefined ? parseInt(visibleAttr, 10) : 5;
+            }
+
             const safeVisibleCount = isNaN(visibleCount) ? 5 : visibleCount;
 
-            if (checkboxes.length > safeVisibleCount) {
-                checkboxes.forEach((cb, index) => {
-                    if (index >= safeVisibleCount) cb.style.display = 'none';
-                });
+            const shouldHide = !isMobile || (isMobile && isInsideOtherFilters);
 
-                seeMoreBtn.style.cursor = 'pointer';
-
-                seeMoreBtn.addEventListener('click', () => {
-                    const isExpanded = seeMoreBtn.classList.toggle('close');
-
+            if (checkboxes.length > safeVisibleCount || (isMobile && isInsideOtherFilters)) {
+                if (shouldHide) {
                     checkboxes.forEach((cb, index) => {
-                        if (index >= safeVisibleCount) {
-                            cb.style.display = isExpanded ? 'flex' : 'none';
-                        }
+                        if (!isMobile && index < safeVisibleCount) return;
+                        cb.style.display = 'none';
                     });
-                });
+
+                    seeMoreBtn.style.cursor = 'pointer';
+                    seeMoreBtn.addEventListener('click', () => {
+                        const isExpanded = seeMoreBtn.classList.toggle('close');
+                        checkboxes.forEach((cb, index) => {
+                            if (!isMobile && index < safeVisibleCount) return;
+                            cb.style.display = isExpanded ? 'flex' : 'none';
+                        });
+                    });
+                } else {
+                    checkboxes.forEach((cb) => (cb.style.display = 'flex'));
+                    seeMoreBtn.style.display = 'none';
+                }
             }
         }
+    });
+
+    // Filter tabs for mobile
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const allFilterBlocks = document.querySelectorAll('.filter-section, .other-filters');
+
+    if (!filterTabs.length || !allFilterBlocks.length) return;
+
+    filterTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.filterTarget;
+            const isAlreadyActive = tab.classList.contains('active');
+
+            // Deactivate all tabs and blocks
+            filterTabs.forEach((t) => t.classList.remove('active'));
+            allFilterBlocks.forEach((block) => block.classList.remove('active'));
+
+            if (!isAlreadyActive) {
+                tab.classList.add('active');
+
+                allFilterBlocks.forEach((block) => {
+                    const id = block.dataset.filterId;
+                    if (id === target) {
+                        block.classList.add('active');
+                    }
+                });
+            }
+        });
     });
 });
