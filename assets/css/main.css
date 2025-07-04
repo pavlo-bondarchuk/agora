@@ -2011,7 +2011,34 @@ header {
 
 .filter-checkbox input:checked~.checkmark {
     background-color: #482B1E;
+}
 
+.checkmark.colorless {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+}
+
+.checkmark.colorless b {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: #000;
+    border-radius: 1px;
+}
+
+.checkmark.colorless b:first-child {
+    transform: rotate(45deg);
+}
+
+.checkmark.colorless b:last-child {
+    transform: rotate(-45deg);
+}
+
+.filter-checkbox input:checked~.checkmark.colorless b {
+    display: none;
 }
 
 .checkmark:after {
