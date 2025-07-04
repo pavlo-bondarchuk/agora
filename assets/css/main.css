@@ -1699,6 +1699,10 @@ header {
     font-size: 20px;
 }
 
+.main-category .stars span {
+    color: #da8f18;
+}
+
 .review-count {
     font-weight: 400;
     font-size: 18px;
@@ -1943,6 +1947,10 @@ header {
 .filter-section {
     margin-top: 48px;
     position: relative;
+}
+
+.filter-section:nth-child(2) {
+    margin-top: 21px;
 }
 
 .label-text {
@@ -3406,6 +3414,11 @@ header {
 
     .pagination {
         max-width: 440px;
+        box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .pagination a.active {
+        box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.25);
     }
 
     .pagination a,
@@ -3562,7 +3575,7 @@ header {
         font-size: 18px;
         border-bottom: 0.30px solid rgba(0, 0, 0, 0.7);
         margin: 0 -16px;
-        padding: 0 16px;
+        padding: 0 16px 4px 16px;
     }
 
     .filters {
@@ -3656,13 +3669,19 @@ header {
         padding: 49px 0 9px;
     }
 
+    .notice-block .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .notice-block__title {
         font-size: 12px;
         line-height: 14px;
+        margin-top: 9px;
     }
 
     .notice-block__link {
-        margin-top: 9px;
+        margin-top: 0;
         font-size: 14px;
         max-width: 220px;
         line-height: 14px;
@@ -3787,7 +3806,7 @@ header {
     .main-category .product-rating {
         margin-top: auto;
         margin-left: auto;
-        gap: 7px;
+        gap: 6px;
     }
 }
 
@@ -3976,6 +3995,10 @@ header {
 
     .other-filters .filter-section {
         margin-top: 0px;
+    }
+
+    .main-category .review-count {
+        font-size: 10px;
     }
 }
 
