@@ -153,6 +153,38 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Product slider
+    const thumbsContainer = document.querySelector('.swiper-thumbs');
+    const mainContainer = document.querySelector('.swiper-main');
+
+    if (thumbsContainer && mainContainer) {
+        const thumbsSwiper = new Swiper(thumbsContainer, {
+            direction: 'vertical',
+            slidesPerView: 9,
+            spaceBetween: 14,
+            watchSlidesProgress: true,
+            breakpoints: {
+                0: {
+                    direction: 'horizontal',
+                },
+                768: {
+                    direction: 'vertical',
+                },
+            },
+        });
+
+        const mainSwiper = new Swiper(mainContainer, {
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            thumbs: {
+                swiper: thumbsSwiper,
+            },
+        });
+    }
+
     // Expand/collapse categories
     const categoryTitles = document.querySelectorAll('.category-title');
     categoryTitles.forEach((title) => {
@@ -272,6 +304,40 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    // Certificates
+    const certPopup = document.getElementById('cert_popup');
+    const openBtn = document.querySelector('.add_info-btn');
+    const certOverlay = document.querySelector('.cert_popup-overlay');
+
+    if (certPopup && openBtn) {
+        openBtn.addEventListener('click', () => {
+            certPopup.classList.add('active');
+            certOverlay.classList.add('active');
+        });
+
+        certOverlay.addEventListener('click', () => {
+            certPopup.classList.remove('active');
+            certOverlay.classList.remove('active');
+        });
+    }
+
+    // Size table popup
+    const openSizeBtn = document.querySelector('.open-size-popup');
+    const sizePopup = document.getElementById('size_popup');
+    const sizeOverlay = document.querySelector('.size_popup-overlay');
+
+    if (openSizeBtn && sizePopup) {
+        openSizeBtn.addEventListener('click', () => {
+            sizePopup.classList.add('active');
+            sizeOverlay.classList.add('active');
+        });
+
+        sizeOverlay.addEventListener('click', () => {
+            sizePopup.classList.remove('active');
+            sizeOverlay.classList.remove('active');
+        });
+    }
 
     // Filter
     const filterSections = document.querySelectorAll('.filter-section');

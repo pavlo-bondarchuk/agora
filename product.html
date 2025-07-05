@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Agora | Shop</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/css/main.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./img/favicons/favicon.svg" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./img/favicons/apple-touch-icon.png" />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <p>
+                        <img
+                            src="./assets/icons/cart.svg"
+                            alt="cart icon" />Відкрий світ покупок разом з нами!
+                    </p>
+                </div>
+            </div>
+            <div class="header__middle">
+                <div class="container">
+                    <a
+                        href="/"
+                        class="logo">
+                        <img
+                            src="./assets/icons/logo.svg"
+                            alt="shop logo" />
+                    </a>
+                    <div class="header__info">
+                        <a
+                            href="#"
+                            class="delivery__info-mob">
+                            <img
+                                src="./assets/icons/geo-mob.svg"
+                                alt="delivery icon" />
+                        </a>
+                        <a
+                            href="#"
+                            class="delivery__info">
+                            Доставити до
+                            <span
+                                ><img
+                                    src="./assets/icons/geo.svg"
+                                    alt="delivery icon" />України</span
+                            >
+                        </a>
+
+                        <form
+                            class="search"
+                            action="/search"
+                            method="get">
+                            <input
+                                type="text"
+                                placeholder="Пошук..." />
+                            <button>
+                                <img
+                                    src="./assets/icons/search.svg"
+                                    alt="search icon" />
+                                <img
+                                    class="search-icon"
+                                    src="./assets/icons/search-mob.svg"
+                                    alt="search icon" />
+                            </button>
+                        </form>
+                        <a
+                            href="#"
+                            class="add__goods"
+                            ><span>Додати товар</span
+                            ><img
+                                src="./assets/icons/cart-mob.svg"
+                                alt="cart icon"
+                        /></a>
+                        <a
+                            href="#"
+                            class="header__account"
+                            aria-label="Click to open account"
+                            ><img
+                                src="./assets/icons/user.svg"
+                                alt="account"
+                        /></a>
+                        <div class="language-switcher">
+                            <div class="selected-option">UA</div>
+                            <div class="options">
+                                <div
+                                    class="language-option"
+                                    data-value="en">
+                                    EN
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-login">
+                            <a
+                                href="#"
+                                class="login"
+                                aria-label="Click to login"
+                                >Вхід</a
+                            >
+                            <a
+                                href="#"
+                                class="register"
+                                aria-label="Click to registration"
+                                >Реєстрація</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <div class="container"></div>
+            </div>
+            <div class="header__btm">
+                <div class="overlay"></div>
+                <div class="container">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="all"
+                                    ><img
+                                        src="./assets/icons/menu.svg"
+                                        alt="menu" /><span>Все</span></a
+                                >
+                                <ul class="sub-menu catalog">
+                                    <div class="catalog-title">
+                                        <span class="close-btn"></span>
+                                        <span>Каталог</span>
+                                    </div>
+                                    <div class="catalog-container">
+                                        <div class="catalog-container__items">
+                                            <li class="menu-category first">
+                                                <span class="category-title"
+                                                    >Одяг<img
+                                                        src="./assets/icons/arrow.svg"
+                                                        alt="arrow"
+                                                /></span>
+                                                <ul class="category-items">
+                                                    <li><a href="#">Жінкам</a></li>
+                                                    <li><a href="#">Чоловікам</a></li>
+                                                    <li><a href="#">Дівчаткам</a></li>
+                                                    <li><a href="#">Хлопчикам</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title"
+                                                    >Взуття<img
+                                                        src="./assets/icons/arrow.svg"
+                                                        alt="arrow"
+                                                /></span>
+                                                <ul class="category-items">
+                                                    <li><a href="#">Жінкам</a></li>
+                                                    <li><a href="#">Чоловікам</a></li>
+                                                    <li><a href="#">Дівчаткам</a></li>
+                                                    <li><a href="#">Хлопчикам</a></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Дітям<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Одяг</a></li>
+                                                <li><a href="#">Взуття</a></li>
+                                                <li><a href="#">Білизна</a></li>
+                                                <li><a href="#">Пляжний одяг</a></li>
+                                                <li><a href="#">Малюкам</a></li>
+                                                <li><a href="#">Дитячий транспорт</a></li>
+                                                <li><a href="#">Іграшки</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                                <li><a href="#">Школа</a></li>
+                                                <li><a href="#">Для свята</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Краса та здоров’я<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Парфуми</a></li>
+                                                <li><a href="#">Декоративна косметика</a></li>
+                                                <li><a href="#">Косметика для догляду</a></li>
+                                                <li><a href="#">Косметика для волосся</a></li>
+                                                <li><a href="#">Захист від сонця</a></li>
+                                                <li><a href="#">Гігієна</a></li>
+                                                <li><a href="#">Гоління</a></li>
+                                                <li><a href="#">Депіляція</a></li>
+                                                <li><a href="#">Косметичні набори</a></li>
+                                                <li><a href="#">Товари для здоров’я</a></li>
+                                                <li><a href="#">Професійна косметика</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Спортивні товари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Мисливське спорядження</a></li>
+                                                <li><a href="#">Обладнання для гольфу</a></li>
+                                                <li><a href="#">Спорт на свіжому повітрі</a></li>
+                                                <li><a href="#">Велосипедне спорядження</a></li>
+                                                <li><a href="#">Тренажери</a></li>
+                                                <li><a href="#">Все для фітнесу</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Електроніка<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Комп'ютери, планшети</a></li>
+                                                <li><a href="#">Мобільні телефони</a></li>
+                                                <li>
+                                                    <a href="#">Смарт годинники та аксесуари</a>
+                                                </li>
+                                                <li><a href="#">Відеоігри та консолі</a></li>
+                                                <li><a href="#">Камери та фото</a></li>
+                                                <li><a href="#">Монітори</a></li>
+                                                <li><a href="#">Принтери</a></li>
+                                                <li><a href="#">Сканери</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Аксесуари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Сумки і рюкзаки</a></li>
+                                                <li><a href="#">Головні убори</a></li>
+                                                <li><a href="#">Окуляри</a></li>
+                                                <li><a href="#">Шарфи і хустки</a></li>
+                                                <li><a href="#">Гаманці</a></li>
+                                                <li><a href="#">Парасолі</a></li>
+                                                <li><a href="#">Біжутерія</a></li>
+                                                <li><a href="#">Годинники</a></li>
+                                                <li><a href="#">Ремені</a></li>
+                                                <li><a href="#">Краватки</a></li>
+                                                <li><a href="#">Ювелірні прикраси</a></li>
+                                                <li><a href="#">Рукавички і рукавиці</a></li>
+                                                <li><a href="#">Подарунковий набір</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Товари для дому<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Посуд</a></li>
+                                                <li><a href="#">Текстиль</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                                <li><a href="#">Освітлення</a></li>
+                                                <li><a href="#">Декор і дизайн</a></li>
+                                                <li><a href="#">Все для свята</a></li>
+                                                <li><a href="#">Книги</a></li>
+                                                <li><a href="#">Канцелярія</a></li>
+                                                <li><a href="#">Творчість і хобі</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Дім і сад<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li>
+                                                    <a href="#"
+                                                        >Інструменти та обладнання для майстерні</a
+                                                    >
+                                                </li>
+                                                <li><a href="#">Все для поливу</a></li>
+                                                <li><a href="#">Альтанки</a></li>
+                                                <li><a href="#">Лавки</a></li>
+                                                <li><a href="#">Гойдалки</a></li>
+                                                <li><a href="#">Фонтани</a></li>
+                                                <li><a href="#">Дитячі майданчики</a></li>
+                                                <li><a href="#">Басейни</a></li>
+                                                <li><a href="#">Обладнання для басейнів</a></li>
+                                                <li><a href="#">Зонти</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Фільми та телебачення<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Фільми</a></li>
+                                                <li><a href="#">Телешоу</a></li>
+                                                <li><a href="#">Бестселери</a></li>
+                                                <li>
+                                                    <a href="#">Фільми та мультики для дітей</a>
+                                                </li>
+                                                <li><a href="#">Фільми для всієї сім'ї</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Авто, мото<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Запчастини та аксесуари</a></li>
+                                                <li>
+                                                    <a href="#">Легкові та вантажні автомобілі</a>
+                                                </li>
+                                                <li><a href="#">Мотоцикли</a></li>
+                                                <li><a href="#">Велосипеди</a></li>
+                                                <li><a href="#">Самокати</a></li>
+                                                <li><a href="#">Інші види транспорту</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items large">
+                                            <span class="category-title"
+                                                >Вироби своїми руками<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Декорування тканин</a></li>
+                                                <li><a href="#">Шиття</a></li>
+                                                <li><a href="#">Рукоділля</a></li>
+                                                <li><a href="#">В'язання спицями та гачком</a></li>
+                                                <li><a href="#">Гравюра</a></li>
+                                                <li><a href="#">Крафтінг</a></li>
+                                                <li>
+                                                    <a href="#"
+                                                        >Бісероплетіння та виготовлення ювелірних
+                                                        виробів</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        >Приладдя для живопису та малювання</a
+                                                    >
+                                                </li>
+                                                <li><a href="#">Вишивання</a></li>
+                                                <li><a href="#">Гончарні вироби</a></li>
+                                                <li><a href="#">Антикваріат</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Зоотовари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Корм для тварин</a></li>
+                                                <li><a href="#">Акваріуми</a></li>
+                                                <li><a href="#">Клітки для птахів</a></li>
+                                                <li><a href="#">Іграшки</a></li>
+                                                <li><a href="#">Все для догляду</a></li>
+                                                <li><a href="#">Одяг</a></li>
+                                                <li><a href="#">Аксесуари</a></li>
+                                                <li><a href="#">Посуд</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Будівництво<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Інструменти та обладнання</a></li>
+                                                <li><a href="#">Сантехніка</a></li>
+                                                <li><a href="#">Будівельні матеріали</a></li>
+                                                <li><a href="#">Інтер'єр та оздоблення</a></li>
+                                                <li><a href="#">Обладнання для бізнесу</a></li>
+                                                <li><a href="#">Сировина</a></li>
+                                            </ul>
+                                        </li>
+                                        <div class="catalog-container__items">
+                                            <li class="menu-category">
+                                                <span class="category-title">Нерухомість</span>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title">Подорожі</span>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title">Аукціони</span>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Щоденні пропозиції</a>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Подарункові картки</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Подарункові картки</a></li>
+                                        <li><a href="#">З нагоди</a></li>
+                                        <li><a href="#">Топ подарунків</a></li>
+                                        <li><a href="#">Знайти подарунок</a></li>
+                                        <li><a href="#">Фізичні картки</a></li>
+                                        <li><a href="#">Електронні картки</a></li>
+                                        <li><a href="#">Картки гуртом</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu4.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Продати</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Перші кроки</a></li>
+                                        <li><a href="#">Правила та політика</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Маркетинг</a></li>
+                                        <li><a href="#">Керування оголошеннями</a></li>
+                                        <li><a href="#">Оновлення продавця</a></li>
+                                        <li><a href="#">Партнери agora</a></li>
+                                        <li><a href="#">Продуктивність продавця</a></li>
+                                        <li><a href="#">Збори, податки та платежі</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu3.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Збережено</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Одяг</a></li>
+                                        <li><a href="#">Зоотовари</a></li>
+                                        <li><a href="#">Взуття</a></li>
+                                        <li><a href="#">Електроніка</a></li>
+                                        <li><a href="#">Дітям</a></li>
+                                        <li><a href="#">Будівництво</a></li>
+                                        <li><a href="#">Аксесуари</a></li>
+                                        <li><a href="#">Авто, мото</a></li>
+                                        <li><a href="#">Товари для дому</a></li>
+                                        <li><a href="#">Спортивні товари</a></li>
+                                        <li><a href="#">Краса та здоров'я</a></li>
+                                        <li><a href="#">Вироби своїми руками</a></li>
+                                        <li><a href="#">Дім і сад</a></li>
+                                        <li><a href="#">Фільми та телебачення</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu2.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Обслуговування клієнтів</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Товар</a></li>
+                                        <li><a href="#">Подарункові картки</a></li>
+                                        <li><a href="#">Оплата</a></li>
+                                        <li><a href="#">Технічні проблеми</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Повернення та рекламації</a></li>
+                                        <li><a href="#">Замовлення</a></li>
+                                        <li><a href="#">Центр обслуговування</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu1.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main main-product">
+            <div class="container product-container">
+                <nav
+                    class="breadcrumb-nav breadcrumb-nav__static"
+                    aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Одяг</a></li>
+                        <li class="breadcrumb-item"><a href="/zhinkam">Жінкам</a></li>
+                        <li class="breadcrumb-item"><a href="/bilizna">Спідня білизна</a></li>
+                        <li
+                            class="breadcrumb-item active"
+                            aria-current="page">
+                            Трусики
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="product-page__inner">
+                    <div class="product__image-block">
+                        <div class="prod-gallery">
+                            <!-- Thumbs Swiper -->
+                            <div class="swiper swiper-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-1.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-2.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-3.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-4.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-5.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-6.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-7.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-8.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-9.png"
+                                            alt="slider image" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Main Swiper -->
+                            <div class="swiper swiper-main">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-1.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-2.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-3.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-4.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-5.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-6.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-7.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-8.png"
+                                            alt="slider image" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./assets/images/image-9.png"
+                                            alt="slider image" />
+                                    </div>
+                                </div>
+                                <!-- Pagination for mobile -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__buy-block">
+                        <div class="buy-info">
+                            <span class="in_stock">В наявності</span>
+                            <h1 class="buy-title">
+                                Сильна корекція стягуючі безшовні труси-корсети корегуючі трусики
+                                післяродовий бандаж 2112
+                            </h1>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span
+                                    ><span>☆</span>
+                                </div>
+                                <span class="review-count">(8)</span>
+                            </div>
+                            <div class="buy-price">399 грн</div>
+                        </div>
+                        <div class="buy-sizes">
+                            <p>Розміри:</p>
+                            <div class="buy-sizes__inner">
+                                <button class="tips">32 / XXS / 40</button>
+                                <button class="tips">34 / XS / 42</button>
+                                <button class="tips">36 / S / 44</button>
+                                <button class="tips">38 / M / 46</button>
+                                <button class="tips">40 / L / 48</button>
+                                <button class="tips">42 / XL / 50</button>
+                                <button class="tips">44 / XXL / 52</button>
+                            </div>
+                        </div>
+                        <div class="buy-add_info">
+                            <div class="buy-add_info-block">
+                                <div class="add_info-title">
+                                    <img
+                                        src="./assets/icons/leaf.svg"
+                                        alt="icon" />1 Сертифікація сталого розвитку
+                                </div>
+                                <div class="add_info-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow icon" />
+                                </div>
+                            </div>
+                            <div class="cert_popup-overlay"></div>
+                            <div
+                                class="cert_popup-content"
+                                id="cert_popup">
+                                <p class="cert_popup-title">
+                                    <img
+                                        src="./assets/icons/leaf.svg"
+                                        alt="leaf icon" />
+                                    Сертифікати сталого розвитку
+                                </p>
+                                <p class="cert_popup-subtitle">
+                                    Продукти перевірені сертифікатами сталого розвитку.
+                                </p>
+
+                                <p class="cert_popup-section-title">Сертифікація продукції (1)</p>
+
+                                <div class="cert-block">
+                                    <img
+                                        src="./assets/icons/sert-icon.png"
+                                        alt="GreenCircle" />
+                                    <div class="cert-text">
+                                        <span class="cert-bold"
+                                            >Сертифіковано GreenCircle: Сертифікована етикетка
+                                            екологічних фактів<br
+                                        /></span>
+                                        <span class="cert-desc">
+                                            перевіряє зменшення вуглецевого сліду продукту на етапі
+                                            сировини або виробництва.</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="climate-title">CLIMATE PLEDGE FRIENDLY</div>
+                                <p class="cert_popup-description">
+                                    Відкрийте для себе більше продуктів із характеристиками сталого
+                                    розвитку.
+                                </p>
+
+                                <a
+                                    href="#"
+                                    class="learn-more"
+                                    >Дізнатися більше</a
+                                >
+                            </div>
+                        </div>
+                        <div class="buy-order">
+                            <button class="btn buy-btn">Купити</button>
+                            <button class="btn btn-outline cart-btn">Додати в кошик</button>
+                        </div>
+                        <div class="buy-other">
+                            <div class="wishlis-info">
+                                <span class="wishlis-count">19</span>
+                                <button>
+                                    <svg
+                                        width="29"
+                                        height="23"
+                                        viewBox="0 0 29 23"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.4432 1.17962C11.5043 1.63989 13.7576 4.41478 14.5016 5.56546C15.1394 4.41478 17.0523 1.75498 19.9221 1.17962C23.7485 0.412476 26.5672 2.20748 27.5748 4.63167C28.5314 6.93303 27.5748 10.2057 27.5748 10.2057C27.5748 10.2057 24.3098 18.2605 14.5016 22.0002C4.03804 18.3481 -0.484999 9.23443 1.42815 4.63167C1.78687 3.76865 3.65996 0.460412 8.4432 1.17962Z"
+                                            stroke="black"
+                                            stroke-opacity="0.8"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <span class="wishlis-text">Збережено</span>
+                            </div>
+                            <a
+                                href="#"
+                                class="ask-info">
+                                <img
+                                    src="./assets/icons/dialog.svg"
+                                    alt="icon" />Поставити запитання
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product__salesman-block">
+                        <div class="salesman-block_title">Продавець</div>
+                        <div class="salesman-block_info">
+                            <img
+                                src="./assets/images/avatar.png"
+                                alt="avatar" />
+                            <div class="salesman-block_info-desc">
+                                <span class="salesman-block_info-name">milax ua</span>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span
+                                        ><span>☆</span>
+                                    </div>
+                                    <span class="review-rate">5.0</span>
+                                    <span class="review-count">(220 оцінок)</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <img
+                                            src="./assets/icons/geo-dark.svg"
+                                            alt="geo icon" />Львів
+                                    </li>
+                                    <li>
+                                        <img
+                                            src="./assets/icons/bag.svg"
+                                            alt="bag icon" />77% виконаних замовлень
+                                    </li>
+                                    <li>
+                                        <img
+                                            src="./assets/icons/clock.svg"
+                                            alt="clock icon" />Була 3 години тому
+                                    </li>
+                                    <li>
+                                        <img
+                                            src="./assets/icons/dialog.svg"
+                                            alt="dialog icon" />Відповідає протягом доби
+                                    </li>
+                                </ul>
+                                <div class="size-table__block">
+                                    <div class="size-table__title">
+                                        <span>Таблиця розмірів</span>
+                                        <div class="open-size-popup">
+                                            <img
+                                                src="./assets/icons/arrow.svg"
+                                                alt="arrow" />
+                                        </div>
+                                    </div>
+                                    <div class="size-table">
+                                        <div class="size_popup-overlay"></div>
+                                        <div
+                                            class="size_popup-content"
+                                            id="size_popup">
+                                            <div class="size_popup-inner">
+                                                <p class="size_popup-title">
+                                                    Таблиця розмірів Danskin
+                                                </p>
+                                                <div class="size_popup-info">
+                                                    <p class="size_popup-subtitle">
+                                                        ЗВИЧАЙНІ РОЗМІРИ ТІЛА (US REGULAR)
+                                                    </p>
+                                                    <div class="size_table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Розмір бренду</th>
+                                                                    <th>Розмір США</th>
+                                                                    <th>Талія (дюйм)</th>
+                                                                    <th>Стегно (дюйм)</th>
+                                                                    <th>Внутрішній шов (дюйм)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>XS</td>
+                                                                    <td>XS</td>
+                                                                    <td>23 - 25</td>
+                                                                    <td>34 - 36</td>
+                                                                    <td>26,2 - 31</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>S</td>
+                                                                    <td>S</td>
+                                                                    <td>25 - 27</td>
+                                                                    <td>36 - 38</td>
+                                                                    <td>26,8 - 31,5</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>M</td>
+                                                                    <td>M</td>
+                                                                    <td>27 - 29</td>
+                                                                    <td>38 - 40</td>
+                                                                    <td>27,2 - 32</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>L</td>
+                                                                    <td>L</td>
+                                                                    <td>29 - 31</td>
+                                                                    <td>40 - 42</td>
+                                                                    <td>27,8 - 32,5</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XL</td>
+                                                                    <td>XL</td>
+                                                                    <td>31 - 33</td>
+                                                                    <td>42 - 44</td>
+                                                                    <td>28,2 - 33</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <p class="size_popup-subtitle">
+                                                        США PLUS-SIZE (ВИМІРИ ТІЛА)
+                                                    </p>
+                                                    <div class="size_table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Розмір бренду</th>
+                                                                    <th>Розмір США</th>
+                                                                    <th>Талія (дюйм)</th>
+                                                                    <th>Стегно (дюйм)</th>
+                                                                    <th>Внутрішній шов (дюйм)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1X</td>
+                                                                    <td>1X</td>
+                                                                    <td>35 - 37</td>
+                                                                    <td>46 - 48</td>
+                                                                    <td>25 - 31,5</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2X</td>
+                                                                    <td>2X</td>
+                                                                    <td>37 - 39</td>
+                                                                    <td>48 - 50</td>
+                                                                    <td>25,4 - 32</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3X</td>
+                                                                    <td>3X</td>
+                                                                    <td>40 - 42</td>
+                                                                    <td>51 - 53</td>
+                                                                    <td>25,8 - 32,5</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__desc-block">
+                        <div class="product__desc-info">
+                            <h2 class="product__desc-title">Опис</h2>
+                            <ul>
+                                <li>Високі стягувальні труси-корсети.</li>
+                                <li>Послідовна та післяопераційна білизна.</li>
+                                <li>Прекрасна заводська якість коригувальної білизни.</li>
+                                <li>Колір: бежевий</li>
+                                <li>Розміри: ХL, ХХL, ХХXL</li>
+                                <li>
+                                    Еластичні мереживні труси корсетні допоможуть підкоригувати тіло
+                                    без дискомфорту.
+                                </li>
+                                <li>Гарне рішення для підтягування живота після пологів.</li>
+                            </ul>
+                        </div>
+                        <div class="product__desc-img">
+                            <img
+                                src="./assets/images/desc-img.png"
+                                alt="product image" />
+                        </div>
+                    </div>
+                    <div class="product__other-block">
+                        <div class="product-data">
+                            <div class="product-data__item">
+                                <p class="product-data__title">Стан:</p>
+                                <p class="product-data__text">Новий</p>
+                            </div>
+                            <div class="product-data__item">
+                                <p class="product-data__title">Колір:</p>
+                                <p class="product-data__text">
+                                    <span class="color-circle"></span>Бежевий
+                                </p>
+                            </div>
+                            <div class="product-data__item">
+                                <p class="product-data__title">Категорії:</p>
+                                <p class="product-data__text">
+                                    <span>
+                                        <a href="/bilizna">Спідня білизна</a>
+                                    </span>
+                                    <span> Трусики </span>
+                                </p>
+                            </div>
+                            <div class="product-data__item">
+                                <p class="product-data__title">Матеріал:</p>
+                                <p class="product-data__text">Еластан</p>
+                            </div>
+                            <div class="product-data__item">
+                                <p class="product-data__title">Догляд:</p>
+                                <p class="product-data__text">Машинне й ручне прання</p>
+                            </div>
+                            <div class="prod-divider"></div>
+                            <div class="product-data__item share-block">
+                                <p class="product-data__title">Поділитися:</p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            aria-hidden="true"
+                                            ><img
+                                                src="./assets/icons/fb.svg"
+                                                alt="facebook"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            aria-hidden="true"
+                                            ><img
+                                                src="./assets/icons/insta.svg"
+                                                alt="instagram"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            aria-hidden="true"
+                                            ><img
+                                                src="./assets/icons/tg.svg"
+                                                alt="telegram"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            aria-hidden="true"
+                                            ><img
+                                                src="./assets/icons/message.svg"
+                                                alt="messenger"
+                                        /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-tips">
+                            <h2 class="product-tips__title">Також шукають:</h2>
+                            <div class="tips-inner">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Комплекти</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Пеньюари</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Трусики рюши</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Бюстгальтери</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Трусики танга</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Корсети</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Трусики бавовняні американка</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Бразиліано</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Бікіні</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Тонг</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Комбітреси</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Хіпстери</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Шорти</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Сліпи</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Ретро</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="tips"
+                                            >Еротична білизна</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__related-block">
+                        <p class="product-data__title">Ще продаю:</p>
+                        <div class="product__related-inner">
+                            <div class="product-card">
+                                <a
+                                    href="#"
+                                    class="product-image">
+                                    <img
+                                        src="./assets/images/related-1.png"
+                                        alt="Пеньюар Жіночий прозорий з мереживом сексуальний" />
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-price-like">
+                                        <span class="price">149 грн</span>
+                                        <div class="like">
+                                            <span>7</span>
+                                            <svg
+                                                width="29"
+                                                height="23"
+                                                viewBox="0 0 29 23"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4432 1.17938C11.5043 1.63965 13.7576 4.41453 14.5016 5.56522C15.1394 4.41453 17.0523 1.75474 19.9221 1.17938C23.7485 0.412232 26.5672 2.20723 27.5748 4.63143C28.5314 6.93278 27.5748 10.2055 27.5748 10.2055C27.5748 10.2055 24.3098 18.2603 14.5016 22C4.03804 18.3478 -0.484999 9.23419 1.42815 4.63143C1.78687 3.76841 3.65996 0.460168 8.4432 1.17938Z"
+                                                    stroke="black"
+                                                    stroke-opacity="0.8"
+                                                    stroke-width="1.5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="product-title">
+                                        Топ із чашами з відстібними лямками
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <a
+                                    href="#"
+                                    class="product-image">
+                                    <img
+                                        src="./assets/images/related-2.png"
+                                        alt="Жіночий наручний годинник" />
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-price-like">
+                                        <span class="price">247 грн</span>
+                                        <div class="like">
+                                            <span>2</span>
+                                            <svg
+                                                width="29"
+                                                height="23"
+                                                viewBox="0 0 29 23"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4432 1.17938C11.5043 1.63965 13.7576 4.41453 14.5016 5.56522C15.1394 4.41453 17.0523 1.75474 19.9221 1.17938C23.7485 0.412232 26.5672 2.20723 27.5748 4.63143C28.5314 6.93278 27.5748 10.2055 27.5748 10.2055C27.5748 10.2055 24.3098 18.2603 14.5016 22C4.03804 18.3478 -0.484999 9.23419 1.42815 4.63143C1.78687 3.76841 3.65996 0.460168 8.4432 1.17938Z"
+                                                    stroke="black"
+                                                    stroke-opacity="0.8"
+                                                    stroke-width="1.5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="product-title">
+                                        Жіночий наручний годинник
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <a
+                                    href="#"
+                                    class="product-image">
+                                    <img
+                                        src="./assets/images/related-3.png"
+                                        alt="Набор прикрас + годинник" />
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-price-like">
+                                        <span class="price">327 грн</span>
+                                        <div class="like">
+                                            <span>7</span>
+                                            <svg
+                                                width="29"
+                                                height="23"
+                                                viewBox="0 0 29 23"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4432 1.17938C11.5043 1.63965 13.7576 4.41453 14.5016 5.56522C15.1394 4.41453 17.0523 1.75474 19.9221 1.17938C23.7485 0.412232 26.5672 2.20723 27.5748 4.63143C28.5314 6.93278 27.5748 10.2055 27.5748 10.2055C27.5748 10.2055 24.3098 18.2603 14.5016 22C4.03804 18.3478 -0.484999 9.23419 1.42815 4.63143C1.78687 3.76841 3.65996 0.460168 8.4432 1.17938Z"
+                                                    stroke="black"
+                                                    stroke-opacity="0.8"
+                                                    stroke-width="1.5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="product-title">
+                                        Набор прикрас + годинник
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <a
+                                    href="#"
+                                    class="product-image">
+                                    <img
+                                        src="./assets/images/related-4.png"
+                                        alt="Жіночі корсетні трусики з утяжкою" />
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-price-like">
+                                        <span class="price">142 грн</span>
+                                        <div class="like">
+                                            <span>5</span>
+                                            <svg
+                                                width="29"
+                                                height="23"
+                                                viewBox="0 0 29 23"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4432 1.17938C11.5043 1.63965 13.7576 4.41453 14.5016 5.56522C15.1394 4.41453 17.0523 1.75474 19.9221 1.17938C23.7485 0.412232 26.5672 2.20723 27.5748 4.63143C28.5314 6.93278 27.5748 10.2055 27.5748 10.2055C27.5748 10.2055 24.3098 18.2603 14.5016 22C4.03804 18.3478 -0.484999 9.23419 1.42815 4.63143C1.78687 3.76841 3.65996 0.460168 8.4432 1.17938Z"
+                                                    stroke="black"
+                                                    stroke-opacity="0.8"
+                                                    stroke-width="1.5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="product-title">
+                                        Жіночі корсетні трусики з утяжкою
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a
+                            href="#"
+                            class="product__related-link"
+                            >Всі товари продавця
+                            <img
+                                src="./assets/icons/arrow.svg"
+                                alt="arrrow"
+                        /></a>
+                    </div>
+                    <div class="product__reviews-block">
+                        <div class="product__reviews-title">
+                            <h2>Відгуки про товар</h2>
+                            <a
+                                href="#"
+                                class="btn btn-outline"
+                                >Залишити відгук</a
+                            >
+                        </div>
+                        <div class="product__reviews-list">
+                            <div class="product__reviews-item">
+                                <p class="product__reviews-item_name">kabat1</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span
+                                        ><span>★</span>
+                                    </div>
+                                </div>
+                                <p class="product__reviews-item_text">Усе супер, дякую 😊</p>
+                                <div class="review-divider"></div>
+                            </div>
+                            <div class="product__reviews-item">
+                                <p class="product__reviews-item_name">PIEPER</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span
+                                        ><span>★</span>
+                                    </div>
+                                </div>
+                                <p class="product__reviews-item_text">
+                                    Дякую. Річ відповідає опису. Продавець кваліфікований і
+                                    ввічливий. Рекомендую!
+                                </p>
+                                <div class="review-divider"></div>
+                            </div>
+                            <div class="product__reviews-item">
+                                <p class="product__reviews-item_name">natali77</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span
+                                        ><span>★</span>
+                                    </div>
+                                </div>
+                                <p class="product__reviews-item_text">
+                                    Чудовий продавець! 😊 Білизна - просто казка! 👍
+                                </p>
+                                <div class="review-divider"></div>
+                            </div>
+                        </div>
+                        <a
+                            href="#"
+                            class="btn btn-outline"
+                            >Дивитись всі відгуки</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__inner-item footer__menu1">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Про компанію</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Рекламуй свою продукцію</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Стати партнером</a>
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--phone">
+                                <a
+                                    href="tel:+380972291449"
+                                    class="footer__menu-link"
+                                    >+38 (097) 229 14 49</a
+                                >
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--address">
+                                Херсонська обл., м. Берислав, вул. Журавлинська, 54
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--email">
+                                <a
+                                    href="mailto:sakalvictoria_br@gmail.com"
+                                    class="footer__menu-link">
+                                    sakalvictoria_br@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__menu2">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Допомога</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Про agora</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Товари і замовлення</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Акції</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__menu3">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Доставка</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Повернення</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Контакти</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Угода користувача</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Політика конфіденсійності</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Політика кукі файлів</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__payments">
+                        <a
+                            href="#"
+                            class="footer__payments-item">
+                            <img
+                                src="./assets/icons/apple.svg"
+                                alt="app store"
+                                aria-hidden="true" />
+                            <p><span>Download on the</span> App Store</p>
+                        </a>
+                        <a
+                            href="#"
+                            class="footer__payments-item">
+                            <img
+                                src="./assets/icons/goo-app.svg"
+                                alt="google app"
+                                aria-hidden="true" />
+                            <p><span>Download on the</span> Google Play</p>
+                        </a>
+                    </div>
+                    <div class="footer__inner-item footer__socials">
+                        <a
+                            href="/"
+                            class="footer-logo">
+                            <img
+                                src="./assets/icons/logo-footer.svg"
+                                alt="logo" />
+                        </a>
+                        <p>Ми в соцмережах</p>
+                        <ul>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/fb.svg"
+                                        alt="facebook"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/insta.svg"
+                                        alt="instagram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/tg.svg"
+                                        alt="telegram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/message.svg"
+                                        alt="messenger"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__code">
+                        <img
+                            src="./assets/icons/code.png"
+                            alt="code" />
+                        <a
+                            href="#"
+                            aria-hidden="true"
+                            >www.agora.com</a
+                        >
+                    </div>
+                    <div class="footer__inner-item footer__copyright">
+                        <p>
+                            <span>Речі за викликом серця. Всі права захищені</span>
+                            <a
+                                href="#"
+                                href="https://agora.ua"
+                                target="_blank">
+                                &copy; 2025 agora.ua</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="overlay"></div>
+        <div class="popup">
+            <div class="popup-bg">
+                <img
+                    src="./assets/images/popup-bg.jpg"
+                    alt="background" />
+            </div>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <button
+                        class="popup-tab active"
+                        data-tab="login">
+                        Вхід
+                    </button>
+                    <button
+                        class="popup-tab"
+                        data-tab="register">
+                        Реєстрація
+                    </button>
+                </div>
+                <div class="popup-body">
+                    <!-- Вхід -->
+                    <div
+                        class="popup-section"
+                        id="login"
+                        style="display: block">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Увійти</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                            <a
+                                href="#"
+                                class="forgot-password"
+                                >Не можете увійти?</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Реєстрація -->
+                    <div
+                        class="popup-section"
+                        id="register">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Зареєструватися</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Зміна пароля -->
+                    <div
+                        class="popup-section"
+                        id="forgot-password">
+                        <form>
+                            <label>Новий пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть новий пароль" />
+                            <label>Підтвердити пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Підтвердьте новий пароль" />
+                            <button class="btn-primary">Далі</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
