@@ -2492,9 +2492,14 @@ header {
     color: rgba(0, 0, 0, 0.85);
 }
 
-.wishlis-info svg {
-    height: 23px;
-    margin: 0 20px 0 8px;
+.wishlis-btn svg {
+    height: 21px;
+    width: 23px;
+    margin: 0 20px 0 6px;
+}
+
+.wishlis-btn.active svg {
+    fill: #482b1e;
 }
 
 .salesman-block_title {
@@ -2883,6 +2888,10 @@ td {
 }
 
 .product-adv {
+    display: none;
+}
+
+.product__reviews-block .btn img {
     display: none;
 }
 
@@ -4915,7 +4924,7 @@ td {
         align-items: flex-end;
     }
 
-    .wishlis-info svg {
+    .wishlis-btn svg {
         height: 15px;
         width: 21px;
         margin: 0 12px 0 2px;

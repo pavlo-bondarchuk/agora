@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Size table popup
-    const openSizeButtons = document.querySelectorAll('.open-size-popup');
+    const openSizeButtons = document.querySelectorAll('.size-table__title');
     const sizePopups = document.querySelectorAll('#size_popup');
     const sizeOverlays = document.querySelectorAll('.size_popup-overlay');
 
@@ -354,6 +354,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     sizeOverlays[index].classList.remove('active');
                 }
             });
+        });
+    }
+
+    // Wishlist count
+    const wishlistBtn = document.querySelector('.wishlis-btn');
+    const wishlistCount = document.querySelector('.wishlis-count');
+
+    if (wishlistBtn && wishlistCount) {
+        wishlistBtn.addEventListener('click', function () {
+            let count = parseInt(wishlistCount.textContent, 10);
+
+            if (wishlistBtn.classList.contains('active')) {
+                wishlistBtn.classList.remove('active');
+                wishlistCount.textContent = Math.max(count - 1, 0);
+            } else {
+                wishlistBtn.classList.add('active');
+                wishlistCount.textContent = count + 1;
+            }
         });
     }
 
