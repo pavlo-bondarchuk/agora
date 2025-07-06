@@ -2521,6 +2521,10 @@ header {
     color: rgba(0, 0, 0, 0.85);
 }
 
+.add_info-btn {
+    cursor: pointer;
+}
+
 .salesman-block_info img {
     width: 53px;
     height: 53px;
@@ -2570,6 +2574,7 @@ header {
     border-bottom: 0.50px solid rgba(0, 0, 0, 0.6);
     width: fit-content;
     padding-top: 2px;
+    cursor: pointer;
 }
 
 .size-table__title img {
@@ -2646,7 +2651,6 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
-    cursor: pointer;
 }
 
 thead {
