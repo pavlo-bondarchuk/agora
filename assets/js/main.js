@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
 
-        const mainSwiper = new Swiper(mainContainer, {
+        const mainSwiperOptions = {
             spaceBetween: 10,
             pagination: {
                 el: '.swiper-pagination',
@@ -182,7 +182,17 @@ document.addEventListener('DOMContentLoaded', function () {
             thumbs: {
                 swiper: thumbsSwiper,
             },
-        });
+        };
+
+        // Добавляем autoplay только для мобильных
+        if (window.innerWidth < 768) {
+            mainSwiperOptions.autoplay = {
+                delay: 3000,
+                disableOnInteraction: false,
+            };
+        }
+
+        const mainSwiper = new Swiper(mainContainer, mainSwiperOptions);
     }
 
     // Expand/collapse categories
@@ -323,19 +333,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Size table popup
-    const openSizeBtn = document.querySelector('.open-size-popup');
-    const sizePopup = document.getElementById('size_popup');
-    const sizeOverlay = document.querySelector('.size_popup-overlay');
+    const openSizeButtons = document.querySelectorAll('.open-size-popup');
+    const sizePopups = document.querySelectorAll('#size_popup');
+    const sizeOverlays = document.querySelectorAll('.size_popup-overlay');
 
-    if (openSizeBtn && sizePopup) {
-        openSizeBtn.addEventListener('click', () => {
-            sizePopup.classList.add('active');
-            sizeOverlay.classList.add('active');
+    if (openSizeButtons.length && sizePopups.length && sizeOverlays.length) {
+        openSizeButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                // Для каждой кнопки активируем соответствующий попап и оверлей
+                sizePopups[index].classList.add('active');
+                sizeOverlays[index].classList.add('active');
+            });
         });
 
-        sizeOverlay.addEventListener('click', () => {
-            sizePopup.classList.remove('active');
-            sizeOverlay.classList.remove('active');
+        sizeOverlays.forEach((overlay, index) => {
+            overlay.addEventListener('click', (e) => {
+                // Закрытие только если клик вне попапа
+                if (!e.target.closest('.size_popup-content')) {
+                    sizePopups[index].classList.remove('active');
+                    sizeOverlays[index].classList.remove('active');
+                }
+            });
         });
     }
 
