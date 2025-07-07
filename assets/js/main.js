@@ -375,6 +375,186 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Favorites tab images
+    const productCards = document.querySelectorAll('.product-card');
+
+    productCards.forEach((card) => {
+        const colorCircles = card.querySelectorAll('.color-circle');
+        const images = card.querySelectorAll('.product-image img');
+
+        if (!images.length) return;
+
+        images.forEach((img, index) => {
+            img.style.display = index === 0 ? 'block' : 'none';
+        });
+
+        if (!colorCircles.length) return;
+
+        colorCircles.forEach((circle) => {
+            circle.addEventListener('click', () => {
+                const selectedColor = circle.dataset.color;
+                if (!selectedColor) return;
+
+                images.forEach((img) => {
+                    img.style.display = 'none';
+                });
+
+                const matchedImage = card.querySelector(
+                    `.product-image img[data-color="${selectedColor}"]`,
+                );
+                if (matchedImage) {
+                    matchedImage.style.display = 'block';
+                }
+            });
+        });
+    });
+
+    // Empty cart popup
+    const deleteBtn = document.getElementById('delete-button');
+    const emptyCartPopup = document.getElementById('empty-cart');
+    const popupOverlay = document.querySelector('.popup-overlay');
+
+    if (deleteBtn && emptyCartPopup && popupOverlay) {
+        deleteBtn.addEventListener('click', () => {
+            emptyCartPopup.classList.toggle('active');
+            popupOverlay.classList.toggle('active');
+        });
+
+        popupOverlay.addEventListener('click', () => {
+            emptyCartPopup.classList.remove('active');
+            popupOverlay.classList.remove('active');
+        });
+    }
+
+    // Filter-menu - wishlist page
+
+    const filterBtn = document.getElementById('filter-button');
+    const menu = document.getElementById('filter-menu');
+    const breadcrumbs = document.getElementById('menu-breadcrumbs');
+
+    const historyStack = [];
+
+    if (filterBtn && menu && popupOverlay) {
+        filterBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            popupOverlay.classList.toggle('active');
+
+            // Reset to first level (no breadcrumbs)
+            historyStack.length = 0;
+            showFirstMenu();
+            renderBreadcrumbs();
+        });
+
+        popupOverlay.addEventListener('click', () => {
+            menu.classList.remove('active');
+            popupOverlay.classList.remove('active');
+            historyStack.length = 0;
+            renderBreadcrumbs();
+        });
+    }
+
+    const links = document.querySelectorAll('.menu-level a[data-target]');
+
+    links.forEach((link) => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.dataset.target;
+            const targetMenu = document.getElementById(targetId);
+
+            if (targetMenu) {
+                hideAllMenus();
+                targetMenu.dataset.active = 'true';
+
+                const currentLabel = this.textContent.trim();
+                historyStack.push({ id: targetId, label: currentLabel });
+
+                renderBreadcrumbs();
+            }
+        });
+    });
+
+    function hideAllMenus() {
+        document.querySelectorAll('.menu-level').forEach((menu) => {
+            menu.dataset.active = 'false';
+        });
+    }
+
+    function showFirstMenu() {
+        const firstMenu = document.querySelector('.menu-level[data-level="1"]');
+        if (firstMenu) {
+            hideAllMenus();
+            firstMenu.dataset.active = 'true';
+        }
+    }
+
+    function renderBreadcrumbs() {
+        breadcrumbs.innerHTML = '';
+
+        historyStack.forEach((crumb, index) => {
+            const span = document.createElement('span');
+            span.classList.add('crumb');
+            span.textContent = crumb.label;
+            span.style.cursor = 'pointer';
+
+            span.addEventListener('click', () => {
+                // Get ID of menu to show before trimming stack
+                const targetId = crumb.id;
+
+                // Trim stack
+                historyStack.splice(index + 1);
+
+                // Show menu by saved ID
+                showMenuById(targetId);
+
+                renderBreadcrumbs();
+            });
+
+            breadcrumbs.appendChild(span);
+
+            // Add › after each
+            const separator = document.createElement('span');
+            separator.textContent = ' › ';
+            breadcrumbs.appendChild(separator);
+        });
+    }
+
+    function showMenuById(id) {
+        hideAllMenus();
+        const targetMenu = document.getElementById(id);
+        if (targetMenu) {
+            targetMenu.dataset.active = 'true';
+        } else {
+            showFirstMenu(); // fallback
+        }
+    }
+
+    // Favorites page See more products
+    const items = document.querySelectorAll('.favorites-list__item');
+    const btn = document.querySelector('.product-more-btn');
+    const batchSize = 5; // Number of items to show per batch
+    let visibleCount = 0; // Counter for how many items are currently visible
+
+    function showNextBatch() {
+        // Show the next batch of items
+        for (let i = visibleCount; i < visibleCount + batchSize && i < items.length; i++) {
+            items[i].style.display = 'block';
+        }
+
+        visibleCount += batchSize;
+
+        // Hide the button if all items are visible
+        if (visibleCount >= items.length) {
+            btn.style.display = 'none';
+        }
+    }
+
+    // Show the initial batch of items
+    showNextBatch();
+
+    // Button click handler
+    btn?.addEventListener('click', showNextBatch);
+
     // Filter
     const filterSections = document.querySelectorAll('.filter-section');
 
