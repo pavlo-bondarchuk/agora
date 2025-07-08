@@ -418,13 +418,21 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteBtn.addEventListener('click', () => {
             emptyCartPopup.classList.toggle('active');
             popupOverlay.classList.toggle('active');
-            body.style.overflow = 'hidden';
+
+            // Apply overflow only on small screens
+            if (window.innerWidth < 460) {
+                document.body.style.overflow = 'hidden';
+            }
         });
 
         popupOverlay.addEventListener('click', () => {
             emptyCartPopup.classList.remove('active');
             popupOverlay.classList.remove('active');
-            body.style.overflow = '';
+
+            // Reset overflow only on small screens
+            if (window.innerWidth < 460) {
+                document.body.style.overflow = '';
+            }
         });
     }
 
