@@ -418,11 +418,13 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteBtn.addEventListener('click', () => {
             emptyCartPopup.classList.toggle('active');
             popupOverlay.classList.toggle('active');
+            body.style.overflow = 'hidden';
         });
 
         popupOverlay.addEventListener('click', () => {
             emptyCartPopup.classList.remove('active');
             popupOverlay.classList.remove('active');
+            body.style.overflow = '';
         });
     }
 
