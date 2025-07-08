@@ -439,6 +439,12 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.classList.toggle('active');
             popupOverlay.classList.toggle('active');
 
+            if (window.innerWidth < 460) {
+                popupOverlay.style.backgroundColor = 'transparent';
+            } else {
+                popupOverlay.style.backgroundColor = '';
+            }
+
             // Reset to first level (no breadcrumbs)
             historyStack.length = 0;
             showFirstMenu();
@@ -532,28 +538,39 @@ document.addEventListener('DOMContentLoaded', function () {
     // Favorites page See more products
     const items = document.querySelectorAll('.favorites-list__item');
     const btn = document.querySelector('.product-more-btn');
-    const batchSize = 5; // Number of items to show per batch
-    let visibleCount = 0; // Counter for how many items are currently visible
+    const batchSize = 5;
+    let visibleCount = 0;
 
+    // Function to show the next batch of items
     function showNextBatch() {
-        // Show the next batch of items
         for (let i = visibleCount; i < visibleCount + batchSize && i < items.length; i++) {
             items[i].style.display = 'block';
         }
 
         visibleCount += batchSize;
 
-        // Hide the button if all items are visible
-        if (visibleCount >= items.length) {
+        if (visibleCount >= items.length && btn) {
             btn.style.display = 'none';
         }
     }
 
-    // Show the initial batch of items
-    showNextBatch();
+    // Initialize only on screens less than 520px
+    function initMobileList() {
+        if (window.innerWidth < 520 && items.length > 0 && btn) {
+            // Hide all items initially
+            items.forEach((item) => (item.style.display = 'none'));
 
-    // Button click handler
-    btn?.addEventListener('click', showNextBatch);
+            // Reset count and show first batch
+            visibleCount = 0;
+            btn.style.display = 'block';
+            showNextBatch();
+
+            // Attach button handler
+            btn.addEventListener('click', showNextBatch);
+        }
+    }
+
+    initMobileList();
 
     // Filter
     const filterSections = document.querySelectorAll('.filter-section');
