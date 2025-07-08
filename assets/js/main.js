@@ -111,6 +111,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    if (document.querySelector('.swiper-giftcard')) {
+        new Swiper('.swiper-giftcard', {
+            loop: true,
+            effect: 'slide',
+        });
+    }
+
     if (document.querySelector('.category-swiper')) {
         new Swiper('.category-swiper', {
             loop: true,
@@ -184,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         };
 
-        // Добавляем autoplay только для мобильных
         if (window.innerWidth < 768) {
             mainSwiperOptions.autoplay = {
                 delay: 3000,
@@ -194,6 +200,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const mainSwiper = new Swiper(mainContainer, mainSwiperOptions);
     }
+
+    //Gift card swiper
+    let giftSwiper = null;
+
+    function initGiftSwiper() {
+        const container = document.querySelector('.gift_category-swiper');
+
+        if (window.innerWidth < 1500) {
+            if (!giftSwiper) {
+                giftSwiper = new Swiper(container, {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    breakpoints: {
+                        560: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1140: {
+                            slidesPerView: 4,
+                        },
+                    },
+                });
+            }
+        } else {
+            if (giftSwiper) {
+                giftSwiper.destroy(true, true);
+                giftSwiper = null;
+            }
+        }
+    }
+
+    window.addEventListener('load', initGiftSwiper);
+    window.addEventListener('resize', initGiftSwiper);
 
     // Expand/collapse categories
     const categoryTitles = document.querySelectorAll('.category-title');
@@ -581,6 +622,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     initMobileList();
+
+    // Gift-card popup
+    const giftCardBtn = document.getElementById('giftcard-popup_open');
+    const giftCardPopup = document.getElementById('giftcard-popup');
+
+    if (giftCardBtn && giftCardPopup && popupOverlay) {
+        giftCardBtn.addEventListener('click', () => {
+            giftCardPopup.classList.toggle('active');
+            popupOverlay.classList.toggle('active');
+        });
+
+        popupOverlay.addEventListener('click', () => {
+            giftCardPopup.classList.remove('active');
+            popupOverlay.classList.remove('active');
+        });
+
+        if (window.innerWidth < 520) {
+            popupOverlay.style.backgroundColor = 'transparent';
+        } else {
+            popupOverlay.style.backgroundColor = '';
+        }
+    }
 
     // Filter
     const filterSections = document.querySelectorAll('.filter-section');
