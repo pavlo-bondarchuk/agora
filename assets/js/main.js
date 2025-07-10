@@ -649,26 +649,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const titles = document.querySelectorAll('.faq_accordion-title');
 
-    if (titles) {
+    if (titles.length) {
         titles.forEach((title) => {
-            title.addEventListener('click', function (e) {
-                e.stopPropagation();
+            title.addEventListener('click', function () {
                 const content = this.nextElementSibling;
+                const isActive = content.classList.contains('active');
 
+                // Закрыть все
                 document.querySelectorAll('.faq_accordion-content.active').forEach((item) => {
                     item.classList.remove('active');
                 });
 
-                content.classList.add('active');
+                // Если текущий не был активен — открыть
+                if (!isActive) {
+                    content.classList.add('active');
+                }
             });
-        });
-
-        document.addEventListener('click', function (e) {
-            if (!e.target.closest('.faq_accordion-content')) {
-                document.querySelectorAll('.faq_accordion-content.active').forEach((item) => {
-                    item.classList.remove('active');
-                });
-            }
         });
     }
 

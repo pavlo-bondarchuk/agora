@@ -7991,11 +7991,20 @@ td {
     }
 
     .contact-form input,
-    .custom-select__trigger,
     .contact-form textarea {
         padding: 11px 8px;
         font-size: 10px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .custom-select {
+        font-size: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .custom-select__trigger {
+        padding: 5.5px 8px;
+        font-size: 10px;
     }
 
     .contact-form input::placeholder,
@@ -8014,10 +8023,9 @@ td {
         line-height: normal;
     }
 
-    .contact-form input,
-    .custom-select__trigger,
     .contact-form textarea {
         margin-bottom: 8px;
+        height: 103px;
     }
 
     .contact-form .privacy {
@@ -8036,6 +8044,14 @@ td {
     .faq_accordion-content {
         left: -8px;
         width: calc(100% + 16px);
+    }
+
+    .services-infoblock {
+        margin: 0 -8px;
+    }
+
+    .services-infoblock_agora .agora-logo {
+        padding-top: 37px;
     }
 
 }
