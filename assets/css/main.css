@@ -4182,6 +4182,8 @@ td {
 
 
 
+
+
 /*---------------------1600px-------------------------*/
 @media (max-width: 1600px) {
     .catalog-container__title {
@@ -4445,6 +4447,12 @@ td {
 
     .faq_accordion-content {
         width: 114%;
+    }
+}
+
+@media (min-width: 1340px) {
+    .main-services .wide-container {
+        padding: 0 43px 0 95px
     }
 }
 
