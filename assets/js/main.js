@@ -645,6 +645,69 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // FAQ Services
+
+    const titles = document.querySelectorAll('.faq_accordion-title');
+
+    if (titles) {
+        titles.forEach((title) => {
+            title.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const content = this.nextElementSibling;
+
+                document.querySelectorAll('.faq_accordion-content.active').forEach((item) => {
+                    item.classList.remove('active');
+                });
+
+                content.classList.add('active');
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.faq_accordion-content')) {
+                document.querySelectorAll('.faq_accordion-content.active').forEach((item) => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+    }
+
+    // Custom select
+
+    const customSelect = document.getElementById('custom-select');
+    const trigger = customSelect.querySelector('.custom-select__trigger');
+    const options = customSelect.querySelectorAll('.custom-option');
+    const hiddenInput = customSelect.querySelector('input[type="hidden"]');
+
+    if (customSelect && trigger && options && hiddenInput) {
+        trigger.addEventListener('click', function (e) {
+            customSelect.classList.toggle('open');
+        });
+
+        options.forEach((option) => {
+            option.addEventListener('click', function () {
+                trigger.textContent = this.textContent;
+                hiddenInput.value = this.getAttribute('data-value');
+                customSelect.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!customSelect.contains(e.target)) {
+                customSelect.classList.remove('open');
+            }
+        });
+    }
+
+    const cfOpen = document.querySelector('.cf-mobile_title');
+    const cfBlock = document.querySelector('.contact-form');
+
+    if (cfOpen && cfBlock) {
+        cfOpen.addEventListener('click', () => {
+            cfBlock.classList.toggle('active');
+        });
+    }
+
     // Filter
     const filterSections = document.querySelectorAll('.filter-section');
 

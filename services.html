@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Agora | Shop</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/css/main.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./images/favicon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./img/favicons/apple-touch-icon.png" />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <p>
+                        <img
+                            src="./assets/icons/cart.svg"
+                            alt="cart icon" />Відкрий світ покупок разом з нами!
+                    </p>
+                </div>
+            </div>
+            <div class="header__middle">
+                <div class="container">
+                    <a
+                        href="/"
+                        class="logo">
+                        <img
+                            src="./assets/icons/logo.svg"
+                            alt="shop logo" />
+                    </a>
+                    <div class="header__info">
+                        <a
+                            href="#"
+                            class="delivery__info-mob">
+                            <img
+                                src="./assets/icons/geo-mob.svg"
+                                alt="delivery icon" />
+                        </a>
+                        <a
+                            href="#"
+                            class="delivery__info">
+                            Доставити до
+                            <span
+                                ><img
+                                    src="./assets/icons/geo.svg"
+                                    alt="delivery icon" />України</span
+                            >
+                        </a>
+
+                        <form
+                            class="search"
+                            action="/search"
+                            method="get">
+                            <input
+                                type="text"
+                                placeholder="Пошук..." />
+                            <button>
+                                <img
+                                    src="./assets/icons/search.svg"
+                                    alt="search icon" />
+                                <img
+                                    class="search-icon"
+                                    src="./assets/icons/search-mob.svg"
+                                    alt="search icon" />
+                            </button>
+                        </form>
+                        <a
+                            href="#"
+                            class="add__goods"
+                            ><span>Додати товар</span
+                            ><img
+                                src="./assets/icons/cart-mob.svg"
+                                alt="cart icon"
+                        /></a>
+                        <a
+                            href="#"
+                            class="header__account"
+                            aria-label="Click to open account"
+                            ><img
+                                src="./assets/icons/user.svg"
+                                alt="account"
+                        /></a>
+                        <div class="language-switcher">
+                            <div class="selected-option">UA</div>
+                            <div class="options">
+                                <div
+                                    class="language-option"
+                                    data-value="en">
+                                    EN
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-login">
+                            <a
+                                href="#"
+                                class="login"
+                                aria-label="Click to login"
+                                >Вхід</a
+                            >
+                            <a
+                                href="#"
+                                class="register"
+                                aria-label="Click to registration"
+                                >Реєстрація</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <div class="container"></div>
+            </div>
+            <div class="header__btm">
+                <div class="overlay"></div>
+                <div class="container">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="all"
+                                    ><img
+                                        src="./assets/icons/menu.svg"
+                                        alt="menu" /><span>Все</span></a
+                                >
+                                <ul class="sub-menu catalog">
+                                    <div class="catalog-title">
+                                        <span class="close-btn"></span>
+                                        <span>Каталог</span>
+                                    </div>
+                                    <div class="catalog-container">
+                                        <div class="catalog-container__items">
+                                            <li class="menu-category first">
+                                                <span class="category-title"
+                                                    >Одяг<img
+                                                        src="./assets/icons/arrow.svg"
+                                                        alt="arrow"
+                                                /></span>
+                                                <ul class="category-items">
+                                                    <li><a href="#">Жінкам</a></li>
+                                                    <li><a href="#">Чоловікам</a></li>
+                                                    <li><a href="#">Дівчаткам</a></li>
+                                                    <li><a href="#">Хлопчикам</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title"
+                                                    >Взуття<img
+                                                        src="./assets/icons/arrow.svg"
+                                                        alt="arrow"
+                                                /></span>
+                                                <ul class="category-items">
+                                                    <li><a href="#">Жінкам</a></li>
+                                                    <li><a href="#">Чоловікам</a></li>
+                                                    <li><a href="#">Дівчаткам</a></li>
+                                                    <li><a href="#">Хлопчикам</a></li>
+                                                </ul>
+                                            </li>
+                                        </div>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Дітям<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Одяг</a></li>
+                                                <li><a href="#">Взуття</a></li>
+                                                <li><a href="#">Білизна</a></li>
+                                                <li><a href="#">Пляжний одяг</a></li>
+                                                <li><a href="#">Малюкам</a></li>
+                                                <li><a href="#">Дитячий транспорт</a></li>
+                                                <li><a href="#">Іграшки</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                                <li><a href="#">Школа</a></li>
+                                                <li><a href="#">Для свята</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Краса та здоров’я<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Парфуми</a></li>
+                                                <li><a href="#">Декоративна косметика</a></li>
+                                                <li><a href="#">Косметика для догляду</a></li>
+                                                <li><a href="#">Косметика для волосся</a></li>
+                                                <li><a href="#">Захист від сонця</a></li>
+                                                <li><a href="#">Гігієна</a></li>
+                                                <li><a href="#">Гоління</a></li>
+                                                <li><a href="#">Депіляція</a></li>
+                                                <li><a href="#">Косметичні набори</a></li>
+                                                <li><a href="#">Товари для здоров’я</a></li>
+                                                <li><a href="#">Професійна косметика</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Спортивні товари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Мисливське спорядження</a></li>
+                                                <li><a href="#">Обладнання для гольфу</a></li>
+                                                <li><a href="#">Спорт на свіжому повітрі</a></li>
+                                                <li><a href="#">Велосипедне спорядження</a></li>
+                                                <li><a href="#">Тренажери</a></li>
+                                                <li><a href="#">Все для фітнесу</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Електроніка<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Комп'ютери, планшети</a></li>
+                                                <li><a href="#">Мобільні телефони</a></li>
+                                                <li>
+                                                    <a href="#">Смарт годинники та аксесуари</a>
+                                                </li>
+                                                <li><a href="#">Відеоігри та консолі</a></li>
+                                                <li><a href="#">Камери та фото</a></li>
+                                                <li><a href="#">Монітори</a></li>
+                                                <li><a href="#">Принтери</a></li>
+                                                <li><a href="#">Сканери</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Аксесуари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Сумки і рюкзаки</a></li>
+                                                <li><a href="#">Головні убори</a></li>
+                                                <li><a href="#">Окуляри</a></li>
+                                                <li><a href="#">Шарфи і хустки</a></li>
+                                                <li><a href="#">Гаманці</a></li>
+                                                <li><a href="#">Парасолі</a></li>
+                                                <li><a href="#">Біжутерія</a></li>
+                                                <li><a href="#">Годинники</a></li>
+                                                <li><a href="#">Ремені</a></li>
+                                                <li><a href="#">Краватки</a></li>
+                                                <li><a href="#">Ювелірні прикраси</a></li>
+                                                <li><a href="#">Рукавички і рукавиці</a></li>
+                                                <li><a href="#">Подарунковий набір</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Товари для дому<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Посуд</a></li>
+                                                <li><a href="#">Текстиль</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                                <li><a href="#">Освітлення</a></li>
+                                                <li><a href="#">Декор і дизайн</a></li>
+                                                <li><a href="#">Все для свята</a></li>
+                                                <li><a href="#">Книги</a></li>
+                                                <li><a href="#">Канцелярія</a></li>
+                                                <li><a href="#">Творчість і хобі</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Дім і сад<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li>
+                                                    <a href="#"
+                                                        >Інструменти та обладнання для майстерні</a
+                                                    >
+                                                </li>
+                                                <li><a href="#">Все для поливу</a></li>
+                                                <li><a href="#">Альтанки</a></li>
+                                                <li><a href="#">Лавки</a></li>
+                                                <li><a href="#">Гойдалки</a></li>
+                                                <li><a href="#">Фонтани</a></li>
+                                                <li><a href="#">Дитячі майданчики</a></li>
+                                                <li><a href="#">Басейни</a></li>
+                                                <li><a href="#">Обладнання для басейнів</a></li>
+                                                <li><a href="#">Зонти</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Фільми та телебачення<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Фільми</a></li>
+                                                <li><a href="#">Телешоу</a></li>
+                                                <li><a href="#">Бестселери</a></li>
+                                                <li>
+                                                    <a href="#">Фільми та мультики для дітей</a>
+                                                </li>
+                                                <li><a href="#">Фільми для всієї сім'ї</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Авто, мото<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Запчастини та аксесуари</a></li>
+                                                <li>
+                                                    <a href="#">Легкові та вантажні автомобілі</a>
+                                                </li>
+                                                <li><a href="#">Мотоцикли</a></li>
+                                                <li><a href="#">Велосипеди</a></li>
+                                                <li><a href="#">Самокати</a></li>
+                                                <li><a href="#">Інші види транспорту</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items large">
+                                            <span class="category-title"
+                                                >Вироби своїми руками<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Декорування тканин</a></li>
+                                                <li><a href="#">Шиття</a></li>
+                                                <li><a href="#">Рукоділля</a></li>
+                                                <li><a href="#">В'язання спицями та гачком</a></li>
+                                                <li><a href="#">Гравюра</a></li>
+                                                <li><a href="#">Крафтінг</a></li>
+                                                <li>
+                                                    <a href="#"
+                                                        >Бісероплетіння та виготовлення ювелірних
+                                                        виробів</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        >Приладдя для живопису та малювання</a
+                                                    >
+                                                </li>
+                                                <li><a href="#">Вишивання</a></li>
+                                                <li><a href="#">Гончарні вироби</a></li>
+                                                <li><a href="#">Антикваріат</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Зоотовари<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Корм для тварин</a></li>
+                                                <li><a href="#">Акваріуми</a></li>
+                                                <li><a href="#">Клітки для птахів</a></li>
+                                                <li><a href="#">Іграшки</a></li>
+                                                <li><a href="#">Все для догляду</a></li>
+                                                <li><a href="#">Одяг</a></li>
+                                                <li><a href="#">Аксесуари</a></li>
+                                                <li><a href="#">Посуд</a></li>
+                                                <li><a href="#">Меблі</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-category catalog-container__items">
+                                            <span class="category-title"
+                                                >Будівництво<img
+                                                    src="./assets/icons/arrow.svg"
+                                                    alt="arrow"
+                                            /></span>
+                                            <ul class="category-items">
+                                                <li><a href="#">Інструменти та обладнання</a></li>
+                                                <li><a href="#">Сантехніка</a></li>
+                                                <li><a href="#">Будівельні матеріали</a></li>
+                                                <li><a href="#">Інтер'єр та оздоблення</a></li>
+                                                <li><a href="#">Обладнання для бізнесу</a></li>
+                                                <li><a href="#">Сировина</a></li>
+                                            </ul>
+                                        </li>
+                                        <div class="catalog-container__items">
+                                            <li class="menu-category">
+                                                <span class="category-title">Нерухомість</span>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title">Подорожі</span>
+                                            </li>
+                                            <li class="menu-category">
+                                                <span class="category-title">Аукціони</span>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Щоденні пропозиції</a>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Подарункові картки</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Подарункові картки</a></li>
+                                        <li><a href="#">З нагоди</a></li>
+                                        <li><a href="#">Топ подарунків</a></li>
+                                        <li><a href="#">Знайти подарунок</a></li>
+                                        <li><a href="#">Фізичні картки</a></li>
+                                        <li><a href="#">Електронні картки</a></li>
+                                        <li><a href="#">Картки гуртом</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu4.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Продати</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Перші кроки</a></li>
+                                        <li><a href="#">Правила та політика</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Маркетинг</a></li>
+                                        <li><a href="#">Керування оголошеннями</a></li>
+                                        <li><a href="#">Оновлення продавця</a></li>
+                                        <li><a href="#">Партнери agora</a></li>
+                                        <li><a href="#">Продуктивність продавця</a></li>
+                                        <li><a href="#">Збори, податки та платежі</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu3.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Збережено</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Одяг</a></li>
+                                        <li><a href="#">Зоотовари</a></li>
+                                        <li><a href="#">Взуття</a></li>
+                                        <li><a href="#">Електроніка</a></li>
+                                        <li><a href="#">Дітям</a></li>
+                                        <li><a href="#">Будівництво</a></li>
+                                        <li><a href="#">Аксесуари</a></li>
+                                        <li><a href="#">Авто, мото</a></li>
+                                        <li><a href="#">Товари для дому</a></li>
+                                        <li><a href="#">Спортивні товари</a></li>
+                                        <li><a href="#">Краса та здоров'я</a></li>
+                                        <li><a href="#">Вироби своїми руками</a></li>
+                                        <li><a href="#">Дім і сад</a></li>
+                                        <li><a href="#">Фільми та телебачення</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu2.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="has-menu">
+                                <a href="#">Обслуговування клієнтів</a>
+                                <span class="sub-menu sub-container">
+                                    <ul class="img-menu">
+                                        <li><a href="#">Товар</a></li>
+                                        <li><a href="#">Подарункові картки</a></li>
+                                        <li><a href="#">Оплата</a></li>
+                                        <li><a href="#">Технічні проблеми</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Повернення та рекламації</a></li>
+                                        <li><a href="#">Замовлення</a></li>
+                                        <li><a href="#">Центр обслуговування</a></li>
+                                    </ul>
+                                    <div>
+                                        <img
+                                            src="./assets/images/menu1.png"
+                                            alt="menu image" />
+                                    </div>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main main-services">
+            <section class="top-services">
+                <div class="wide-container">
+                    <h1 class="top-services_title">Обслуговування клієнтів</h1>
+                    <div class="top-services_inner">
+                        <div class="top-services_info">
+                            <h2>Вас обслуговує служба підтримки</h2>
+                            <form
+                                class="search"
+                                action="/search"
+                                method="get">
+                                <input
+                                    type="text"
+                                    placeholder="Задайте запитання, яке Вас цікавить" />
+                                <button>
+                                    <img
+                                        src="./assets/icons/search.svg"
+                                        alt="search icon" />
+                                </button>
+                            </form>
+                            <p>Або виберіть тему та перевірте відповіді нижче</p>
+                            <ul class="top-services_item">
+                                <li>
+                                    <img
+                                        src="./assets/icons/product.svg"
+                                        alt="product icon" /><a href="/">Товар</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/order.svg"
+                                        alt="order icon" /><a href="/">Замовлення</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/service.svg"
+                                        alt="service icon" /><a href="/">Технічні проблеми</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/paycard.svg"
+                                        alt="paycardicon" /><a href="/">Оплата</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/delivery.svg"
+                                        alt="delivery icon" /><a href="/">Доставка</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/arrow-back.svg"
+                                        alt="arrow icon" /><a href="/">Повернення та рекламації</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/giftcard.svg"
+                                        alt="gift-card icon" /><a href="/">Подарункові картки</a>
+                                </li>
+                                <li>
+                                    <img
+                                        src="./assets/icons/info.svg"
+                                        alt="info icon" /><a href="/">Центр обслуговування </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cf-inner">
+                            <div class="cf-mobile_title">
+                                Зв’яжіться з нами
+                                <img
+                                    src="./assets/icons/arrow.svg"
+                                    alt="arrow" />
+                            </div>
+                            <div class="contact-form">
+                                <p class="contact-form_title">Зв’яжіться з нами</p>
+                                <form
+                                    action="#"
+                                    method="post">
+                                    <label for="name">Ім’я та прізвище*</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required />
+
+                                    <label for="email">Email *</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required />
+
+                                    <label for="phone">Телефон*</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="+380..."
+                                        required />
+
+                                    <label for="topic">Оберіть тему звернення*</label>
+                                    <div
+                                        class="custom-select"
+                                        id="custom-select">
+                                        <img
+                                            src="./assets/icons/arrow.svg"
+                                            alt="arrow" />
+                                        <div class="custom-select__trigger">
+                                            Оберіть тему звернення
+                                        </div>
+                                        <div class="custom-options">
+                                            <div
+                                                class="custom-option"
+                                                data-value="1">
+                                                Товар
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="2">
+                                                Технічні проблеми
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="3">
+                                                Доставка
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="4">
+                                                Подарункові картки
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="5">
+                                                Замовлення
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="6">
+                                                Оплата
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="7">
+                                                Повернення та рекламації
+                                            </div>
+                                            <div
+                                                class="custom-option"
+                                                data-value="8">
+                                                Центр обслуговування
+                                            </div>
+                                        </div>
+                                        <input
+                                            type="hidden"
+                                            name="topic"
+                                            required />
+                                    </div>
+
+                                    <label for="message">Текст*</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="5"
+                                        required></textarea>
+
+                                    <p class="privacy">
+                                        Якщо у Вас виникли якісь запитання про те, як ми
+                                        використовуємо Ваші персональні дані, напишіть нам на
+                                        вказану адресу електронної пошти:
+                                        <a href="mailto:www.agora.com">www.agora.com</a>.
+                                        <a href="#">Більше тут...</a>
+                                    </p>
+
+                                    <button
+                                        class="btn"
+                                        type="submit">
+                                        Відправити
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services-faq">
+                <div class="wide-container">
+                    <h2 class="services-faq_title">Оплата</h2>
+                    <div class="services-faq_accordion">
+                        <div class="services-faq_accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Як я можу оплатити замовлення?</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                На сайті <a href="/">www.answear.ua</a> оплатити замовлення можна:
+                                <p>
+                                    а) готівкою при отриманні Замовлення в сумі, що відповідає сумі
+                                    Замовлення, зазначеній на Сайті, за умови, що обраний метод
+                                    доставки був - Кур'єр Meest ПОШТА. У зворотному випадку (при
+                                    виборі методу доставки у відділення Нова Пошта) можливість
+                                    сплатити Замовлення готівкою відсутня. Також, можливість
+                                    післяплати відсутня для замовлень, вартість яких перевищує 5500
+                                    грн.
+                                </p>
+                                <p>
+                                    б) банківською картою, за допомогою електронної оплати, що
+                                    реалізовується за допомогою платформи PayU в момент оформлення
+                                    Замовлення. У разі вибору клієнтом даної форми оплати, її
+                                    відсутність на рахунку www.agora.com або суб'єкта, що бере
+                                    участь в транзакції (сервіс PayU) терміном до 24 годин з моменту
+                                    оформлення Замовлення веде до анулювання Замовлення. У подібних
+                                    випадках прохання повторити оформлення замовлення. Замовлення,
+                                    де була обрана форма оплати Online – карткою, приймається в
+                                    обробку за фактом успішного платежу. Розмір комісії, у разі її
+                                    присутності, - відповідно до тарифів Вашого банку. Курси валют
+                                    банку, що впливають на суми платіжу після подвійної конвертації
+                                    - відповідно до курсів Вашого банку. Перед фіналізацією
+                                    транзакції в налаштуваннях банківської картки перевірте, чи
+                                    дозволено у вас проведення платежів в інтернеті та чи активована
+                                    у вас  подвійна конвертація.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-faq_accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>
+                                    Трансакція була відхилина моєю карткою/банком. Що я маю зробити?
+                                </p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <p>
+                                    Є кілька причин відмови у проведенні трансакції українською
+                                    карткою/банком. Перевір у налаштуваннях банківської картки чи:
+                                    Щоб ознайомитися з інформацією про причини подвійної конвертації
+                                    при оплаті дивіться питання, що нижче.
+                                </p>
+                                <ol>
+                                    <li>
+                                        Маєш ввімкнений дозвіл на проведення платежів в інтернеті;
+                                    </li>
+                                    <li>
+                                        Маєш встановлений відповідній ліміт на онлайн-покупки (в
+                                        залежності від банку);
+                                    </li>
+                                    <li>Маєш ввімкнений дозвіл на подвійну конвертацію;</li>
+                                    <li>
+                                        Твоя банківська картка часом не була видана російськими
+                                        банками Sberbank, VTB, Gazprombank, Alfa Bank, Promsvyzbank,
+                                        Otkritie bank, Russian Agricultural Bank, Novikombank, Bank
+                                        Rossiya, Sovcombank, VEB Bank for development, Bank of
+                                        Russia, Russian Direct Investment fund. Вищезгадані банки не
+                                        обслуговуються європейським сертифікованим оператором
+                                        інтернет-трансакцій PayU.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Щоб ознайомитися з інформацією про причини подвійної конвертації
+                                    при оплаті дивіться питання, що нижче.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-faq_accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Що таке подвійна конвертація та чому вона відбувається?</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <p>
+                                    <a href="/">agora.com</a> є міжнародною компанією, яка
+                                    обслуговує на сьогодні 11 європейських ринків. Компанія
+                                    <a href="/">agora.com</a> зареєстрована у м.Берислав, вул.
+                                    Журавлинська, 54. Платіжні онлайн-операції на agora.ua
+                                    обслуговує міжнародний сертифікований оператор
+                                    інтернет-трансакцій PayU. Онлайн-оплата на сайті
+                                    <a href="/">www.agora.ua</a> є міжнародною трансакцією. З метою
+                                    успішного проведення платежу, фінансовими сервісами
+                                    Visa/Mastercard використовується механізм транскордонного
+                                    торгового еквайрингу (cross border merchant acquiring), за
+                                    внутрішнім курсом валют вище згаданих платіжних сервісів,
+                                    відбувається подвійна конвертація. Іншими словами, валютний
+                                    перерахунок йде двічі, спершу це робить Visa/Mastercard, потім -
+                                    український банк, який залишає за собою право, враховуючи
+                                    валютні коливання, довільно встановлювати курс. Окрім того, в
+                                    залежності від банку, можлива додаткова комісія за вище описану
+                                    операцію. Наголошуємо, магазин <a href="/">agora.ua</a>
+                                    не стягує жодних комісій чи зайвих коштів через подвійну
+                                    конвертацію.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-faq_accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Що мені варто знати, купуючи товар дорожче 150 євро?</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <p>
+                                    Якщо ви обрали товар, вартість якого перевищує 150 євро, згідно
+                                    законодавства України, ви повинні сплатити податок на додану
+                                    вартість (ПДВ) та митні збори, які розраховуються Державною
+                                    митницею. Дізнатися більше можна тут
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-faq_accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>
+                                    При виборі післяплати мені налічується додаткова оплата. Що це
+                                    значить?
+                                </p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <p>
+                                    Додаткова плата в розмірі 30 гривень, яка не залежить від
+                                    розміру замовлення - це операційна вартість обслуговування
+                                    замовлення в разі вибору післяплати. Щоб її уникнути, радимо
+                                    скористатися методом онлайн оплати.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services-infoblock">
+                <div class="wide-container">
+                    <div class="services-infoblock_inner">
+                        <div class="services-infoblock_subscribe">
+                            <div class="subscribe-title">
+                                <span>-15%</span> знижки на першу покупку*** за підписку на розсилку
+                            </div>
+                            <p class="subscribe-subtitle">
+                                Приєднуйтеся до нашої спільноти, щоб отримувати інформацію про
+                                найновіші акції та товари.
+                            </p>
+                            <p class="subscribe-text">
+                                **Знижка є одноразовою, діє лише на новинки при мінімальному кошику
+                                1500 грн. Промокод не поєднується з іншими акціями, а деякі товари
+                                можуть бути виключені з його дії. Деталі за посиланням:
+                                <a href="/">виключення з акції.</a>
+                            </p>
+                            <form
+                                class="subscribe-form"
+                                action="#"
+                                method="post">
+                                <div class="input-wrapper">
+                                    <img
+                                        src="./assets/icons/mail-w.svg"
+                                        alt="mail icon" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Введіть адресу e-mail"
+                                        required />
+                                    <button
+                                        type="submit"
+                                        class="btn">
+                                        Підписатися
+                                    </button>
+                                </div>
+                                <p class="error-message">Дане поле повинно бути заповнене</p>
+                            </form>
+                        </div>
+                        <div class="services-infoblock_agora">
+                            <img
+                                src="./assets/icons/a-logo.svg"
+                                alt="agora logo"
+                                class="agora-small" />
+                            <div class="agora-logo">
+                                <img
+                                    src="./assets/icons/logo.svg"
+                                    alt="agora logo" />
+                            </div>
+                            <p>
+                                Зареєструйся та заощаджуй при кожній покупці. В
+                                <span>agora</span> отримаєш до -20% сталої знижки від "чорних"
+                                цінників.
+                            </p>
+                            <a
+                                href="/"
+                                class="btn"
+                                >Дізнатися більше</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__inner-item footer__menu1">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Про компанію</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Рекламуй свою продукцію</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Стати партнером</a>
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--phone">
+                                <a
+                                    href="tel:+380972291449"
+                                    class="footer__menu-link"
+                                    >+38 (097) 229 14 49</a
+                                >
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--address">
+                                Херсонська обл., м. Берислав, вул. Журавлинська, 54
+                            </li>
+                            <li class="footer__menu-item footer__menu-item--email">
+                                <a
+                                    href="mailto:sakalvictoria_br@gmail.com"
+                                    class="footer__menu-link">
+                                    sakalvictoria_br@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__menu2">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Допомога</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Про agora</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Товари і замовлення</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Акції</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__menu3">
+                        <ul class="footer__menu">
+                            <li class="footer__menu-title">Доставка</li>
+                            <li class="footer__menu-item">
+                                <a href="#">Повернення</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Контакти</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Угода користувача</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Політика конфіденсійності</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#">Політика кукі файлів</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__payments">
+                        <a
+                            href="#"
+                            class="footer__payments-item">
+                            <img
+                                src="./assets/icons/apple.svg"
+                                alt="app store"
+                                aria-hidden="true" />
+                            <p><span>Download on the</span> App Store</p>
+                        </a>
+                        <a
+                            href="#"
+                            class="footer__payments-item">
+                            <img
+                                src="./assets/icons/goo-app.svg"
+                                alt="google app"
+                                aria-hidden="true" />
+                            <p><span>Download on the</span> Google Play</p>
+                        </a>
+                    </div>
+                    <div class="footer__inner-item footer__socials">
+                        <a
+                            href="/"
+                            class="footer-logo">
+                            <img
+                                src="./assets/icons/logo-footer.svg"
+                                alt="logo" />
+                        </a>
+                        <p>Ми в соцмережах</p>
+                        <ul>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/fb.svg"
+                                        alt="facebook"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/insta.svg"
+                                        alt="instagram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/tg.svg"
+                                        alt="telegram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/message.svg"
+                                        alt="messenger"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__code">
+                        <img
+                            src="./assets/icons/code.png"
+                            alt="code" />
+                        <a
+                            href="#"
+                            aria-hidden="true"
+                            >www.agora.com</a
+                        >
+                    </div>
+                    <div class="footer__inner-item footer__copyright">
+                        <p>
+                            <span>Речі за викликом серця. Всі права захищені</span>
+                            <a
+                                href="#"
+                                href="https://agora.ua"
+                                target="_blank">
+                                &copy; 2025 agora.ua</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="popup">
+            <div class="popup-bg">
+                <img
+                    src="./assets/images/popup-bg.jpg"
+                    alt="background" />
+            </div>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <button
+                        class="popup-tab active"
+                        data-tab="login">
+                        Вхід
+                    </button>
+                    <button
+                        class="popup-tab"
+                        data-tab="register">
+                        Реєстрація
+                    </button>
+                </div>
+                <div class="popup-body">
+                    <!-- Вхід -->
+                    <div
+                        class="popup-section"
+                        id="login"
+                        style="display: block">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Увійти</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                            <a
+                                href="#"
+                                class="forgot-password"
+                                >Не можете увійти?</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Реєстрація -->
+                    <div
+                        class="popup-section"
+                        id="register">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Зареєструватися</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Зміна пароля -->
+                    <div
+                        class="popup-section"
+                        id="forgot-password">
+                        <form>
+                            <label>Новий пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть новий пароль" />
+                            <label>Підтвердити пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Підтвердьте новий пароль" />
+                            <button class="btn-primary">Далі</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="giftcard-popup"
+            id="giftcard-popup">
+            <p>Подарункові сертифікати на день народження</p>
+            <div class="giftcard-popup_list">
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-1.png"
+                        alt="popup image" />
+                    <span>Солодощі</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-2.png"
+                        alt="popup image" />
+                    <span>Світ технологій</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-3.png"
+                        alt="popup image" />
+                    <span>Спорт</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-4.png"
+                        alt="popup image" />
+                    <span>Взуття</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-5.png"
+                        alt="popup image" />
+                    <span>Годинники</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-6.png"
+                        alt="popup image" />
+                    <span>На жіночі <br />дрібнички</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-7.png"
+                        alt="popup image" />
+                    <span>Одяг</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-8.png"
+                        alt="popup image" />
+                    <span>Іграшки</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-9.png"
+                        alt="popup image" />
+                    <span>Прикраси</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-10.png"
+                        alt="popup image" />
+                    <span>Авто</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-11.png"
+                        alt="popup image" />
+                    <span>Косметика</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+                <div class="giftcard-popup_item">
+                    <img
+                        src="./assets/images/gift-popup-12.png"
+                        alt="popup image" />
+                    <span>Книги</span>
+                    <img
+                        src="./assets/images/gift-logo.png"
+                        alt="gift card logo"
+                        class="giftcard-logo" />
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
