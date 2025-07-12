@@ -945,4 +945,69 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const container = document.querySelector('.agora-steps_images');
+    const defaultImg = container.querySelector('.step-default');
+    const leftImg = container.querySelector('.step-left');
+    const rightImg = container.querySelector('.step-right');
+
+    if (container && defaultImg && leftImg && rightImg) {
+        function showImage(zone) {
+            defaultImg.style.opacity = zone === 'default' ? '1' : '0';
+            leftImg.style.opacity = zone === 'left' ? '1' : '0';
+            rightImg.style.opacity = zone === 'right' ? '1' : '0';
+        }
+
+        // Desktop hover
+        container.addEventListener('mousemove', (e) => {
+            const bounds = container.getBoundingClientRect();
+            const x = e.clientX - bounds.left;
+
+            if (x < bounds.width / 2) {
+                showImage('left');
+            } else {
+                showImage('right');
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            showImage('default');
+        });
+
+        // Touch support
+        container.addEventListener('touchstart', handleTouch);
+        container.addEventListener('touchmove', handleTouch);
+        container.addEventListener('touchend', () => showImage('default'));
+
+        function handleTouch(e) {
+            const touch = e.touches[0];
+            const bounds = container.getBoundingClientRect();
+            const x = touch.clientX - bounds.left;
+
+            if (x < bounds.width / 2) {
+                showImage('left');
+            } else {
+                showImage('right');
+            }
+        }
+    }
+
+    const imgContainer = document.querySelector('.agora-questions_images');
+    if (imgContainer) {
+        const imgDefault = imgContainer?.querySelector('.img-default');
+        const imgHover = imgContainer?.querySelector('.img-hover');
+        function showHover() {
+            imgDefault.style.opacity = '0';
+            imgHover.style.opacity = '1';
+        }
+
+        function reset() {
+            imgDefault.style.opacity = '1';
+            imgHover.style.opacity = '0';
+        }
+
+        imgContainer.addEventListener('touchstart', showHover);
+        imgContainer.addEventListener('touchend', reset);
+        imgContainer.addEventListener('touchcancel', reset);
+    }
 });
