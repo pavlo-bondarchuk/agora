@@ -38,3 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.querySelectorAll(".seller-faq__question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const currentItem = question.parentElement;
+    const isOpen = currentItem.classList.contains("open");
+
+    document.querySelectorAll(".seller-faq__item").forEach((item) => {
+      item.classList.remove("open");
+    });
+
+    if (!isOpen) {
+      currentItem.classList.add("open");
+    }
+  });
+});
