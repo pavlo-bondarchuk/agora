@@ -5173,7 +5173,114 @@ td {
     border-right: 0.5px solid rgba(0, 0, 0, 0.7);
 }
 
+/*------------------- SellerProtection1 --------------------------*/
+.sellprotect-items {
+    padding: 90px 0 156px 0;
+    line-height: normal;
+}
 
+.sellprotect-item:not(:last-child) {
+    margin-bottom: 90px;
+}
+
+.sellprotect-item {
+    background: #866655;
+    display: flex;
+    gap: 15px;
+}
+
+.sellprotect-item.grey-bl {
+    background: #d9d9d9;
+}
+
+.sellprotect-item.beige-bl {
+    background: #af9b8c;
+}
+
+.sellprotect-item_info {
+    padding: 34px 0 50px 42px;
+    max-width: 796px;
+    width: 100%;
+}
+
+.sellprotect-item_info.w-100 {
+    max-width: 100%
+}
+
+.sellprotect-title {
+    font-weight: 500;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.sellprotect-item_info p {
+    font-weight: 500;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 22px 0 44px;
+}
+
+.sellprotect-item_info p span {
+    color: #f8f6f0;
+}
+
+.sellprotect-item_info .btn {
+    width: 362px;
+    height: 80px;
+    font-size: 26px;
+}
+
+.sellprotect-item_info .btn-outline {
+    background: #f8f6f0;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.sellprotect-item_img {
+    overflow: hidden;
+    margin-left: 8px;
+}
+
+.sellprotect-item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sellprotect-item:nth-child(1) .sellprotect-item_img {
+    padding-right: 51px;
+}
+
+.sellprotect-item:nth-child(2) .sellprotect-item_img {
+    padding-right: 71px;
+}
+
+.sellprotect-item:nth-child(1) .sellprotect-item_info p {
+    max-width: 697px;
+}
+
+.sellprotect-item:nth-child(2) .sellprotect-item_info p {
+    max-width: 602px;
+}
+
+.sellprotect-item:nth-child(5) .sellprotect-item_info p {
+    max-width: 1213px;
+}
+
+.sellprotect-item:nth-child(8) .sellprotect-item_info p {
+    max-width: 661px;
+}
+
+.sellprotect-item:nth-child(8) .sellprotect-item_info div {
+    max-width: 480px;
+}
+
+.sellprotect-item:nth-child(9) .sellprotect-item_info p {
+    max-width: 672px;
+}
+
+.sellprotect-item:nth-child(9) .sellprotect-item_info div {
+    max-width: 490px;
+}
 
 
 
@@ -6042,6 +6149,19 @@ td {
         display: none;
     }
 
+    .sellprotect-item_info {
+        max-width: 656px;
+    }
+
+    .sellprotect-item:nth-child(1) .sellprotect-item_img,
+    .sellprotect-item:nth-child(2) .sellprotect-item_img {
+        padding-right: 0px;
+    }
+
+    .sellprotect-item_info.w-100 {
+        padding-right: 24px;
+    }
+
 }
 
 @media (min-width: 1240px) {
@@ -6061,8 +6181,9 @@ td {
         margin-top: 0px;
     }
 
-    .main.main-hts {
-        margin-top: 0px;
+    .main.main-hts,
+    .main.main-sellprotect {
+        margin-top: 7px;
     }
 
     header {
@@ -9038,6 +9159,40 @@ td {
     .agora_header-inner .options {
         background: linear-gradient(180deg, #482b1e 0%, #583a2c 150%);
     }
+
+    .sellprotect-items {
+        padding: 44px 0;
+    }
+
+    .sellprotect-item {
+        flex-direction: column-reverse;
+    }
+
+    .sellprotect-item_img {
+        margin-left: 0px;
+    }
+
+    .sellprotect-items .container {
+        padding: 0;
+    }
+
+    .sellprotect-item_info {
+        padding: 24px 20px 32px;
+    }
+
+    .sellprotect-title {
+        text-align: center;
+        font-size: 32px;
+        margin: 0 auto;
+    }
+
+    .sellprotect-item_info p {
+        font-size: 22px;
+    }
+
+    .sellprotect-item_info .btn {
+        margin: 0 auto;
+    }
 }
 
 /*520*/
@@ -10133,6 +10288,59 @@ td {
 
     .hts-info_block.first-block .hts-info_text p {
         max-width: 228px;
+    }
+
+    .sellprotect-item {
+        position: relative;
+        gap: 0;
+        padding-top: 22px;
+    }
+
+    .sellprotect-item:nth-child(1),
+    .sellprotect-item:nth-child(7),
+    .sellprotect-item:nth-child(9) {
+        padding-top: 88px;
+    }
+
+    .sellprotect-item:nth-child(2) {
+        padding-top: 63px;
+    }
+
+    .sellprotect-item:nth-child(8) {
+        padding-top: 128px;
+    }
+
+    .sellprotect-item_info {
+        padding: 0 8px 32px;
+    }
+
+    .sellprotect-title {
+        position: absolute;
+        top: 20px;
+        font-size: 24px;
+        width: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sellprotect-item_info.w-100 .sellprotect-title {
+        position: static;
+        transform: none;
+    }
+
+    .sellprotect-item_info p {
+        font-size: 16px;
+        padding: 21px 0 36px;
+    }
+
+    .sellprotect-item_info .btn {
+        width: 192px;
+        height: 41px;
+        font-size: 14px;
+    }
+
+    .sellprotect-item:not(:last-child) {
+        margin-bottom: 43px;
     }
 }
 
