@@ -947,11 +947,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const container = document.querySelector('.agora-steps_images');
-    const defaultImg = container.querySelector('.step-default');
-    const leftImg = container.querySelector('.step-left');
-    const rightImg = container.querySelector('.step-right');
 
-    if (container && defaultImg && leftImg && rightImg) {
+    if (container) {
+        const defaultImg = container.querySelector('.step-default');
+        const leftImg = container.querySelector('.step-left');
+        const rightImg = container.querySelector('.step-right');
         function showImage(zone) {
             defaultImg.style.opacity = zone === 'default' ? '1' : '0';
             leftImg.style.opacity = zone === 'left' ? '1' : '0';
@@ -1009,5 +1009,45 @@ document.addEventListener('DOMContentLoaded', function () {
         imgContainer.addEventListener('touchstart', showHover);
         imgContainer.addEventListener('touchend', reset);
         imgContainer.addEventListener('touchcancel', reset);
+    }
+
+    const sellerMenuLinks = document.querySelectorAll('.nav-list-simple a');
+    const sellerTabContents = document.querySelectorAll('.seller_tab-content');
+
+    if (sellerMenuLinks.length > 0) {
+        sellerMenuLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Get the target tab from data attribute
+                const targetTab = link.getAttribute('data-tab');
+                const targetContent = document.querySelector(
+                    `.seller_tab-content[data-tab-content="${targetTab}"]`,
+                );
+
+                if (!targetContent) return;
+
+                // Toggle logic: close if already active
+                const isActive = targetContent.classList.contains('active');
+
+                // Remove active class from all tabs
+                sellerTabContents.forEach((content) => content.classList.remove('active'));
+
+                // Toggle the clicked tab (re-activate only if it wasn't already active)
+                if (!isActive) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Close tab when clicking outside the tab content or nav link
+        document.addEventListener('click', (e) => {
+            const clickedInsideTab = e.target.closest('.seller_tab-content');
+            const clickedLink = e.target.closest('.nav-list-simple a');
+
+            if (!clickedInsideTab && !clickedLink) {
+                sellerTabContents.forEach((content) => content.classList.remove('active'));
+            }
+        });
     }
 });

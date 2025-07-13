@@ -10,6 +10,7 @@ body {
     background: #f8f6f0;
 }
 
+
 .header__middle {
     padding: 73px 0 72px;
 }
@@ -112,12 +113,18 @@ body {
     min-height: 141px;
     display: flex;
     align-items: center;
+    border-left: 0.40px solid rgba(0, 0, 0, 0);
+    border-right: 0.40px solid rgba(0, 0, 0, 0);
 }
 
 .header__btm .header__nav>ul li.active {
     background: #af9b8c;
 }
 
+.seller-page .header__btm .header__nav>ul li:hover {
+    border-left: 0.40px solid rgba(0, 0, 0, 0.7);
+    border-right: 0.40px solid rgba(0, 0, 0, 0.7);
+}
 
 .header__btm .container .nav-list-simple>li a {
     text-wrap: wrap;
