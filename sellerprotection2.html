@@ -1,919 +1,2541 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agora | Shop</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/comissioncurrencyconverter.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Agora | Shop</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/css/main.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/css/comissioncurrencyconverter.css" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./img/favicons/apple-touch-icon.png"
-    />
-  </head>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./assets/images/favicon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./img/favicons/apple-touch-icon.png" />
+    </head>
 
-  <body>
-    <header class="header">
-      <div class="header__middle">
-        <div class="container">
-          <a href="/" class="logo logo--text">
-            <span class="logo--text-dark">agora</span>
-            <span class="logo--text-light">export</span>
-          </a>
-          <div class="header__info">
-            <form class="search--small" action="/search" method="get">
-              <i class="icon-search"></i>
-              <input type="text" placeholder="" />
-            </form>
-            <div class="language-switcher language-switcher--small">
-              <div class="selected-option">UA</div>
-              <div class="options">
-                <div class="language-option" data-value="en">EN</div>
-              </div>
+    <body>
+        <header class="header">
+            <div class="header__middle">
+                <div class="container">
+                    <a
+                        href="/"
+                        class="logo logo--text">
+                        <span class="logo--text-dark">agora</span>
+                        <span class="logo--text-light">export</span>
+                    </a>
+                    <div class="header__info">
+                        <form
+                            class="search--small"
+                            action="/search"
+                            method="get">
+                            <i class="icon-search"></i>
+                            <input
+                                type="text"
+                                placeholder="" />
+                        </form>
+                        <div class="language-switcher language-switcher--small">
+                            <div class="selected-option">UA</div>
+                            <div class="options">
+                                <div
+                                    class="language-option"
+                                    data-value="en">
+                                    EN
+                                </div>
+                            </div>
+                        </div>
+                        <a
+                            class="header--listing"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Створіть своє оголошення</a
+                        >
+                    </div>
+                </div>
             </div>
-            <a
-              class="header--listing"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Створіть своє оголошення</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="header__btm">
-        <div class="overlay"></div>
-        <div class="container">
-          <nav class="header__nav nav">
-            <ul class="nav__list">
-              <li>
-                <a href="#">Перші кроки</a>
-              </li>
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Керування оголошеннями</a>
-              </li>
-              <li>
-                <a href="#">Продуктивність продавця</a>
-              </li>
-              <li>
-                <a href="#">Збори, податки та платежі</a>
-              </li>
-              <li>
-                <a href="#">Правила та політика</a>
-              </li>
-              <li>
-                <a href="#">Маркетинг</a>
-              </li>
-              <li>
-                <a href="#">Оновлення продавця</a>
-              </li>
-              <li>
-                <a href="#">Партнери agora</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <section class="hero hero--simple" id="hero">
-        <span>Захист продавців</span>
-      </section>
-      <section class="text-banner text-banner__right_rounded">
-        <div class="container">
-          <div class="inner padding-top100">
-            <div class="text-banner__left">
-              <ul class="text-banner__list">
-                <li>Зловживальна діяльність з купівлі</li>
-                <li>Події поза вашим контролем</li>
-                <li>Інші засоби захисту</li>
-                <li>Захист у разі суперечок щодо оплати</li>
-                <li>Право на захист</li>
-                <li>Втрата захисту</li>
-              </ul>
-            </div>
-            <div class="text-banner__right">
-              <img
-                class="text-banner__right-image"
-                src="assets/images/agora-text-circle.svg"
-                alt=""
-                role="presentation"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content">
-        <div class="container">
-          <div class="padded">
-            <p>
-              Коли ви продаєте на agora, торговий майданчик захищає вас від
-              зловживань покупцями та подій, які ви не контролюєте.
-            </p>
-          </div>
-          <div class="faq-section">
-            <h2 class="faq-section-title-image">Часті запитання</h2>
-            <div class="accordion not-fullwidth">
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  <span>Як я захищений від недобросовісних покупців?</span>
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>...</p>
+            <div class="header__btm">
+                <div class="overlay"></div>
+                <div class="container">
+                    <nav class="header__nav nav">
+                        <ul class="nav-list-simple">
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-1"
+                                    >Перші <br class="br-xl" />кроки</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-2"
+                                    >Доставка</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-3"
+                                    >Керування <br class="br-xl" />оголошеннями</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-4"
+                                    >Продуктивність <br class="br-xl" />продавця</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-5"
+                                    >Збори, податки <br class="br-xl" />та платежі</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-6"
+                                    >Правила та <br class="br-xl" />політика</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-7"
+                                    >Маркетинг</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-8"
+                                    >Оновлення <br class="br-xl" />продавця</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    data-target="tab-9"
+                                    >Партнери <br class="br-xl" />agora</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  <span
-                    >Що робити, якщо трапиться щось поза моїм контролем?</span
-                  >
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="space100"></div>
-          <h2 class="heading-bg-beige-image-big">
-            Інші засоби захисту
-          </h2>
-          <hr class="hr-spacer" />
-          <div class="padded">
-            <h2>Міжнародний збір</h2>
-            <p>
-              Якщо ваша зареєстрована адреса на agora знаходиться в країні, що є
-              частиною глобальної мережі agora, agora стягує міжнародний збір,
-              якщо:
-            </p>
-            <ul>
-              <li>
-                Адреса доставки товару (введена покупцем під час оформлення
-                замовлення) знаходиться за межами вашої зареєстрованої країни,
-                або
-              </li>
-              <li>
-                Зареєстрована адреса покупця знаходиться за межами вашої країни
-                зареєстрованої адреси (незалежно від адреси доставки товару)
-              </li>
-            </ul>
-            <p>
-              Міжнародний збір розраховується на основі загальної суми продажу
-              та автоматично вираховується з вашої виручки від продажу. Загальна
-              сума продажу складається з ціни товару, будь-яких зборів за
-              обробку, обраної покупцем служби доставки, податку з продажу (або
-              еквівалентного місцевого споживчого податку) та будь-яких інших
-              застосовних зборів.
-            </p>
-            <div class="space30"></div>
-            <h3 class="heading-halfwidth">
-              Міжнародний збір для глобальних продавців agora (за винятком
-              продавців з ЄС, що не входять до складу)
-            </h3>
-            <p>
-              Міжнародний збір визначається країною або регіоном реєстрації
-              продавця, згідно з таблицею нижче.
-            </p>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Країна або регіон зареєстрованої адреси продавця</th>
-                <th>Міжнародний збір</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Японія</td>
-                <td>1,35%</td>
-              </tr>
-              <tr>
-                <td>Південна Корея</td>
-                <td>1,45%</td>
-              </tr>
-              <tr>
-                <td>Індія</td>
-                <td>1,70%</td>
-              </tr>
-              <tr>
-                <td>Нова Зеландія</td>
-                <td>1,00%</td>
-              </tr>
-              <tr>
-                <td>Решта Азіатсько-Тихоокеанського регіону</td>
-                <td>1,30%</td>
-              </tr>
-              <tr>
-                <td>Європа Без позиції (крім ЄС)</td>
-                <td>1,30%</td>
-              </tr>
-              <tr>
-                <td>Решта світу</td>
-                <td>1,55%</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="padded">
-            <h3>
-              Міжнародний збір для продавців з ЄС, що не мають торговельного
-              місця
-            </h3>
-            <p>
-              Міжнародний збір для продавців, які не мають юридичної адреси в
-              ЄС, визначається адресою доставки товару або зареєстрованою
-              адресою покупця, згідно з таблицею нижче.
-            </p>
-          </div>
-          <div class="regions-rates">
-            <div class="region-card">
-              <p>Єврозона та Швеція</p>
-              <span data-value="0%">%</span>
-            </div>
-            <div class="region-card">
-              <p>Велика Британія</p>
-              <span data-value="1,2%">%</span>
-            </div>
-            <div class="region-card">
-              <ul>
-                <li>
-                  Європа* (за винятком Єврозони, Швеції, Великої Британії)
-                </li>
-                <li>США та <br />Канади</li>
-              </ul>
-              <span data-value="1,6%">%</span>
-            </div>
-            <div class="region-card">
-              <p>Усі інші країни</p>
-              <span data-value="3,3%">%</span>
-            </div>
-          </div>
-          <div class="padded">
-            <p>
-              * Європа: Албанія, Андорра, Азербайджан, Боснія і Герцеговина,
-              Болгарія, Білорусь, Хорватія, Чеська Республіка, Данія, Фарерські
-              острови, Грузія, Ватикан, Угорщина, Ісландія, Казахстан,
-              Ліхтенштейн, Монако, Республіка Молдова, Чорногорія, Норвегія,
-              Польща, Румунія, Російська Федерація, Сан-Марино, Сербія,
-              Шпіцберген і Ян-Маєн, Швейцарія, Туреччина, Україна, Північна
-              Македонія.
-            </p>
-            <div class="space30"></div>
-            <p>
-              Якщо ваша зареєстрована адреса не знаходиться в країні, що є
-              частиною глобальної мережі agora, будь ласка, зверніться до
-              сторінки з комісіями для вашої країни/регіону проживання на
-              сторінках з комісіями на міжнародних сайтах, щоб отримати
-              інформацію про міжнародні комісії.
-            </p>
-            <div class="space30"></div>
-            <h3>Знижки на міжнародні комісії за обсяг</h3>
-            <p>
-              Глобальні продавці agora із зареєстрованою адресою в Японії або
-              решті країн Азіатсько-Тихоокеанського регіону можуть претендувати
-              на оптову знижку на міжнародний збір, з урахуванням винятків,
-              перелічених у розділі «Розрахунок оптової знижки та винятки»
-              нижче.
-            </p>
-            <p>
-              Для кожного облікового запису agora, якщо ваш загальний обсяг
-              продажів (включно з поштовими виратами) на agora.com.ua,
-              agora.com., agoraMag (разом - “сайти agora”) становить щонайменьше
-              3000 доларів США за попередній місяць на постійній основі, ви
-              можетемати право на знижку на міжнародний збір у наступному
-              місяці, за умови, що ваш рівень продавця щонайменьше “Вище
-              стандартного”. Ви можете перевірити свій поточний рівень продавця
-              на інформаційній панелі.
-            </p>
-            <h2>
-              Міжнародна комісія зі знижкою на обсяг для Японії та решти країн
-              Азіатсько-Тихоокеанського регіону на agora
-            </h2>
-            <div class="space30"></div>
-            <table class="sales-table">
-              <thead>
-                <tr>
-                  <th>Обсяг продажів (дол. США)<br />(попередній місяць)</th>
-                  <th>Японія</th>
-                  <th>Решта Азіатсько-Тихоокеанського регіону</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>від <strong>3000</strong> до 9999,99 дол.США</td>
-                  <td>1,20%</td>
-                  <td>1,10%</td>
-                </tr>
-                <tr>
-                  <td>від <strong>10 000</strong> до 49 999,99 дол.США</td>
-                  <td>0,95%</td>
-                  <td>0,85%</td>
-                </tr>
-                <tr>
-                  <td>від <strong>50 000</strong> до 99 999,99 дол.США</td>
-                  <td>0,70%</td>
-                  <td>0,50%</td>
-                </tr>
-                <tr>
-                  <td><strong>100 000</strong> доларів США або більше</td>
-                  <td>0,40%</td>
-                  <td>0,00%</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="space30"></div>
-            <p>
-              agora оцінює ваш рівень обсягу продажів 20-го числа кожного місяця
-              на основі історії ваших продажів на сайтах agora за попередній
-              місяць, на постійній основі. Якщо ваш обліковий запис відповідає
-              вимогам, знижена міжнародна комісія буде застосована автоматично з
-              початку наступного календарного місяця.
-            </p>
-            <div class="space30"></div>
-            <h2>Розрахунок та виключення оптової знижки</h2>
-            <p>
-              Щоб отримати право на знижку, ваша зареєстрована адреса має бути в
-              Японії або в решті регіону Азіатсько- Тихоокеанського регіону.
-            </p>
-            <p>
-              Щоб скористатися знижкою на міжнародний збір у наступному місяці,
-              обсяг ваших транзакцій на кожному обліковому записі agora на
-              сайтах agora має перевищувати мінімальні порогові значення
-              протягом періоду визначення. Якщо ви не досягнете обсягу
-              транзакцій протягом цього періоду, ви не отримаєте знижку на
-              обсяг.
-            </p>
-          </div>
-          <div class="excluded-categories">
-            <h2>Категорії, що виключаються з розрахунку оптової знижки</h2>
-            <div class="accordion">
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайт US/MOTORS (agora.com):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>
-                    Легкові та вантажні автомобілі (6001), Мотоцикли (6024),
-                    Інші транспортні засоби та причепи (6038), Автофургони та
-                    кемпери (50054), Човни (26429), Мотоспорт (66466),
-                    Подарункові сертифікати та купони (172008), Нерухомість
-                    (10542), Злитки металу (39482)
-                  </p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайт у Великій Британії (agora.co.uk):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>
-                    Автомобілі, мотоцикли та транспортні засоби (9800),
-                    Подарункові сертифікати та купони (172008), Нерухомість
-                    (10542), Монети (11116)
-                  </p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайти НІМЕЧЧИНИ/АВСТРІЇ (agora.de/agora.at):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>
-                    Auto & Motorrad: Fahrzeuge (9800), Kfz-Service auf Anfrage
-                    (179235), Immobilien (10542), Motorboote (48329), Segelboote
-                    (132148), Sonstige Boote (36623), Garantien & Versicherungen
-                    (175844), Подарункові картки та купони (55008 ), Злитки
-                    (39482)
-                  </p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайт в АВСТРАЛІЇ (agora.com.au):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>Категорії АВСТРАЛІЇ...</p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайти CA/CAFR (agora.ca/cafr.agora.ca):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>Категорії CA/CAFR...</p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайт у ФРАНЦІЇ (agora.fr):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>Категорії ФРАНЦІЇ...</p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайти ІТАЛІЇ (agora.it):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>Категорії ІТАЛІЇ...</p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-header">
-                  Сайт ІСПАНІЇ (agora.es):
-                  <span class="icon-collapse-down"></span>
-                </button>
-                <div class="accordion-content">
-                  <p>Категорії ІСПАНІЇ...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="space30"></div>
-          <div class="padded">
-            <p>
-              agora залишає за собою право виключити вас із оптових знижок, якщо
-              ви порушуєте політику agora (зокрема Угоду користувача agora,
-              Повідомлення про конфіденсійність користувачів agora,Глобальні
-              стандарти ефективності продавців та Умови використанняплатежів).
-            </p>
-            <h2>Регулятивний експлуатаційний збір</h2>
-            <p>
-              Як глобальна платформа електронної комерції, що об'єднує мільйони
-              покупців і продавців на понад 190 ринках, ми прагнемо пропонувати
-              надійний глобальний ринок у складному регуляторному середовищі,
-              яке впливає на agora та наших продавців.
-            </p>
-            <p>
-              Щоб вирішити проблему зростання витрат, пов’язаних зі зростанням
-              кількості та складності нормативних актів, включаючи захист прав
-              споживачів та навколишнього середовища, а також нових податкових
-              та митних заходів, з 8 квітня 2024 року ми запроваджуємо
-              новий регуляторний операційний збір , який застосовуватиметься до
-              всіх продажів з оголошень на таких сайтах: Велика Британія,
-              Австрія, Бельгія, Франція, Італія, Ірландія, Нідерланди, Польща,
-              Іспанія та Швейцарія. 
-            </p>
-            <p>
-              Ця комісія розраховується як фіксована процентна ставка (0,35%)
-              від загальної суми продажу (яка включає ціну товару, вартість
-              доставки, податки та будь-які інші застосовні збори) та підлягає
-              оподаткуванню податком на додану вартість (ПДВ), де це
-              застосовується.
-            </p>
-            <button class="btn-primary">Дізнатися більше</button>
-          </div>
+                <div class="nav-submenu">
+                    <div class="container">
+                        <div class="tabs-content">
+                            <div
+                                class="tab-content"
+                                id="tab-1">
+                                <!-- Перша колонка -->
+                                <div class="column">
+                                    <div class="column-title">Як скласти список товарів</div>
 
-          <div class="padded">
-            <h2>Комісія продавця за конвертацію валюти</h2>
-            <p>
-              Коли ви створюєте оголошення або продаєте товари на міжнародному
-              сайті agora з валютою оголошення, що відрізняється від валюти
-              вашої виплати, agora може конвертувати ваші кошти для стягнення
-              сум, які ви заборгували agora, або для виплати належних вам
-              коштів.
-            </p>
-            <p>
-              Наприклад, якщо ваша зареєстрована адреса знаходиться в Японії, і
-              ви створюєте оголошення на agora.de, за яке стягуються збори (такі
-              як плата за розміщення та/або необов'язкове оновлення оголошення),
-              agora конвертує ваші кошти з доларів США в євро, використовуючи
-              обмінний курс транзакції, що діє на момент розміщення оголошення,
-              щоб стягнути ці збори. Коли товар продається на agora.de, agora
-              розрахує суму вашої виплати, конвертувавши виручку від продажу з
-              євро в долари США, використовуючи обмінний курс транзакції, що діє
-              на момент продажу.
-            </p>
-            <p>
-              Якщо agora конвертує ваші кошти, конвертація буде виконана за
-              обмінним курсом транзакції, встановленим нами для відповідного
-              обміну валюти. Обмінний курс транзакції agora складається з
-              базового обмінного курсу плюс комісія за конвертацію. Комісія за
-              конвертацію – це фіксований відсоток, що застосовується до
-              базового обмінного курсу та утримується agora. Базовий обмінний
-              курс відображає курси на оптових валютних ринках, що
-              застосовуються до валютної пари в день конвертації або на
-              попередній робочий день. Якщо обмінні курси встановлені законом
-              або нормативним актом, базовий обмінний курс відображає урядові
-              довідкові курси.
-            </p>
-            <p>
-              Дивіться таблицю нижче для отримання детальної інформації про
-              комісію продавця за конвертацію валюти, яка застосовується та
-              утримується agora:
-            </p>
-          </div>
-          <div class="padded">
-            <table>
-              <thead>
-                <tr>
-                  <th>Країна або регіон зареєстрованої адреси продавця</th>
-                  <th>Комісія продавця за конвертацію валюти</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Малайзія, Ізраїль</td>
-                  <td>2,50%</td>
-                </tr>
-                <tr>
-                  <td>Латинська Америка*</td>
-                  <td>3,50%</td>
-                </tr>
-                <tr>
-                  <td>Усі інші країни світу agora</td>
-                  <td>3,00%</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="space30"></div>
-            <p>
-              * Антигуа і Барбуда, Аргентина, Аруба, Багамські Острови,
-              Барбадос, Беліз, Болівія (Багатонаціональна Держава), Бразилія,
-              Чилі, Колумбія, Коста-Рика, Домініка, Домініканська Республіка,
-              Еквадор, Сальвадор, Гренада, Гватемала, Гайана, Гаїті, Гондурас,
-              Ямайка, Мексика, Монтсеррат, Нікарагуа, Панама, Парагвай, Перу,
-              Сент-Кітс і Невіс, Сент-Люсія, Сент-Вінсент і Гренадини, Суринам,
-              Тринідад і Тобаго, острови Теркс і Кайкос, Уругвай.
-            </p>
-            <div class="space30"></div>
-            <p>
-              Якщо ваша зареєстрована адреса не знаходиться в країні, що є
-              частиною глобальної мережі agora, будь ласка, зверніться до
-              сторінки комісій для вашої країни/регіону проживання на сторінках
-              комісій на міжнародних сайтах, щоб отримати інформацію про комісію
-              за конвертацію валюти продавця.
-            </p>
-            <div class="space30"></div>
-            <h2>Заморські території</h2>
-            <p>
-              Якщо ваша зареєстрована адреса знаходиться в будь-якій із
-              перелічених нижче заморських територій, то ми розглядаємо вас так,
-              ніби ви проживаєте у відповідній країні, з метою розрахунку ваших
-              зборів.
-            </p>
-            <p>
-              Наприклад, якщо ваша зареєстрована адреса знаходиться в
-              Пуерто-Рико, і ви продаєте та відправляєте товар покупцю в
-              Сполучених Штатах, то з вас не стягуватиметься міжнародний збір за
-              цю транзакцію.
-            </p>
-            <p>
-              Будь ласка, зверніться до таблиці, щоб дізнатися, яка сторінка з
-              тарифами застосовується до вас.
-            </p>
-          </div>
-          <table class="country-fees-table">
-            <thead>
-              <tr>
-                <th>Адреса реєстрації за кордоном</th>
-                <th>Сторінка пов’язаної країни / застосовної плати</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  Французька Гвіана<br />
-                  Французька Полінезія<br />
-                  Гваделупа<br />
-                  Мартиніка<br />
-                  Майотта<br />
-                  Нова Каледонія<br />
-                  Реюньйон<br />
-                  Сен-П'єр і Мікелон
-                </td>
-                <td>Франція: Приватні/Бізнес-продавці</td>
-              </tr>
-              <tr>
-                <td>
-                  Англія<br />
-                  Бермудські острови<br />
-                  Кайманові острови<br />
-                  Фолклендські острови (Мальвінські острови)<br />
-                  Гібралтар<br />
-                  Гернсі<br />
-                  Джерсі<br />
-                  Свята Єлена, Вознесіння та Трістан-да-Кунья<br />
-                  Британські Віргінські острови
-                </td>
-                <td>Велика Британія: Приватні/Бізнес-продавці</td>
-              </tr>
-              <tr>
-                <td>
-                  Американське Самоа<br />
-                  Гуам<br />
-                  Пуерто-Рико<br />
-                  Віргінські острови (США)
-                </td>
-                <td>Сполучені Штати: Приватні/Бізнес-продавці</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="space30"></div>
-          <div class="padded">
-            <h2>Сторінки з тарифами на міжнародних сайтах</h2>
-          </div>
-          <div class="block-beige-bg">
-            <p>
-              <b
-                >На agora.de комісія за остаточну вартість становить 0% з 1
-                березня 2023 року</b
-              >
-            </p>
-            <p>
-              <b>agora</b> скасовує комісію за остаточну вартість для приватних
-              (C2C) продавців, які розміщують свої послуги на <b>agora.de</b> та
-              проживають у Європейській економічній зоні.
-            </p>
-            <p>Зміни також стосуються всіх уже перелічених товарів.</p>
-            <p>
-              Міжнародна комісія за продаж на <b>agora.de</b> становить
-              <b>5%</b>.
-            </p>
-          </div>
-          <div class="space30"></div>
-          <div class="padded">
-            <p class="fs22">
-              Для отримання додаткової інформації, будь ласка, перегляньте
-              сторінку з цінами для вашої країни/регіону проживання:
-            </p>
-            <p class="fs22">Сполучені Штати: Продавці без/ з магазином agora</p>
-            <p class="fs22">Велика Британія: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Канада: Продавці без/ з магазином agora</p>
-            <p class="fs22">Німеччина: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Франція: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Італія: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Іспанія: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Австралія: Продавці без/ з магазином agora</p>
-            <p class="fs22">Австрія: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Швейцарія: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Ірландія: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">
-              Бельгія (нідерландська): Приватні/ Бізнес-продавці
-            </p>
-            <p class="fs22">Бельгія (французька): Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Нідерланди: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Польща: Приватні/ Бізнес-продавці</p>
-            <p class="fs22">Регіон Великого Китаю</p>
-            <p class="fs22">Гонконг</p>
-            <p class="fs22">Сінгапур</p>
-            <p class="fs22">Малайзія</p>
-            <p class="fs22">Філіппіни</p>
-          </div>
-          <div class="space100"></div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer footer-light">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer-menu-grid">
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Перші кроки</li>
-                <li class="footer__menu-item">
-                  <a href="#"
-                    >Як створювати обліковий запис продавця на <b>agora</b></a
-                  >
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Ваше перше оголошення</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Стати партнером</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Доставка</li>
-                <li class="footer__menu-item">
-                  <a href="#">Налаштування варіантів доставки</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Як упакувати товар для доставки</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Основи продажів</li>
-                <li class="footer__menu-item">
-                  <a href="#">Продуктивність продавця </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Ліміти продажу</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Лістинг на міжнародних сайтах agora</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Основи продажів</li>
-                <li class="footer__menu-item">
-                  <a href="#">Продуктивність продавця </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Ліміти продажу</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Лістинг на міжнародних сайтах agora</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Рекламувати оголошення</li>
-                <li class="footer__menu-item">
-                  <a href="#">Стратегії просування </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Реклама на agora </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Менеджер зі знижками</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Керуйте своїм магазином</li>
-                <li class="footer__menu-item">
-                  <a href="#">Чому варто придбати магазин на <b>agora</b></a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Передплати та збори </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Налаштуйте свій магазин</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Навчання</li>
-                <li class="footer__menu-item">
-                  <a href="#">Вебінари </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="#">Академія agora</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__inner-item">
-              <ul class="footer__menu">
-                <li class="footer__menu-title">Контакти</li>
-                <li class="footer__menu-item">
-                  <a href="#">Зв’яжіться з нами</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як створити оголошення: покрокова інструкція</a>
+                                    </div>
 
-          <div class="footer__inner-item footer__socials">
-            <p>Глобальний ринок <b>agora</b></p>
-            <ul>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/fb.svg" alt="facebook"
-                /></a>
-              </li>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/insta.svg" alt="instagram"
-                /></a>
-              </li>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/tg.svg" alt="telegram"
-                /></a>
-              </li>
-              <li>
-                <a href="#" aria-hidden="true"
-                  ><img src="./assets/icons/message.svg" alt="messenger"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__inner-item footer__copyright">
-            <span>Всі права захищені &copy; 2025 agora.ua</span>
-            <span> | </span>
-            <a href="#">Конфіденційність</a>
-            <span> | </span>
-            <a href="#">Налаштування файлів cookle</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="popup">
-      <div class="popup-bg">
-        <img src="./assets/images/popup-bg.jpg" alt="background" />
-      </div>
-      <div class="popup-content">
-        <div class="popup-header">
-          <button class="popup-tab active" data-tab="login">Вхід</button>
-          <button class="popup-tab" data-tab="register">Реєстрація</button>
-        </div>
-        <div class="popup-body">
-          <!-- Вхід -->
-          <div class="popup-section" id="login" style="display: block">
-            <form>
-              <label>Email *</label>
-              <input type="email" placeholder="Введіть вашу електронну пошту" />
-              <label>Пароль *</label>
-              <input type="password" placeholder="Введіть ваш пароль" />
-              <button class="btn-primary">Увійти</button>
-            </form>
-            <div class="popup-footer">
-              <span class="or">або</span>
-              <div class="social-login">
-                <button class="btn-social">
-                  <span class="social-icon">f</span>
-                  <span class="social-text">Facebook</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon">g</span>
-                  <span class="social-text">Google</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon"
-                    ><img src="./assets/icons/apple.svg" alt="apple icon"
-                  /></span>
-                  <span class="social-text">Apple</span>
-                </button>
-              </div>
-              <a href="#" class="forgot-password">Не можете увійти?</a>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Правила та обмеження продажу: категорії товарів та
+                                            кількість оголошень</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як завершити публікацію оголошення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як переглянути оголошення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як встановити ціну на ваші товари</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Продаж через аукціони</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як переоформити список товарів</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як скасувати ставки та керувати учасниками торгів</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як організувати каталог товарів на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Значок «Вигідна ціна»</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Передпродажні оголошення на <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Продаж за допомогою "Купи зараз"</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Перегляди сторінок</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Створення оголошень на 1 день</a>
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">
+                                        Як користуватися обліковим записом продавця на
+                                        <span>agora</span>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як зареєструватися продавцем на <span>agora</span>:
+                                            покрокова інструкція</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як закрити обліковий запис продавця на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як захистити свій обліковий запис продавця на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Що робити, якщо мій обліковий запис продавця на
+                                            <span>agora</span> заблоковано</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Зміна країни реєстрації</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Кілька облікових записів</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як змінити тип облікового запису продавця</a>
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">Знайомтесь з нашими продавцями</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Продавці з Європи</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Продавці з Латинської Америки</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Продавці з Азії та Близького Сходу</a>
+                                    </div>
+                                </div>
+
+                                <!-- Четверта колонка -->
+                                <div class="column">
+                                    <div class="column-title">Освіта</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Вебінари</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Розвивайте свій бізнес з <span>agora</span></a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Подкасти</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Ласкаво просимо до Академії <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Календар тренувань</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-2">
+                                <!-- Перша колонка -->
+                                <div class="column">
+                                    <div class="column-title">Як налаштувати доставку</div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Налаштування варіантів доставки: покрокова
+                                            інструкція</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як встановити вийнятки доставки для певних регіонів</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Час обробки та орієнтовні дати доставки</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Коли потрібне підтвердження підпису</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Варіанти дати доставки для продавців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Використання таблиць тарифів на доставку</a>
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">
+                                        Поради та найкращі практики щодо доставки
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Поради щодо міжнародної доставки</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Пропонуємо комбіновану доставку</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Дропшипинг</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як упакувати товар для доставки</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Екологічна упаковка: 11 порад для продавця, який
+                                            дотримується принципів сталого розвитку</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Відстеження проданих вами товарів</a>
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">
+                                        Програма міжнародної доставки<span>agora</span> розширюється
+                                        для міжнародних продавців
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-3">
+                                <!-- Перша колонка -->
+                                <div class="column">
+                                    <div class="column-title">Як оптимізувати ваші оголошення</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Поради щодо оптимізації лістингу</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Поради щодо фото</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як зробити ваші оголошення зручнішими для мобільних
+                                            пристроїв</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як створювати оголошення з варіаціями</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Контрольний список: ваше ідеальне оголошення для
+                                            продажу одягу</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Новий інструмент для масового лістингу: переваги та
+                                            функції</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як швидше розмістити акцію за допомогою
+                                            бізнес-політики</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Додавання відео до вашого оголошення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як створити оголошення з опцією благодійності</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як створювати та використовувати шаблони для
+                                            продажів</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Специфіка товару</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Ідентифікатори продукту</a>
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">Ліміти</div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Ліміт продажу та нульова комісія за розміщення
+                                            оголошень</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Обмеження категорій <span>agora</span></a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Інструменти для масового лістингу на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">
+                                        Лістинг на міжнародних сайтах <span>agora</span>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як розміщення на міжнародних <span>agora</span> може
+                                            допомогти збільшити продажі</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            ><span>agora</span>Mag: інструмент для керування
+                                            оголошеннями та оптимізації доставки</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як розміщувати та доставляти цифрові товари на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Четверта колонка -->
+                                <div class="column">
+                                    <div class="column-title">
+                                        Масове оновлення характеристик товарів за допомогою функції
+                                        завантаження/вивантаження файлів
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-4">
+                                <!-- Перша колонка -->
+                                <div class="column">
+                                    <div class="column-title">Продуктивність продавця</div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Огляд політики ефективності продавців на міжнародних
+                                            сайтах <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Метрики послуг та бенчмаркінг для аналітичних
+                                            компаній</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Політика ефективності та відгуків продавців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Рівні продавців та стандарти ефективності</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Найкращий продавець</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як контролювати та покращувати ефективність роботи
+                                            ваших продавців</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Панель керування продавцем СВТ</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Абетка метрик та дефектів на <span>agora</span></a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">Зворотній зв'язок</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Профілі зворотнього зв'язку</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Перегляд та реагування на відгуки покупців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Залишення відгуків для покупців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Політика зворотнього зв'язку</a>
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">Суперечки та захист продавця</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Проблеми з отриманням товару</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Встановлення вимог до покупця або блокування покупця</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Вирішення спорів щодо оплати</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Оскарження дефекту</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Захист продавця у разі оскарження платежів</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як оскаржити результат справи</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Найкращі практики, щоб уникнути проблем із
+                                            продавцями</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Попросіть <span>agora</span> втрутитися та допомогти</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Четверта колонка -->
+                                <div class="column">
+                                    <div class="column-title">Транзакції</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як працює повернення товарів</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як налаштувати політику повернення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як продавці можуть скасувати замовлення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Повернення коштів покупцям</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Що робити, якщо покупець не оплатив товар</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Політика скасування замовлення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Зворотна доставка для продавців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Політика розташування товарів</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як обробити запит на повернення</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Пошук проданих товарів</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-5">
+                                <!-- Перша колонка -->
+                                <div class="column">
+                                    <div class="column-title">Комісії продавця</div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Комісії за продаж для продавців на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Щомісячна нульова комісія за розміщення оголошень та
+                                            базові комісії на міжнародних сайтах
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Комісійні кредити</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як стягуються комісії та витрати на продаж</a>
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">Податки</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Податок на додану вартість</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">ПДВ на імпорт для Португалії</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Правило імпорту з ПДВ для Великої Британії</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Правило імпорту з ПДВ для ЄС</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >ПДВ на комісії <span>agora</span> у Казахстані</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >ПДВ на комісії <span>agora</span> в Єгипті та Боснії та
+                                            Герцеговині</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">ПДВ на імпорт для Норвегії</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">ПДВ на комісії <span>agora</span> у Нігерії</a>
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">Платежі</div>
+
+                                    <div class="menu-item">
+                                        <a href="#"><span>agora</span> керує платежами</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Що означає для <span>agora</span> керувати платежами</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як налаштувати та змінити спосіб оплати комісій та
+                                            витрат на продаж</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Платежі затримано</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Як надсилати рахунки-фактури покупцям</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Підсумок у деталях транзакції</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-6">
+                                <!-- Перша колонка -->
+                                <div class="column">
+                                    <div class="column-title">Політика <span>agora</span></div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Огляд правил та політик <span>agora</span></a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Політика якості доставки - коефіцієнт неотриманих
+                                            товарів</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Програма перевірених власників прав
+                                            <span>agora</span> та політика щодо інтелектуальної
+                                            власності</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Стандартна політика обслуговування - коефіцієнт
+                                            негативного досвіду покупців</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Перевезення небезпечних матеріалів</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Політика зворотнього зв'язку</a>
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">Міжнародні правила</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Продаж продукції з маркуванням СЕ в ЄС</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Використання маркування UKCA/UKNI та СЕ на ринку
+                                            Великої Британії</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >DAC7 - Забов'язання щодо звітності про продажі</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >14-денне право на відмову від договору згідно з
+                                            Директивою ЄС про права споживачів</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Закон ЄС про цифрові послуги</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Загальний регламент безпеки продукції (GPSR)</a>
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">
+                                        Розширена відповідальність виробника
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">РВР у Франції</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Німецький закон про упаковку</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Німецький закон про електричне та електрообладнання
+                                            (ElektroG)</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-7">
+                                <div class="column">
+                                    <div class="column-title">Політика <span>agora</span></div>
+                                    <div class="menu-item">
+                                        <a href="#">Налаштуйте свій магазин</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Підписки та збори магазину <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як закрити свій магазин на <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як налаштувати свій магазин на <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Магазини <span>agora</span> на міжнародних сайтах</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"><span>agora</span>: комісії та переваги</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Створення бізнесу постійних покупців для вашого
+                                            магазину</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як керувати категоріями магазину</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Сезонний посібник для продавців на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Проведіть маркетингову компанію</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Безкоштовні сезонні контрольні списки для
+                                            завантаження</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Інвентарізація - це ключ: як підготуватися до пікового
+                                            сезону</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Відмінне обслуговування клієнтів у пікові сезони</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Поради щодо доставки у святковий сезон</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як упакувати сезонні продукти та прикрасити ваш
+                                            магазин</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Найпопулярніші товари цього святкового сезону</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Календар свят на 2025 рік: ключові дати для ваших
+                                            маркетингових компаній</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Весняні тренди у продажах</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Літні тренди розпродажів: весілля, вечірки та свята</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Осінній період розпродажів в 2025 році: Хелловін, Чорна
+                                            п'ятниця, Кіберпонеділок</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Найпопулярніші товари на святковий сезон 2025 року</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Друга колонка -->
+                                <div class="column">
+                                    <div class="column-title">Просування</div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Менеджер зі знижок</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Стратегії просування</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Ціноутворення на обсяг</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Пропозиція покупцям</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Зв'яжіться з більшою кількістю покупців за допомогою
+                                            соціальних мереж</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Оновити SEO на <span>agora</span></a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Додавання найкращої пропозиції до оголошень</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >10 практичних порад: як продавати вінтаж як
+                                            професіонал</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як знайти та зрозуміти свою цільову аудиторію:
+                                            практичні поради</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як розпочати роботу зі сторінкою Seller Hub у
+                                            соціальних мережах</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як зрозуміти нове покоління покупців</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як залучити більше покупців, будучи сталим продавцем</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Третя колонка -->
+                                <div class="column">
+                                    <div class="column-title">Реклама</div>
+                                    <div class="menu-item">
+                                        <a href="#">Рекламовані оголошення</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Рекламовані магазини</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Реклама поза сайтом</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Пріорітетна стратегія компанії</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Загальна стратегія компанії</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Найчастіші запитання щодо рекламних магазинів</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Поширені запитання щодо реклами поза сайтом</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Панелі реклами на <span>agora</span></a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Представляємо оновлення для рекламних оголошень на
+                                            <span>agora.de</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-divider"></div>
+
+                                    <div class="block-title">
+                                        Центр продавців: ваш центр управління бізнесом
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Моніторинг вашого бізнесу в Центрі продавців</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як використовувати звіти Центру продавців</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Керуйте своїми продажами за допомогою Центру
+                                            продавців</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Як користуватися вкладкою "Платежі" в Центрі
+                                            продавців</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Масове завантаження оголошень за допомогою вкладки
+                                            "Звіти"</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Четверта колонка -->
+                                <div class="column">
+                                    <div class="block-title">
+                                        Сервіси та інструменти <span>agora</span> для допомоги
+                                        продавцю
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Дослідження продукту</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як керувати часом, проведеним поза домом</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Інструмент для продавців колекційних карток:
+                                            завантаження CSV-файлу та посібник з цін</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Командна робота на <span>agora</span>: як налаштувати
+                                            доступ до облікового запису для кількох користувачів</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Оптимізуйте свої оголошення за допомогою Звіту про
+                                            якість оголошень</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як створювати та надсилати розсилки покупцям</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Як створити групи покупців</a>
+                                    </div>
+
+                                    <div class="menu-divider"></div>
+
+                                    <div class="block-title">
+                                        Розвивайте свій бізнес з питань оренди та обслуговування
+                                        (P&A)
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Основи продажу автомобілів, запчастин та аксесуарів</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Комісії за продаж транспортних засобів на
+                                            <span>agora</span> Motors</a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Програма гарантованої посадки <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Сумісність (сумісність) автомобілів: посібник для
+                                            продавців <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Інструменти та рішення для продажу автозапчастин на
+                                            <span>agora</span></a
+                                        >
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Продаж автозапчастин та аксесуарів на
+                                            <span>agora</span>: як створити запаси та вибрати
+                                            постачальників</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tab-content"
+                                id="tab-8">
+                                <div class="column">
+                                    <div class="column-title">Новини <span>agora</span></div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Зміни в імпортах та митній політиці США</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Зустрічайте переможців конкурсу "Експортер року 2024"
+                                            на <span>agora</span></a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Оновлення щодо класифікації методів доставки та
+                                            постачальників логістичних послуг</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Оновлення щодо захисту продавців для відправлень із
+                                            Сербії</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Оновлення щодо захисту продавців для відправлень до/з
+                                            Ізраїлю</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Ізраїльський інститут експорту запускає онлайн-каталог
+                                            для підтримки бізнесу</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Оновлення щодо захисту продавців через землетрус у
+                                            Туреччині та Сирії</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Захист продавців у разі затримки доставки через ураган
+                                            Фіона</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Важливі оновлення щодо захисту продавців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Архів новин <span>agora</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="column-title">
+                                        Архів оновлень <span>agora</span>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Оновлення для продавців за січень 2025</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#"
+                                            >Оновлення для продавців за листопад 2024 року</a
+                                        >
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Оновлення для продавців за липень 2024 року</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Оновлення для продавців осені 2023 року</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Оновлення для продавців літа 2023 року</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Зимове оновлення для продавців 2023 року</a>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="column-title">
+                                        Новини продавця: на червень 2025 року
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Оптимізуйте свій бізнес</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Розвивайте свій бізнес</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Інструменти, якими можна довіряти</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Захист продавців</a>
+                                    </div>
+
+                                    <div class="menu-item">
+                                        <a href="#">Міжнародні оновлення</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div
+                                class="tab-content"
+                                id="tab-9" ></div> -->
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="mobile-links">
+                <ul>
+                    <li>
+                        <a
+                            id="mobile-links_btn"
+                            href="#"
+                            ><span>Центр продавця</span><span class="mobile-links-arrow"></span
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span>Створіть своє оголошення</span
+                            ><span class="mobile-links-arrow"></span
+                        ></a>
+                    </li>
+                </ul>
 
-          <!-- Реєстрація -->
-          <div class="popup-section" id="register">
-            <form>
-              <label>Email *</label>
-              <input type="email" placeholder="Введіть вашу електронну пошту" />
-              <label>Пароль *</label>
-              <input type="password" placeholder="Введіть ваш пароль" />
-              <button class="btn-primary">Зареєструватися</button>
-            </form>
-            <div class="popup-footer">
-              <span class="or">або</span>
-              <div class="social-login">
-                <button class="btn-social">
-                  <span class="social-icon">f</span>
-                  <span class="social-text">Facebook</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon">g</span>
-                  <span class="social-text">Google</span>
-                </button>
-                <button class="btn-social">
-                  <span class="social-icon"
-                    ><img src="./assets/icons/apple.svg" alt="apple icon"
-                  /></span>
-                  <span class="social-text">Apple</span>
-                </button>
-              </div>
+                <div class="mobile-menu-wrapper">
+                    <div class="menu-level-1">
+                        <ul>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="steps">
+                                <a href="#"
+                                    ><span>Перші кроки</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="delivery">
+                                <a href="#"
+                                    ><span>Доставка</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="management">
+                                <a href="#"
+                                    ><span>Керування оголошеннями</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="performance">
+                                <a href="#"
+                                    ><span>Продуктивність продавця</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="fees">
+                                <a href="#"
+                                    ><span>Збори, податки та платежі</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="policy">
+                                <a href="#"
+                                    ><span>Правила та політика</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="tools">
+                                <a href="#"
+                                    ><span>Маркетинг</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="updates">
+                                <a href="#"
+                                    ><span>Оновлення продавця</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li
+                                class="menu-level-1-item"
+                                data-target="partners">
+                                <a href="#"
+                                    ><span>Партнери <span class="fw500">agora</span></span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-overlay"></div>
+                    <div
+                        class="menu-level-2"
+                        data-menu="steps">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Як скласти список товарів</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Як користуватися обліковим записом продавця</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Знайомтесь з нашими продавцями</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Освіта</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="delivery">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Як Налаштувати доставку</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Поради та найкращі практики щодо доставки</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Програма міжнародної доставки
+                                        <span class="fw500">agora</span> розширюється для
+                                        міжнародних продавців</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="management">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Як оптимізувати ваші оголошення</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Ліміти</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Лістинг на міжнародних сайтах
+                                        <span class="fw500">agora</span></span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Масове оновлення характеристик товарів за допомогою функції
+                                        завантаження/вивантаження файлів</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="performance">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Продуктивність продавця</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Зворотній зв’язок</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Суперечки та захист продавця</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Транзакції</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="fees">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Комісії продавця</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Податки</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Платежі</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="policy">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Політика <span class="fw500">agora</span></span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Міжнародні правила</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Розширена відповідальність виробника</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="tools">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Політика <span class="fw500">agora</span></span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Просування</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Реклама</span><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Центр продавця: ваш центр управління бізнесом</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Сервіси та інструменти <span class="fw500">agora</span> для
+                                        допомоги продавцю</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Розвивайте свій бізнес з питань оренди та обслуговування
+                                        (P&A)</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="menu-level-2"
+                        data-menu="updates">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><span>Новини <span class="fw500">agora</span></span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Архів оновлень <span class="fw500">agora</span></span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span>Новини продавця: на червень 2025 року</span
+                                    ><span class="mobile-links-arrow"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
+        </header>
+        <main class="main main-sellprotect2">
+            <section
+                class="hero hero--simple"
+                id="hero">
+                <span>Захист продавців</span>
+            </section>
+            <section class="text-banner text-banner__right_rounded">
+                <div class="container">
+                    <div class="inner padding-top100">
+                        <div class="text-banner__left">
+                            <ul class="text-banner__list">
+                                <li>Зловживальна діяльність з купівлі</li>
+                                <li>Події поза вашим контролем</li>
+                                <li>Інші засоби захисту</li>
+                                <li>Захист у разі суперечок щодо оплати</li>
+                                <li>Право на захист</li>
+                                <li>Втрата захисту</li>
+                            </ul>
+                        </div>
+                        <div class="text-banner__right">
+                            <img
+                                class="text-banner__right-image"
+                                src="assets/images/agora-text-circle.svg"
+                                alt=""
+                                role="presentation" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="padded">
+                        <p>
+                            Коли ви продаєте на <span class="fw500">agora</span>, торговий майданчик
+                            захищає вас від зловживань покупцями та подій, які ви не контролюєте.
+                        </p>
+                    </div>
+                    <div class="faq-section">
+                        <h2 class="faq-section-title-image">Часті запитання</h2>
+                        <div class="accordion not-fullwidth">
+                            <div class="accordion-item">
+                                <div class="faq_accordion-title">
+                                    <p>Як я захищений від недобросовісних покупців?</p>
+                                    <div class="services-faq_accordion-btn">
+                                        <img
+                                            src="./assets/icons/arrow.svg"
+                                            alt="arrow  icon" />
+                                    </div>
+                                </div>
+                                <div class="faq_accordion-content">
+                                    Якщо <span class="fw500">agora</span> виявить, що поведінка
+                                    покупця є образливою, компанія вживе заходів щодо покупця та
+                                    видалить негативні та нейтральні відгуки й дефекти, включаючи
+                                    відкриті справи з показників обслуговування.
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="faq_accordion-title">
+                                    <p>Що робити, якщо трапиться щось поза моїм контролем?</p>
+                                    <div class="services-faq_accordion-btn">
+                                        <img
+                                            src="./assets/icons/arrow.svg"
+                                            alt="arrow  icon" />
+                                    </div>
+                                </div>
+                                <div class="faq_accordion-content">
+                                    <span class="fw500">agora</span> захистить вас, видаливши
+                                    негативні та нейтральні відгуки та дефекти, коли трапляються
+                                    обставини, які ви не контролюєте, такі як погодні умови чи
+                                    затримки перевізника, або коли товар прибуває із запізненням,
+                                    але відстеження показує, що ви відправили товар вчасно.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space100"></div>
+                    <h2 class="heading-bg-beige-image-big mb-60">
+                        Зловживальна діяльність з купівлі
+                    </h2>
+                    <div class="padded">
+                        <p>
+                            Коли <span class="fw500">agora</span> визначить, що покупець порушив
+                            політику щодо зловживань , він видалить будь-які пов'язані негативні або
+                            нейтральні відгуки та дефекти, включаючи будь-які відкриті справи щодо
+                            показників обслуговування. Для зловживань покупців
+                            <span class="fw500">agora</span> також може обмежити їхню можливість
+                            запитувати повернення товарів на торговому майданчику. У серйозних
+                            випадках або при повторній зловживанні
+                            <span class="fw500">agora</span> може призупинити дію облікового запису
+                            покупця.
+                        </p>
+                        <p>
+                            Ви можете допомогти нам, повідомивши про покупця та чітко описавши його
+                            дії. Це допоможе <span class="fw500">agora</span> розслідувати
+                            потенційні порушення політики та вжити заходів для вашого захисту.
+                        </p>
+                        <p>
+                            Перегляньте політику щодо зловживань покупцями, щоб побачити приклади
+                            неприпустимої поведінки покупців.
+                        </p>
+                    </div>
+                    <div class="accordion acc-75">
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>
+                                    Товар повертається після того, як він був використаний або
+                                    пошкоджений покупцем
+                                </p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <p>
+                                    Продавці, які не відповідають стандарту “Нижче стандарту” мають
+                                    право на цей захист для оголошень, що пропонують безкоштовне
+                                    повернення.
+                                </p>
 
-          <!-- Зміна пароля -->
-          <div class="popup-section" id="forgot-password">
-            <form>
-              <label>Новий пароль</label>
-              <input type="password" placeholder="Введіть новий пароль" />
-              <label>Підтвердити пароль</label>
-              <input type="password" placeholder="Підтвердьте новий пароль" />
-              <button class="btn-primary">Далі</button>
-            </form>
-          </div>
+                                <p>
+                                    Якщо ви прийняли запит покупця на повернення, але товар
+                                    повернуто в іншому стані, ніж той, у якому він був спочатку
+                                    відправлений:
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        Ви можете відрахувати до 50% від суми відшкодування, щоб
+                                        відшкодувати втрачену вартість товару
+                                    </li>
+                                    <li>
+                                        <span class="fw500">agora</span> автоматично видаляє
+                                        будь-які пов'язані негативні або нейтральні відгуки
+                                    </li>
+                                    <li>
+                                        Якщо покупець запросив повернення, оскільки товар не
+                                        відповідав опису, <span class="fw500">agora</span> не врахує
+                                        повернення у вашому показнику «Товар не відповідає опису» в
+                                        метриках обслуговування.
+                                    </li>
+                                </ul>
+
+                                <p>
+                                    <span>
+                                        Обов’язково повідомте про покупця та надішліть йому
+                                        відшкодування протягом 2 робочих днів після отримання товару
+                                        назад. Ви можете зробити це в запиті на повернення. Якщо
+                                        <span class="fw500">agora</span> втрутиться, щоб допомогти з
+                                        поверненням на будь-якому етапі, ви більше не зможете
+                                        вирахувати суму з відшкодування покупця.</span
+                                    >
+                                </p>
+
+                                <p>
+                                    Якщо <span class="fw500">agora</span> попросять втрутитися після
+                                    того, як ви повернули кошти, це не буде вважатися закритою
+                                    справою без вирішення питання продавцем.
+                                    <span class="fw500">agora</span> залишатиме повернення відкритим
+                                    до 10 днів, поки працює з покупцем над вирішенням його проблем,
+                                    і вам не потрібно буде робити нічого більше.
+                                </p>
+
+                                <p>Дізнайтеся більше про повернення коштів покупцеві.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Покупець відкликає свою ставку або не платить</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <ul>
+                                    <li>
+                                        Якщо покупець відкликає свою ставку, і це порушує ваш
+                                        аукціон, ви можете скасувати замовлення, і
+                                        <span class="fw500">agora</span> видалить будь-які пов'язані
+                                        негативні або нейтральні відгуки та дефекти скасованого
+                                        замовлення.
+                                    </li>
+                                    <li>
+                                        Якщо покупець не сплатить у встановлений термін, і ви
+                                        скасуєте замовлення,
+                                        <span class="fw500">agora</span> видалить будь-які пов'язані
+                                        з цим відгуки та дефекти скасованого замовлення.
+                                    </li>
+                                    <li>
+                                        Щоб запобігти неоплаченим товарам, ви можете
+                                        вимагати негайної оплати від покупців
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>
+                                    Покупець вимагає щось, чого не було запропоновано в
+                                    оригінальному оголошенні
+                                </p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                Ви ніколи не зобов'язані погоджуватися на будь-які зміни умов вашого
+                                оголошення (наприклад, додавання додаткових товарів або надання
+                                знижки). Якщо покупець вимагає зміни до того, що ви спочатку
+                                пропонували, ви можете скасувати замовлення або завершити транзакцію
+                                за початковими умовами. <span class="fw500">agora</span> видалить
+                                будь-які пов'язані негативні або нейтральні відгуки та дефекти
+                                скасованого замовлення, коли побачить вимоги покупця в повідомленнях
+                                <span class="fw500">agora</span>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space100"></div>
+                    <h2 class="heading-bg-beige-image-big">Події поза вашим контролем</h2>
+                    <div class="accordion acc-75">
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>
+                                    Товар прибув із запізненням, але відстеження показує, що ви
+                                    відправили його вчасно
+                                </p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <ul>
+                                    <span class="fw500">agora</span>
+                                    автоматично коригує ваш коефіцієнт затримки доставки та
+                                    негативний або нейтральний відгук, коли:
+
+                                    <li>
+                                        Сканування перевізника показує, що ви відправили товар у
+                                        встановлений термін обробки, навіть якщо він прибуває із
+                                        запізненням.
+                                    </li>
+                                    <li>
+                                        Сканування перевізника показує, що товар прибув до
+                                        очікуваного часу доставки, навіть якщо ви відправили його із
+                                        запізненням
+                                    </li>
+                                    <li>
+                                        Якщо відстеження відсутнє або перевізник не відсканував
+                                        відправлення, це не вважатиметься запізненням, якщо покупець
+                                        не вкаже, що відправлення було доставлено із запізненням.
+                                    </li>
+                                </ul>
+
+                                <p class="acc-title">
+                                    Міжнародна доставка <span class="fw500">agora</span>
+                                </p>
+
+                                <p>
+                                    Коли ви користуєтеся послугою міжнародної доставки
+                                    <span class="fw500">agora</span>, ви несете відповідальність за
+                                    безпечне відправлення придбаного покупцем товару до центру
+                                    доставки в США. Якщо товар пошкоджено в центрі доставки або якщо
+                                    покупець повідомляє про його втрату чи пошкодження під час
+                                    міжнародної доставки, <span class="fw500">agora</span>
+                                    співпрацюватиме з покупцем, щоб вирішити проблему. Ви захищені
+                                    від:
+                                </p>
+
+                                <ul>
+                                    Випадкові гарантії повернення грошей
+                                    <span class="fw500">agora</span
+                                    >, та суперечки щодо оплати, якщо:
+
+                                    <li>Покупець повідомляє, що товар не прибув, або</li>
+                                    <li>
+                                        Покупець повідомляє про пошкодження товару під час доставки
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    Негативний та нейтральний зворотний зв'язок та/або дефекти,
+                                    коли:
+
+                                    <li>
+                                        Покупець повідомляє про втрату або пошкодження, а
+                                        <span class="fw500">agora</span>
+                                        визначає, що ви не несете відповідальності
+                                    </li>
+                                    <li>
+                                        Коментар або дефект у відгуку стосується проблеми з
+                                        доставкою, а відстеження показує, що ви вчасно відправили
+                                        посилку до центру доставки США.
+                                    </li>
+                                </ul>
+
+                                <p>
+                                    Для отримання додаткової інформації дивіться статтю
+                                    про міжнародну доставку <span class="fw500">agora</span>.
+                                </p>
+
+                                <p class="acc-title">
+                                    Митні питання та питання міжнародних перевізників
+                                </p>
+                                <p>
+                                    <span class="fw500">agora</span> коригує ваш коефіцієнт затримки
+                                    відправлень та видаляє негативні або нейтральні відгуки, коли ви
+                                    відправляєте міжнародні відправлення, а відправлення отримує
+                                    сканування місцевого перевізника протягом встановленого часу
+                                    обробки.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Покупець відкликає свою ставку або не платить</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content">
+                                <ul>
+                                    <li>
+                                        Якщо покупець відкликає свою ставку, і це порушує ваш
+                                        аукціон, ви можете скасувати замовлення, і
+                                        <span class="fw500">agora</span> видалить будь-які пов'язані
+                                        негативні або нейтральні відгуки та дефекти скасованого
+                                        замовлення.
+                                    </li>
+                                    <li>
+                                        Якщо покупець не сплатить у встановлений термін, і ви
+                                        скасуєте замовлення,
+                                        <span class="fw500">agora</span> видалить будь-які пов'язані
+                                        з цим відгуки та дефекти скасованого замовлення.
+                                    </li>
+                                    <li>
+                                        Щоб запобігти неоплаченим товарам, ви можете
+                                        вимагати негайної оплати від покупців
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space100"></div>
+
+                    <h2 class="heading-bg-brown-dark heading-bg-brown-dark-image">
+                        Інші засоби захисту
+                    </h2>
+
+                    <h2 class="heading-bg-beige-image-big small">
+                        Стандарти ефективності продавців
+                    </h2>
+                    <div class="accordion acc-75">
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Справедлива оцінка ефективності роботи</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content"></div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>
+                                    Пільговий період для продавців з найвищим рейтингом на
+                                    <span class="fw500">agora</span>
+                                </p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content"></div>
+                        </div>
+                    </div>
+                    <div class="padded mt-60">
+                        <p>
+                            Якщо <span class="fw500">agora</span> закриє справу або апеляцію щодо
+                            гарантії повернення грошей <span class="fw500">agora</span> після того,
+                            як визначить, що ви виконали свої зобов'язання перед покупцем, це
+                            видалить будь-які пов'язані негативні або нейтральні відгуки та
+                            недоліки.
+                        </p>
+                    </div>
+
+                    <h2 class="heading-bg-beige-image-big small">
+                        Стандарти ефективності продавців
+                    </h2>
+                    <div class="accordion acc-75">
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Якщо покупець повідомляє, що товар не прибув</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content"></div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Якщо покупець повідомляє, що товар не відповідає опису</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content"></div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Якщо покупець не відправляє повернений товар</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content"></div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="faq_accordion-title">
+                                <p>Дублікати заявок</p>
+                                <div class="services-faq_accordion-btn">
+                                    <img
+                                        src="./assets/icons/arrow.svg"
+                                        alt="arrow  icon" />
+                                </div>
+                            </div>
+                            <div class="faq_accordion-content"></div>
+                        </div>
+                    </div>
+
+                    <div class="padded mmt-40">
+                        <h2>Гарантована посадка на <span class="fw500">agora</span></h2>
+                        <p>
+                            Коли покупець відкриває повернення запчастини або аксесуара для
+                            автомобіля, що покривається
+                            <a href="#">гарантією придатності <span class="fw500">agora</span></a
+                            >, і вибирає причину «Не підходить до мого автомобіля»,
+                            <span class="fw500">agora</span> покриває вартість етикетки для
+                            повернення <span class="fw500">agora</span>. Якщо товар не відповідає
+                            вимогам етикетки для повернення <span class="fw500">agora</span>, ви
+                            будете відповідальні за надання покупцеві способу повернення товару.
+                        </p>
+                    </div>
+                    <div class="padded">
+                        <h2>Захист у разі суперечок щодо оплати</h2>
+                        <p>
+                            Якщо покупець подає скаргу на оплату, і транзакція має право на захист
+                            згідно із <a href="#"> захистом у сфері спорів щодо платежів</a> на
+                            <span class="fw500">agora</span> ,
+                            <span class="fw500">agora</span> покриє суму скарги, скасує плату за
+                            скаргу та видалить негативні та нейтральні відгуки, пов’язані з
+                            транзакцією.
+                        </p>
+
+                        <p>
+                            Дізнайтеся більше про
+                            <a href="#"> захист продавців у разі суперечок щодо оплати.</a>
+                        </p>
+                    </div>
+
+                    <div class="padded">
+                        <h2>Право на захист</h2>
+                        <p>
+                            Більшість транзакцій на <span class="fw500">agora</span> охоплені
+                            захистом продавців. Однак такі типи товарів та оголошень не охоплюються
+                            цим захистом:
+                        </p>
+                        <ul>
+                            <li>
+                                Товари, що порушують будь-які
+                                <a href="#"
+                                    >правила заборонених та обмежених товарів
+                                    <span class="fw500">agora</span>.</a
+                                >
+                            </li>
+                            <li>
+                                Товари, на які не поширюється
+                                <a href="#"
+                                    >гарантія повернення грошей <span class="fw500">agora</span></a
+                                >. Деякі приклади включають транспортні засоби (див.
+                                <a href="#"
+                                    >Захист транспортних засобів <span class="fw500">agora</span></a
+                                >), нерухомість, веб-сайти та бізнес на продаж, оголошення, послуги,
+                                цифровий контент, нематеріальні товари та деякі категорії
+                                бізнес-обладнання (див.
+                                <a href="#"
+                                    >Захист придбання бізнес-обладнання
+                                    <span class="fw500">agora</span></a
+                                >).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="padded">
+                        <h2>Втрата захисту</h2>
+                        <p class="text-strong">
+                            Якщо ви зробите щось із переліченого нижче, ви можете втратити право на
+                            захист продавців:
+                        </p>
+                        <ul>
+                            <li>Працювати під фальшивою ідентичністю</li>
+                            <li>
+                                Невиконання ваших обіцянок щодо обслуговування (наприклад,
+                                недотримання політики повернення)
+                            </li>
+                            <li>
+                                Мати історію серйозних порушень політики, таких як: продаж підробок,
+                                використання заборонених форм дропшиппінгу,або зняття продажів з
+                                <span class="fw500">agora</span>
+                            </li>
+
+                            <li>
+                                Зловживаєте або шахрайським чином використовуєте захист продавця –
+                                наприклад, у вас є історія:
+                            </li>
+                            <li>
+                                Повідомлення покупців про неправдиві запити «Товар не відповідає
+                                опису», якщо ви описали товар неправильно
+                            </li>
+                            <li>
+                                Несправедливе відрахування занадто великої суми з відшкодування
+                                покупцеві, коли товар <a href="#">повертається в іншому стані</a>. У
+                                цих випадках відрахування слід використовувати лише для
+                                відшкодування фактично втраченої вартості товару.
+                            </li>
+                            <li>
+                                Неправильне використання або маніпулювання програмою гарантованої
+                                відповідності <span class="fw500">agora</span>
+                            </li>
+                        </ul>
+                        <p>
+                            <a href="#"
+                                >Для отримання додаткової інформації див. політику захисту
+                                продавців</a
+                            >
+                            <span class="fw500">agora</span> щодо зловживань .
+                        </p>
+                        <p class="text-strong">
+                            Якщо <span class="fw500">agora</span> втручається, щоб допомогти із
+                            запитом на повернення або неотримання товару:
+                        </p>
+                        <p>
+                            Ви більше не зможете вирахувати суму з відшкодування покупцеві, якщо
+                            товар повернуто, використано або пошкоджено покупцем.
+                        </p>
+                        <p>
+                            Якщо <span class="fw500">agora</span> визначить, що ви несете
+                            відповідальність за повернення коштів покупцеві,
+                            <span class="fw500">agora</span> не видалятиме негативні та нейтральні
+                            відгуки, і це вважатиметься «справою закритою без вирішення питання
+                            продавцем».
+                        </p>
+                        <p>
+                            Дізнайтеся більше про
+                            <a href="#">політику ефективності та відгуків продавців.</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer footer-light">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer-menu-grid">
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Перші кроки</li>
+                                <li class="footer__menu-item">
+                                    <a href="#"
+                                        >Як створювати обліковий запис продавця на <b>agora</b></a
+                                    >
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Ваше перше оголошення</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Стати партнером</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Доставка</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Налаштування варіантів доставки</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Як упакувати товар для доставки</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Основи продажів</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Продуктивність продавця </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Ліміти продажу</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#"
+                                        >Лістинг на міжнародних сайтах
+                                        <span class="fw500">agora</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Основи продажів</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Продуктивність продавця </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Ліміти продажу</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#"
+                                        >Лістинг на міжнародних сайтах
+                                        <span class="fw500">agora</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Рекламувати оголошення</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Стратегії просування </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Реклама на <span class="fw500">agora</span> </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Менеджер зі знижками</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Керуйте своїм магазином</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Чому варто придбати магазин на <b>agora</b></a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Передплати та збори </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Налаштуйте свій магазин</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Навчання</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Вебінари </a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Академія <span class="fw500">agora</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__inner-item">
+                            <ul class="footer__menu">
+                                <li class="footer__menu-title">Контакти</li>
+                                <li class="footer__menu-item">
+                                    <a href="#">Зв’яжіться з нами</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__inner-item footer__socials">
+                        <p>Глобальний ринок <b>agora</b></p>
+                        <ul>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/fb.svg"
+                                        alt="facebook"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/insta.svg"
+                                        alt="instagram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/tg.svg"
+                                        alt="telegram"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-hidden="true"
+                                    ><img
+                                        src="./assets/icons/message.svg"
+                                        alt="messenger"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner-item footer__copyright">
+                        <span
+                            >Всі права захищені &copy; 2025
+                            <span class="fw500">agora</span>.ua</span
+                        >
+                        <span> | </span>
+                        <a href="#">Конфіденційність</a>
+                        <span> | </span>
+                        <a href="#">Налаштування файлів cookle</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="popup">
+            <div class="popup-bg">
+                <img
+                    src="./assets/images/popup-bg.jpg"
+                    alt="background" />
+            </div>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <button
+                        class="popup-tab active"
+                        data-tab="login">
+                        Вхід
+                    </button>
+                    <button
+                        class="popup-tab"
+                        data-tab="register">
+                        Реєстрація
+                    </button>
+                </div>
+                <div class="popup-body">
+                    <!-- Вхід -->
+                    <div
+                        class="popup-section"
+                        id="login"
+                        style="display: block">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Увійти</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                            <a
+                                href="#"
+                                class="forgot-password"
+                                >Не можете увійти?</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Реєстрація -->
+                    <div
+                        class="popup-section"
+                        id="register">
+                        <form>
+                            <label>Email *</label>
+                            <input
+                                type="email"
+                                placeholder="Введіть вашу електронну пошту" />
+                            <label>Пароль *</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть ваш пароль" />
+                            <button class="btn-primary">Зареєструватися</button>
+                        </form>
+                        <div class="popup-footer">
+                            <span class="or">або</span>
+                            <div class="social-login">
+                                <button class="btn-social">
+                                    <span class="social-icon">f</span>
+                                    <span class="social-text">Facebook</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon">g</span>
+                                    <span class="social-text">Google</span>
+                                </button>
+                                <button class="btn-social">
+                                    <span class="social-icon"
+                                        ><img
+                                            src="./assets/icons/apple.svg"
+                                            alt="apple icon"
+                                    /></span>
+                                    <span class="social-text">Apple</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Зміна пароля -->
+                    <div
+                        class="popup-section"
+                        id="forgot-password">
+                        <form>
+                            <label>Новий пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Введіть новий пароль" />
+                            <label>Підтвердити пароль</label>
+                            <input
+                                type="password"
+                                placeholder="Підтвердьте новий пароль" />
+                            <button class="btn-primary">Далі</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
