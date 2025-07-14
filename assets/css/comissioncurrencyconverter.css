@@ -20,6 +20,11 @@ body {
     padding: 0 13px;
 }
 
+.agora-touch-slider,
+.collapsed-btn {
+    display: none;
+}
+
 .header__middle .container {
     max-width: 1460px;
     padding: 0 clamp(0.8125rem, 0.6611rem + 0.6731vw, 1.25rem);
@@ -852,8 +857,9 @@ tbody td {
         line-height: 1.2;
     }
 
-    .main.main-sellprotect2 {
-        margin-top: 0;
+    .main.main-sellprotect2,
+    .main.main-comission {
+        margin-top: 7px;
     }
 
     .mb-60 {
@@ -1121,7 +1127,105 @@ tbody td {
 
 @media (max-width: 768px) {
     .regions-rates {
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 20px 0 23px;
+    }
+
+    .region-card {
+        flex: none;
+        width: calc(50% - 6px);
+        aspect-ratio: 1 / 1;
+        min-height: 150px
+    }
+
+    thead th {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    tbody td {
+        padding: 6px 15px 9px;
+        font-size: 14px;
+    }
+
+    .sales-table th {
+        font-size: 18px;
+        padding: 16px 24px;
+        line-height: 170%;
+    }
+
+    .sales-table td {
+        padding: 24px;
+    }
+
+    .main-comission .hr-spacer {
+        display: none;
+    }
+
+    .collapsed-list.acc-70 {
+        width: 70%;
+    }
+
+    .fs22 {
+        font-size: 18px ! important;
+    }
+
+    .collapsed-list-heading {
+        font-size: 18px;
+        gap: 20px;
+        padding: 0 4px;
+        border-bottom: 0.30px solid rgba(0, 0, 0, 0.7);
+        justify-content: space-between;
+    }
+
+    .icon-collapse-down {
+        width: 22px !important;
+        height: 14px;
+    }
+
+    .accordion-header {
+        padding: 0;
+        font-size: 16px;
+        padding: 20px 0;
+        align-items: flex-end;
+    }
+
+    .excluded-categories {
+        padding: 0px 20px 0px 15px;
+    }
+
+    .main-comission .accordion-item {
+        border-bottom: none
+    }
+
+    .accordion-header span:first-child {
+        width: 96%;
+    }
+
+    .padded .btn-primary {
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+        background: #f8f6f0;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        max-width: 192px;
+        margin: 24px auto 10px;
+    }
+
+    .text-banner__title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .text-banner__text {
+        font-size: 18px;
+    }
+
+    .text-banner__button {
+        font-size: 14px;
+        padding: 13px 36px;
+        margin: 0 auto
     }
 
     .header__middle {
@@ -1288,11 +1392,6 @@ tbody td {
         max-width: 96px;
     }
 
-
-    .regions-rates {
-        flex-direction: column;
-    }
-
     .footer.footer-light .footer__menu-title {
         font-size: 14px;
     }
@@ -1358,6 +1457,8 @@ tbody td {
 
     .padded {
         padding: 15px 13px;
+        display: flex;
+        flex-direction: column;
     }
 
     .hero--simple {
@@ -1412,6 +1513,13 @@ tbody td {
 
     .content .faq_accordion-content li {
         margin-bottom: 6px;
+    }
+
+    .main-comission .accordion-content {
+        padding: 20px 6px;
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        width: 100%;
+        border-radius: 0 0 30px 30px;
     }
 
     .main-sellprotect2 .content h2 {
@@ -1521,6 +1629,146 @@ tbody td {
     }
 }
 
+@media (max-width: 560px) {
+    .padded {
+        padding: 15px 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .country-fees-table,
+    .sales-table {
+        min-width: fit-content;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .country-fees-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        overflow: hidden;
+        min-width: 500px;
+        padding: 0;
+    }
+
+    table {
+        margin: 0;
+    }
+
+    .sales-table th,
+    .sales-table td,
+    .country-fees-table th,
+    .country-fees-table td {
+        padding: 13px 24px;
+        text-align: left;
+        word-wrap: break-word;
+        font-size: 16px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .country-fees-table th {
+        background: #af9b8c;
+    }
+
+    .country-fees-table th,
+    .country-fees-table td {
+        padding: 15px 10px 15px 23px;
+        line-height: 140%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .country-fees-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .country-fees-table tr td:last-child {
+        border-left: 1px solid #ddd;
+    }
+
+    .sales-table thead th {
+        border-radius: 20px 20px 0 0;
+        width: calc(50vw - 20px) !important;
+    }
+
+    .sales-table thead th:nth-child(1) {
+        width: calc(100vw - 20px) !important;
+    }
+
+    .sales-table tr td,
+    .sales-table tr th {
+        border: none;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .sales-table tbody tr:last-child td,
+    .sales-table tbody tr:last-child th {
+        border-bottom: 1px solid #ddd;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .collapsed-btn {
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 23px;
+        display: block;
+        margin-left: auto;
+    }
+
+    .collapsed-mobile {
+        display: none;
+    }
+
+    .collapsed-mobile.active {
+        display: block;
+    }
+
+    .country-reg-table {
+        margin-bottom: 23px;
+    }
+
+    .main-comission .faq-section .accordion-item {
+        padding: 0 6px 0 15px;
+    }
+
+    .agora-touch-slider {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        display: block;
+        padding-top: 118.66%;
+        touch-action: manipulation;
+    }
+
+    .agora-touch-slider img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        pointer-events: none;
+    }
+
+    .agora-touch-slider img.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 @media (max-width:460px) {
     .main {
         margin-top: 7px;
@@ -1552,7 +1800,7 @@ tbody td {
         box-shadow: none;
         border: 1px solid #482B1E;
         width: 100%;
-        min-width: 151px;
+        min-width: 121px;
     }
 
     .search--small .icon-search {
@@ -1568,7 +1816,7 @@ tbody td {
     }
 
     .content--padding-top--big {
-        padding: 56px 0 64px 0;
+        padding: 32px 0 64px 0;
     }
 
     .content ul {
@@ -1734,6 +1982,7 @@ tbody td {
         height: 100%;
         min-height: 150px;
         padding: 0;
+        width: 100%;
     }
 
     .region-card p {

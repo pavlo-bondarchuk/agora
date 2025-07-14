@@ -1050,4 +1050,61 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const toggleBtn = document.querySelector('.collapsed-btn');
+    const mobileBlock = document.querySelector('.collapsed-mobile');
+
+    if (toggleBtn && mobileBlock) {
+        toggleBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (window.innerWidth < 460) {
+                mobileBlock.classList.toggle('active');
+            }
+        });
+    }
+
+    const agoraBl = document.querySelector('.agora-touch-slider');
+
+    if (agoraBl) {
+        const images = agoraBl.querySelectorAll('img');
+        let current = 0;
+        let interval;
+        let direction = 1; // 1 — вперёд, -1 — назад
+
+        function updateImage() {
+            images[current].classList.remove('active');
+            current += direction;
+
+            if (current >= images.length) current = images.length - 1;
+            if (current < 0) current = 0;
+
+            images[current].classList.add('active');
+
+            // Остановить на концах
+            if (
+                (direction === 1 && current === images.length - 1) ||
+                (direction === -1 && current === 0)
+            ) {
+                clearInterval(interval);
+            }
+        }
+
+        function startCycle(dir) {
+            clearInterval(interval);
+            direction = dir;
+            interval = setInterval(updateImage, 500);
+        }
+
+        function stopCycle() {
+            clearInterval(interval);
+        }
+
+        // Наведение мыши
+        agoraBl.addEventListener('mouseenter', () => startCycle(1));
+        agoraBl.addEventListener('mouseleave', () => startCycle(-1));
+
+        // Сенсорный экран
+        agoraBl.addEventListener('touchstart', () => startCycle(1));
+        agoraBl.addEventListener('touchend', () => startCycle(-1));
+    }
 });
