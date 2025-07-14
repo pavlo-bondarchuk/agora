@@ -11533,6 +11533,14 @@ td {
     .sellprotect-item:not(:last-child) {
         margin-bottom: 43px;
     }
+
+    .agora-hero_grid-item:last-child .ml-20 {
+        margin-left: -20px;
+    }
+
+    .agora-try_title {
+        margin-top: 0;
+    }
 }
 
 

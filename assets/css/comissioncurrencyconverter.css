@@ -20,6 +20,7 @@ body {
     padding: 0 13px;
 }
 
+.mob-value,
 .agora-touch-slider,
 .collapsed-btn {
     display: none;
@@ -266,6 +267,7 @@ body {
 .text-banner .container .inner {
     display: flex;
     margin: 72px 0 90px;
+    position: relative;
 }
 
 .text-banner .container .inner.padding-top100 {
@@ -273,12 +275,13 @@ body {
 }
 
 .text-banner__left {
-    flex: 3 1 0;
+    flex: 2 1 0;
+    max-width: 966px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 50px;
+    padding: 45px;
     background-color: var(--color-beige-light);
 }
 
@@ -317,6 +320,8 @@ body {
 .text-banner__right_rounded .text-banner__right {
     border-radius: 0 50% 50% 0;
     overflow: hidden;
+    position: absolute;
+    right: 74px;
 }
 
 .text-banner__list {
@@ -818,6 +823,12 @@ tbody td {
     display: block;
 }
 
+@media (min-width: 1920px) {
+    .text-banner__left {
+        max-width: 1496px;
+    }
+}
+
 @media (max-width: 1500px) {
 
     .header__btm .container .nav-list-simple>li a {
@@ -953,6 +964,10 @@ tbody td {
     .heading-bg-beige-image-big.small {
         padding: 24px 40px;
         font-size: 28px;
+    }
+
+    .text-banner__right {
+        display: none;
     }
 
 
@@ -1644,6 +1659,11 @@ tbody td {
         min-width: fit-content;
         width: 100%;
         table-layout: fixed;
+        border-spacing: 8px 0;
+    }
+
+    .sales-table {
+        margin-left: -8px;
     }
 
     .country-fees-table {
@@ -1699,6 +1719,10 @@ tbody td {
 
     .sales-table thead th:nth-child(1) {
         width: calc(100vw - 20px) !important;
+    }
+
+    .sales-table thead th:nth-child(3) {
+        padding: 4px 8px
     }
 
     .sales-table tr td,
@@ -1811,12 +1835,13 @@ tbody td {
 
 
     .hero--simple {
-        padding: 34px 32px;
+        padding: 34px 13px;
         font-size: 24px;
+        text-align: left;
     }
 
     .content--padding-top--big {
-        padding: 32px 0 64px 0;
+        padding: 32px 0 23px 0;
     }
 
     .content ul {
@@ -1831,6 +1856,7 @@ tbody td {
 
     .text-banner__left {
         padding: 0;
+        background: #af9b8c;
     }
 
     .text-banner__title {
@@ -1883,6 +1909,35 @@ tbody td {
         display: none;
     }
 
+    .h2-small {
+        font-size: 20px !important;
+    }
+
+    .content h2 {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+
+    .content ul li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+    }
+
+    .block-beige-bg {
+        margin-bottom: 0;
+        margin-top: -15px;
+        padding: 28px 11px 15px 15px;
+    }
+
+    .content .space100:nth-last-child {
+        display: none;
+    }
+
+    .space100.space0 {
+        display: none;
+    }
+
     /* .padded {
         padding: 31px 13px;
     }
@@ -1931,10 +1986,10 @@ tbody td {
         display: none;
     }
 
-    /* .content h3 {
-        font-size: 20px;
-        margin: 0 0 10px;
-    } */
+    .content h3 {
+        font-size: 18px;
+        margin: 23px 0;
+    }
 
     .heading-halfwidth {
         padding-inline-end: 0;
@@ -1948,7 +2003,7 @@ tbody td {
     thead th {
         font-size: 16px;
         padding: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.7);
+        border: 0.30px solid rgba(0, 0, 0, 0.2)
     }
 
     thead th:nth-child(1) {
@@ -1960,8 +2015,9 @@ tbody td {
     }
 
     tbody tr td {
-        border-right: 1px solid rgba(0, 0, 0, 0.7);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+        border: none;
+        border-right: 0.30px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 0.30px solid rgba(0, 0, 0, 0.2);
     }
 
     tbody td {
@@ -1988,14 +2044,28 @@ tbody td {
     .region-card p {
         font-size: 14px;
         padding: 21px 13px;
+        font-weight: 500;
     }
 
     .region-card span {
         font-size: 14px;
+        padding: 10px;
         right: 0;
         bottom: 0;
         border-top-left-radius: 20px;
         box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .region-card ul li {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 170%;
+        margin-bottom: 0;
+
+    }
+
+    .region-card ul {
+        margin-top: 18px;
     }
 
     .footer__menu-item {
@@ -2004,5 +2074,29 @@ tbody td {
 
     .footer__menu-item.active {
         display: block;
+    }
+
+    .excluded-categories {
+        padding: 0px 8px 0px 8px;
+    }
+
+    .mob-value {
+        display: inline-block;
+    }
+
+    .fs-20 {
+        font-size: 20px !important;
+    }
+
+    .mfs-22 {
+        font-size: 22px !important;
+    }
+
+    .fs12 {
+        font-size: 12px !important;
+    }
+
+    .excluded-categories h2 {
+        padding-inline-end: 0
     }
 }
