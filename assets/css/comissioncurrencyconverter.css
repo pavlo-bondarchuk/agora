@@ -21,7 +21,6 @@ body {
 }
 
 .mob-value,
-.agora-touch-slider,
 .collapsed-btn {
     display: none;
 }
@@ -285,6 +284,36 @@ body {
     background-color: var(--color-beige-light);
 }
 
+.agora-touch-slider {
+    display: none;
+}
+
+.agora-hover-slider {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    overflow: hidden;
+    height: 441px;
+}
+
+.agora-hover-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1.6s ease-in-out;
+    pointer-events: none;
+}
+
+.agora-hover-slider img.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.6s ease-in-out;
+}
+
 .text-banner__title {
     font-size: 40px;
     font-weight: 500;
@@ -342,6 +371,10 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--color-beige-light);
+}
+
+.main-comission .text-banner__right {
+    justify-content: flex-end;
 }
 
 .text-banner__agora-bg {
@@ -576,6 +609,10 @@ tbody td {
     line-height: 30px;
     color: rgba(0, 0, 0, 0.85);
     padding: 30px 43px;
+}
+
+.sales-table.v-us td {
+    font-weight: 500;
 }
 
 .sales-table strong {
@@ -838,6 +875,10 @@ tbody td {
 
     .footer-menu-grid .footer__inner-item {
         max-width: 30.33% !important;
+    }
+
+    .main-comission .text-banner__left {
+        padding: 25px;
     }
 }
 
@@ -1447,7 +1488,7 @@ tbody td {
     }
 
     .text-banner__left {
-        background-color: unset;
+        background-color: #af9b8c;
         padding: 0;
     }
 
@@ -1790,6 +1831,27 @@ tbody td {
     .agora-touch-slider img.active {
         opacity: 1;
         pointer-events: auto;
+    }
+}
+
+@media (min-width:460px) {
+
+    table td,
+    table th {
+        border: none;
+        text-align: left;
+    }
+
+    thead th {
+        padding: 33px 38px;
+    }
+
+    tbody td {
+        border-bottom: 0.50px solid rgba(0, 0, 0, 0.7);
+    }
+
+    .country-fees-table td {
+        line-height: 140%;
     }
 }
 

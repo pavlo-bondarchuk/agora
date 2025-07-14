@@ -1107,4 +1107,46 @@ document.addEventListener('DOMContentLoaded', function () {
         agoraBl.addEventListener('touchstart', () => startCycle(1));
         agoraBl.addEventListener('touchend', () => startCycle(-1));
     }
+
+    const hoverSlider = document.querySelector('.agora-hover-slider');
+
+    if (hoverSlider) {
+        const hoverImages = hoverSlider.querySelectorAll('img');
+        let hoverCurrent = 0;
+        let hoverInterval;
+        let hoverDirection = 1;
+
+        function updateHoverImage() {
+            hoverImages[hoverCurrent].classList.remove('active');
+            hoverCurrent += hoverDirection;
+
+            if (hoverCurrent >= hoverImages.length) hoverCurrent = hoverImages.length - 1;
+            if (hoverCurrent < 0) hoverCurrent = 0;
+
+            hoverImages[hoverCurrent].classList.add('active');
+
+            if (
+                (hoverDirection === 1 && hoverCurrent === hoverImages.length - 1) ||
+                (hoverDirection === -1 && hoverCurrent === 0)
+            ) {
+                clearInterval(hoverInterval);
+            }
+        }
+
+        function startHoverCycle(dir) {
+            clearInterval(hoverInterval);
+            hoverDirection = dir;
+            hoverInterval = setInterval(updateHoverImage, 600);
+        }
+
+        function stopHoverCycle() {
+            clearInterval(hoverInterval);
+        }
+
+        // Запускаем только на экранах >= 460px
+        if (window.innerWidth >= 460) {
+            hoverSlider.addEventListener('mouseenter', () => startHoverCycle(1));
+            hoverSlider.addEventListener('mouseleave', () => startHoverCycle(-1));
+        }
+    }
 });
